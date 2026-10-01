@@ -1,0 +1,81 @@
+# Kubernetes deployment for flowguard.
+#
+# Horizontal scaling is built in: replicas are stateless and the rate limiter
+# switches to Redis when REDIS_URL is set. A load balancer (Service) distributes
+# traffic; the readiness probe gates rollout, and the liveness probe restarts a
+# hung pod. SIGTERM triggers a graceful shutdown.
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: flowguard
+  labels:
+    app: flowguard
+spec:
+  replicas: 3
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxSurge: 1
+      maxUnavailable: 0
+  selector:
+    matchLabels:
+      app: flowguard
+  template:
+    metadata:
+      labels:
+        app: flowguard
+    spec:
+      terminationGracePeriodSeconds: 30
+      containers:
+        - name: flowguard
+          image: flowguard:latest
+          imagePullPolicy: IfNotPresent
+          ports:
+            - name: http
+              containerPort: 3000
+          env:
+            - name: ENV
+              value: production
+            - name: LOG_LEVEL
+              value: info
+            - name: PORT
+              value: "3000"
+            - name: RATE_LIMIT_MAX
+              value: "100"
+            - name: RATE_LIMIT_TTL_MS
+              value: "60000"
+            # - name: REDIS_URL
+            #   value: "redis://flowguard-redis:6379"
+          readinessProbe:
+            httpGet:
+              path: /health
+              port: 3000
+            initialDelaySeconds: 5
+            periodSeconds: 10
+          livenessProbe:
+            httpGet:
+              path: /health
+              port: 3000
+            initialDelaySeconds: 10
+            periodSeconds: 30
+          resources:
+            requests:
+              cpu: 100m
+              memory: 128Mi
+            limits:
+              cpu: 500m
+              memory: 256Mi
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: flowguard
+spec:
+  selector:
+    app: flowguard
+  ports:
+    - name: http
+      port: 80
+      targetPort: 3000
+  type: LoadBalancer
