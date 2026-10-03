@@ -47,6 +47,12 @@ spec:
               value: "60000"
             # - name: REDIS_URL
             #   value: "redis://flowguard-redis:6379"
+            - name: KAFKA_BROKERS
+              value: "flowguard-kafka:9092"
+            - name: KAFKA_TOPIC
+              value: "RECONCILIATION"
+            - name: KAFKA_TIMEOUT_MS
+              value: "5000"
           readinessProbe:
             httpGet:
               path: /health

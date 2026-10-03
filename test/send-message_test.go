@@ -3,6 +3,7 @@ package test
 
 import (
 	"bytes"
+	"context"
 	"encoding/json"
 	"net/http"
 	"net/http/httptest"
@@ -13,20 +14,42 @@ import (
 	"flowguard/internal/router"
 )
 
-// newTestServer builds an app wired for testing (in-memory rate limiter).
-func newTestServer(t *testing.T) *httptest.Server {
+// stubProducer is a kafka.Producer that records calls or fails, with no broker.
+type stubProducer struct {
+	topic    string
+	recorded []publishCall
+	err      error
+}
+
+type publishCall struct {
+	topic, key, value string
+}
+
+func (s *stubProducer) Publish(_ context.Context, topic, key, value string) error {
+	s.recorded = append(s.recorded, publishCall{topic, key, value})
+	return s.err
+}
+func (s *stubProducer) Close() error { return nil }
+
+func newTestServer(t *testing.T, producer *stubProducer) *httptest.Server {
 	t.Helper()
 	cfg, err := config.Load()
 	if err != nil {
 		t.Fatalf("config: %v", err)
 	}
 	cfg.Env = "development"
-	cfg.RateLimitMax = 10000 // effectively disabled for tests
-	return httptest.NewServer(router.Build(cfg))
+	cfg.RateLimitMax = 10000             // effectively disabled for tests
+	cfg.KafkaBrokers = []string{"dummy"} // so newProducer doesn't disable it; we inject our own
+	app, err := router.BuildWithProducer(cfg, producer)
+	if err != nil {
+		t.Fatalf("router build: %v", err)
+	}
+	return httptest.NewServer(app)
 }
 
 func TestSendMessage(t *testing.T) {
-	srv := newTestServer(t)
+	producer := &stubProducer{topic: "RECONCILIATION"}
+	srv := newTestServer(t, producer)
 	defer srv.Close()
 
 	resp, err := http.Post(srv.URL+"/v1/send-message",
@@ -69,10 +92,26 @@ func TestSendMessage(t *testing.T) {
 	if body.Timestamp == "" {
 		t.Fatal("missing timestamp")
 	}
+
+	// The message must have been published to Kafka with the message as both
+	// key and value.
+	if len(producer.recorded) != 1 {
+		t.Fatalf("expected 1 publish call, got %d", len(producer.recorded))
+	}
+	pub := producer.recorded[0]
+	if pub.topic != "RECONCILIATION" {
+		t.Fatalf("topic = %q, want RECONCILIATION", pub.topic)
+	}
+	if pub.key != "world" {
+		t.Fatalf("key = %q, want world", pub.key)
+	}
+	if pub.value != "world" {
+		t.Fatalf("value = %q, want world", pub.value)
+	}
 }
 
 func TestSendMessageTraceIdHeader(t *testing.T) {
-	srv := newTestServer(t)
+	srv := newTestServer(t, &stubProducer{})
 	defer srv.Close()
 
 	req, _ := http.NewRequest(http.MethodPost, srv.URL+"/v1/send-message",
@@ -90,7 +129,7 @@ func TestSendMessageTraceIdHeader(t *testing.T) {
 }
 
 func TestSendMessageEmptyBody(t *testing.T) {
-	srv := newTestServer(t)
+	srv := newTestServer(t, &stubProducer{})
 	defer srv.Close()
 
 	resp, err := http.Post(srv.URL+"/v1/send-message",
@@ -117,7 +156,7 @@ func TestSendMessageEmptyBody(t *testing.T) {
 }
 
 func TestSendMessageMissingMessage(t *testing.T) {
-	srv := newTestServer(t)
+	srv := newTestServer(t, &stubProducer{})
 	defer srv.Close()
 
 	resp, err := http.Post(srv.URL+"/v1/send-message",
@@ -132,8 +171,36 @@ func TestSendMessageMissingMessage(t *testing.T) {
 	}
 }
 
+func TestSendMessageKafkaFailure(t *testing.T) {
+	producer := &stubProducer{err: errKafkaFailed}
+	srv := newTestServer(t, producer)
+	defer srv.Close()
+
+	resp, err := http.Post(srv.URL+"/v1/send-message",
+		"application/json", strings.NewReader(`{"message":"world"}`))
+	if err != nil {
+		t.Fatal(err)
+	}
+	defer resp.Body.Close()
+
+	if resp.StatusCode != http.StatusServiceUnavailable {
+		t.Fatalf("status = %d, want 503", resp.StatusCode)
+	}
+	var body struct {
+		Error struct {
+			Code string `json:"code"`
+		} `json:"error"`
+	}
+	if err := json.NewDecoder(resp.Body).Decode(&body); err != nil {
+		t.Fatal(err)
+	}
+	if body.Error.Code != "SERVICE_UNAVAILABLE" {
+		t.Fatalf("code = %q, want SERVICE_UNAVAILABLE", body.Error.Code)
+	}
+}
+
 func TestNotFound(t *testing.T) {
-	srv := newTestServer(t)
+	srv := newTestServer(t, &stubProducer{})
 	defer srv.Close()
 
 	resp, err := http.Get(srv.URL + "/nope")
@@ -159,7 +226,7 @@ func TestNotFound(t *testing.T) {
 }
 
 func TestHealth(t *testing.T) {
-	srv := newTestServer(t)
+	srv := newTestServer(t, &stubProducer{})
 	defer srv.Close()
 
 	resp, err := http.Get(srv.URL + "/health")
@@ -185,7 +252,7 @@ func TestHealth(t *testing.T) {
 }
 
 func TestOpenAPI(t *testing.T) {
-	srv := newTestServer(t)
+	srv := newTestServer(t, &stubProducer{})
 	defer srv.Close()
 
 	resp, err := http.Get(srv.URL + "/openapi.json")
@@ -212,7 +279,7 @@ func TestOpenAPI(t *testing.T) {
 }
 
 func TestMethodNotAllowed(t *testing.T) {
-	srv := newTestServer(t)
+	srv := newTestServer(t, &stubProducer{})
 	defer srv.Close()
 
 	req, _ := http.NewRequest(http.MethodGet, srv.URL+"/v1/send-message", nil)

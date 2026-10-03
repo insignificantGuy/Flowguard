@@ -7,7 +7,8 @@ FROM golang:1.26-alpine AS builder
 
 WORKDIR /src
 
-RUN addgroup -g 1001 -S appgroup && adduser -u 1001 -S appuser -G appgroup
+RUN addgroup -g 1001 -S appgroup && adduser -u 1001 -S appuser -G appgroup \
+    && apk add --no-cache ca-certificates
 
 ENV CGO_ENABLED=0 GOOS=linux GOARCH=amd64
 
@@ -29,7 +30,8 @@ ENV ENV=production PORT=3000 HOST=0.0.0.0 LOG_LEVEL=info
 COPY --from=builder /out/flowguard /flowguard
 
 # Create user at runtime (alpine may not have same uid/gid)
-RUN addgroup -g 1001 -S appgroup && adduser -u 1001 -S appuser -G appgroup
+RUN addgroup -g 1001 -S appgroup && adduser -u 1001 -S appuser -G appgroup \
+    && apk add --no-cache ca-certificates
 USER appuser
 
 EXPOSE 3000

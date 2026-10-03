@@ -53,7 +53,7 @@ const OpenAPISpec = `{
     "/v1/send-message": {
       "post": {
         "summary": "Send a message",
-        "description": "Echoes a greeting combined with the provided message.",
+        "description": "Publishes the provided message to the RECONCILIATION Kafka topic. Returns 503 if the publish fails.",
         "requestBody": {
           "required": true,
           "content": {
@@ -96,7 +96,8 @@ const OpenAPISpec = `{
             }
           },
           "400": { "$ref": "#/components/responses/ValidationError" },
-          "429": { "$ref": "#/components/responses/RateLimitError" }
+          "429": { "$ref": "#/components/responses/RateLimitError" },
+          "503": { "$ref": "#/components/responses/ServiceUnavailableError" }
         }
       }
     }
@@ -135,6 +136,26 @@ const OpenAPISpec = `{
                   "type": "object",
                   "properties": {
                     "code": { "type": "string", "example": "RATE_LIMITED" },
+                    "message": { "type": "string" },
+                    "traceId": { "type": "string" }
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "ServiceUnavailableError": {
+        "description": "Kafka publish failed",
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "object",
+              "properties": {
+                "error": {
+                  "type": "object",
+                  "properties": {
+                    "code": { "type": "string", "example": "SERVICE_UNAVAILABLE" },
                     "message": { "type": "string" },
                     "traceId": { "type": "string" }
                   }

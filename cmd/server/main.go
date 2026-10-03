@@ -45,22 +45,25 @@ func main() {
 		cfg.Port = *port
 	}
 
-	// --- Build router -------------------------------------------------------
-	handler := router.Build(cfg)
+	// --- Build app (fails fast if Kafka is misconfigured) ------------------
+	app, err := router.Build(cfg)
+	if err != nil {
+		logger.Log.Fatal().Err(err).Msg("failed to build app")
+	}
 
 	// --- HTTP server --------------------------------------------------------
 	srv := &http.Server{
 		Addr:         cfg.Host + ":" + fmt.Sprint(cfg.Port),
-		Handler:      handler,
+		Handler:      app,
 		ReadTimeout:  10 * time.Second,
 		WriteTimeout: 30 * time.Second,
 		IdleTimeout:  60 * time.Second,
 	}
 
 	// --- Graceful shutdown --------------------------------------------------
-	// Stop accepting new connections, finish in-flight requests, then exit.
-	// Required for horizontal scaling behind a load balancer so we don't drop
-	// in-flight requests during deploys.
+	// Stop accepting new connections, finish in-flight requests, flush the
+	// Kafka producer, then exit. Required for horizontal scaling behind a load
+	// balancer so we don't drop in-flight requests during deploys.
 	go func() {
 		logger.Log.Info().
 			Str("addr", srv.Addr).
@@ -79,6 +82,11 @@ func main() {
 	<-stop
 
 	logger.Log.Info().Msg("shutting down...")
+
+	// Flush the Kafka producer first so in-flight publishes complete.
+	if err := app.Close(); err != nil {
+		logger.Log.Error().Err(err).Msg("kafka producer close failed")
+	}
 
 	ctx, cancel := context.WithTimeout(context.Background(), 10*time.Second)
 	defer cancel()

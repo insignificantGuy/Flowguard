@@ -8,7 +8,7 @@ Scalable, production-grade web server in Go.
 |--------|------|-------------|
 | `GET`  | `/health` | Liveness probe |
 | `GET`  | `/openapi.json` | OpenAPI 3.1 spec |
-| `POST` | `/v1/send-message` | Echo a greeting with your message |
+| `POST` | `/v1/send-message` | Publish a message to the Kafka `RECONCILIATION` topic |
 
 ### Example
 
@@ -55,6 +55,9 @@ All settings via environment variables or `.env` file:
 | `RATE_LIMIT_MAX` | `100` | Requests per window per client |
 | `RATE_LIMIT_TTL_MS` | `60000` | Rate-limit window (ms) |
 | `REDIS_URL` | *(empty)* | When set, enables distributed rate limiting |
+| `KAFKA_BROKERS` | *(empty)* | Kafka broker list (comma-separated); empty disables the producer (returns 503) |
+| `KAFKA_TOPIC` | `RECONCILIATION` | Topic for `/v1/send-message` publishes |
+| `KAFKA_TIMEOUT_MS` | `5000` | Publish ack timeout |
 
 Copy `.env.example` to `.env` and adjust.
 
@@ -64,11 +67,11 @@ Copy `.env.example` to `.env` and adjust.
 - **Structured JSON logging** — ingestible by any log aggregator
 - **Request tracing** — `X-Request-Id` header propagated end-to-end
 - **Rate limiting** — in-memory (dev) or Redis-backed (prod) per-client
-- **Graceful shutdown** — finishes in-flight requests on SIGTERM
+- **Graceful shutdown** — finishes in-flight requests on SIGTERM, flushes Kafka producer
 - **Security headers** — CSP, HSTS, X-Frame-Options, etc.
 - **OpenAPI spec** — served at `/openapi.json`
 - **Health endpoint** — `/health` for k8s liveness probes
-- **Distroless Docker image** — ~10 MB, runs as non-root
+- **Kafka integration** — publishes to configurable topic, fail-fast at startup, graceful flush on shutdown
 
 ## Architecture
 
@@ -80,9 +83,10 @@ internal/model      ← API request/response shapes
 internal/response   ← standard envelope helpers
 internal/errors     ← domain error hierarchy
 internal/middleware ← Recovery, Security, Logger, RateLimit
-internal/service    ← business logic (stateless, testable)
+internal/kafka       ← producer wrapper around sarama (fail-fast init)
+internal/service    ← business logic (stateless, publish to Kafka)
 internal/handler    ← HTTP handlers (thin, validation → service)
-internal/router     ← wires handlers + middleware
+internal/router     ← wires handlers + middleware + producer
 ```
 
 Each package has a single responsibility and can be tested in isolation.

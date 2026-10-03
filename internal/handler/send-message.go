@@ -5,6 +5,7 @@ import (
 	"encoding/json"
 	"net/http"
 
+	"flowguard/internal/kafka"
 	"flowguard/internal/model"
 	"flowguard/internal/response"
 	"flowguard/internal/service"
@@ -14,14 +15,15 @@ import (
 //
 // It validates the request body, delegates to the service, and writes the
 // standard response envelope. Validation failures map to a stable
-// VALIDATION_ERROR code so clients can surface the right input error.
+// VALIDATION_ERROR code so clients can surface the right input error. A Kafka
+// publish failure maps to 503 SERVICE_UNAVAILABLE.
 type SendMessage struct {
 	svc *service.SendMessageService
 }
 
 // NewSendMessage creates a SendMessage handler.
-func NewSendMessage(greeting string) *SendMessage {
-	return &SendMessage{svc: service.NewSendMessageService(greeting)}
+func NewSendMessage(greeting, topic string, producer kafka.Producer) *SendMessage {
+	return &SendMessage{svc: service.NewSendMessageService(greeting, topic, producer)}
 }
 
 // ServeHTTP implements http.Handler.
@@ -44,11 +46,12 @@ func (h *SendMessage) ServeHTTP(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	result, err := h.svc.Send(req)
+	result, err := h.svc.Send(r.Context(), req)
 	if err != nil {
-		// Service errors are internal; we never leak them to clients.
-		response.Error(w, r, http.StatusInternalServerError,
-			"INTERNAL_ERROR", "Internal server error", nil)
+		// Publish failures are transient (broker down, timeouts). Surface them
+		// as 503 so the client can retry, but never leak the underlying error.
+		response.Error(w, r, http.StatusServiceUnavailable,
+			"SERVICE_UNAVAILABLE", "Failed to publish message", nil)
 		return
 	}
 
