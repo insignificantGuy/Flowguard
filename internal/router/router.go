@@ -10,6 +10,7 @@ import (
 	"flowguard/internal/handler"
 	"flowguard/internal/kafka"
 	"flowguard/internal/middleware"
+	"flowguard/internal/observability"
 	"flowguard/internal/response"
 )
 
@@ -19,6 +20,8 @@ import (
 type App struct {
 	http.Handler
 	producer kafka.Producer
+	consumer *kafka.Consumer // deprecated: use consumer.Consumer instead
+	metrics  *observability.Metrics
 }
 
 // Close flushes in-flight Kafka publishes and releases the producer.
@@ -31,10 +34,20 @@ func (a *App) Close() error {
 
 // BuildWithProducer lets callers inject a custom producer — used by tests.
 func BuildWithProducer(cfg config.Config, producer kafka.Producer) (*App, error) {
+	return BuildWithProducerAndMetrics(cfg, producer, nil)
+}
+
+// BuildWithProducerAndMetrics lets callers inject a custom producer and metrics.
+func BuildWithProducerAndMetrics(cfg config.Config, producer kafka.Producer, metrics *observability.Metrics) (*App, error) {
+	if metrics == nil {
+		metrics = observability.NewMetrics()
+	}
+
 	mux := http.NewServeMux()
 	mux.Handle("/health", handler.NewHealth("1.0.0", cfg.Env))
 	mux.Handle("/openapi.json", handler.NewOpenAPI())
-	mux.Handle("/v1/send-message", handler.NewSendMessage("Hello", cfg.KafkaTopic, producer))
+	mux.Handle("/v1/send-message", handler.NewSendMessage("Hello", cfg.KafkaTopic, producer, metrics))
+	mux.Handle("/metrics", metrics.Handler())
 	mux.HandleFunc("/{path...}", func(w http.ResponseWriter, r *http.Request) {
 		response.Error(w, r, http.StatusNotFound, "NOT_FOUND", "Route not found", nil)
 	})
@@ -44,7 +57,7 @@ func BuildWithProducer(cfg config.Config, producer kafka.Producer) (*App, error)
 	h = middleware.Logger(h)
 	h = middleware.RateLimit(cfg)(h)
 
-	return &App{Handler: h, producer: producer}, nil
+	return &App{Handler: h, producer: producer, metrics: metrics}, nil
 }
 
 // Build constructs the complete HTTP handler with all middleware and routes.

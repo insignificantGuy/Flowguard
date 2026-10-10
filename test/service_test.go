@@ -75,3 +75,20 @@ func TestSendMessageServicePublishFailure(t *testing.T) {
 		t.Fatalf("expected empty response, got %q", resp.Echo)
 	}
 }
+
+// stubProducer is a kafka.Producer that records calls or fails, with no broker.
+type stubProducer struct {
+	topic    string
+	recorded []publishCall
+	err      error
+}
+
+type publishCall struct {
+	topic, key, value string
+}
+
+func (s *stubProducer) Publish(_ context.Context, topic, key, value string) error {
+	s.recorded = append(s.recorded, publishCall{topic, key, value})
+	return s.err
+}
+func (s *stubProducer) Close() error { return nil }

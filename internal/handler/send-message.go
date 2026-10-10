@@ -7,6 +7,7 @@ import (
 
 	"flowguard/internal/kafka"
 	"flowguard/internal/model"
+	"flowguard/internal/observability"
 	"flowguard/internal/response"
 	"flowguard/internal/service"
 )
@@ -18,12 +19,16 @@ import (
 // VALIDATION_ERROR code so clients can surface the right input error. A Kafka
 // publish failure maps to 503 SERVICE_UNAVAILABLE.
 type SendMessage struct {
-	svc *service.SendMessageService
+	svc     *service.SendMessageService
+	metrics *observability.Metrics
 }
 
 // NewSendMessage creates a SendMessage handler.
-func NewSendMessage(greeting, topic string, producer kafka.Producer) *SendMessage {
-	return &SendMessage{svc: service.NewSendMessageService(greeting, topic, producer)}
+func NewSendMessage(greeting, topic string, producer kafka.Producer, metrics *observability.Metrics) *SendMessage {
+	return &SendMessage{
+		svc:     service.NewSendMessageService(greeting, topic, producer),
+		metrics: metrics,
+	}
 }
 
 // ServeHTTP implements http.Handler.
@@ -53,6 +58,11 @@ func (h *SendMessage) ServeHTTP(w http.ResponseWriter, r *http.Request) {
 		response.Error(w, r, http.StatusServiceUnavailable,
 			"SERVICE_UNAVAILABLE", "Failed to publish message", nil)
 		return
+	}
+
+	// Record metrics on successful publish
+	if h.metrics != nil {
+		h.metrics.RecordPublished(req.Message)
 	}
 
 	response.Send(w, r, http.StatusOK, result)
