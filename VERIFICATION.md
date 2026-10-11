@@ -64,7 +64,7 @@ docker compose up --build
 # Access services:
 # - API: http://localhost:3000
 # - Metrics: http://localhost:3000/metrics  
-# - Grafana: http://localhost:3001 (admin/admin)
+# - Grafana: http://localhost:3002 (admin/admin)
 # - Prometheus: http://localhost:9090
 
 # Run load test

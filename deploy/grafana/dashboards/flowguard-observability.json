@@ -39,17 +39,17 @@
       },
       "targets": [
         {
-          "expr": "rate(flowguard_messages_published_total[5m])",
-          "legendFormat": "Published: {{topic}}",
+          "expr": "(sum(flowguard_messages_published_total) - sum(flowguard_messages_published_total offset 1m)) / 60",
+          "legendFormat": "Published",
           "refId": "A"
         },
         {
-          "expr": "rate(flowguard_messages_consumed_total[5m])",
-          "legendFormat": "Consumed: {{topic}}",
+          "expr": "(sum(flowguard_messages_consumed_total) - sum(flowguard_messages_consumed_total offset 1m)) / 60",
+          "legendFormat": "Consumed",
           "refId": "B"
         }
       ],
-      "title": "Message Throughput (per 5m)",
+      "title": "Message Throughput",
       "type": "timeseries"
     },
     {
@@ -254,13 +254,13 @@
       "options": {"showHeader": true},
       "targets": [
         {
-          "expr": "sum(rate(flowguard_messages_published_total[5m])) by (topic)",
-          "legendFormat": "Published: {{topic}}",
+          "expr": "(sum(flowguard_messages_published_total) - sum(flowguard_messages_published_total offset 1m)) / 60",
+          "legendFormat": "Published",
           "refId": "A"
         },
         {
-          "expr": "sum(rate(flowguard_messages_consumed_total[5m])) by (topic)",
-          "legendFormat": "Consumed: {{topic}}",
+          "expr": "(sum(flowguard_messages_consumed_total) - sum(flowguard_messages_consumed_total offset 1m)) / 60",
+          "legendFormat": "Consumed",
           "refId": "B"
         },
         {
@@ -298,6 +298,6 @@
   "timezone": "",
   "title": "Flowguard Pipeline Observability",
   "uid": "flowguard-observability",
-  "version": 1,
+  "version": 2,
   "weekStart": ""
 }

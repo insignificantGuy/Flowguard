@@ -21,6 +21,7 @@ import (
 type SendMessage struct {
 	svc     *service.SendMessageService
 	metrics *observability.Metrics
+	topic   string
 }
 
 // NewSendMessage creates a SendMessage handler.
@@ -28,6 +29,7 @@ func NewSendMessage(greeting, topic string, producer kafka.Producer, metrics *ob
 	return &SendMessage{
 		svc:     service.NewSendMessageService(greeting, topic, producer),
 		metrics: metrics,
+		topic:   topic,
 	}
 }
 
@@ -62,7 +64,7 @@ func (h *SendMessage) ServeHTTP(w http.ResponseWriter, r *http.Request) {
 
 	// Record metrics on successful publish
 	if h.metrics != nil {
-		h.metrics.RecordPublished(req.Message)
+		h.metrics.RecordPublished(h.topic)
 	}
 
 	response.Send(w, r, http.StatusOK, result)

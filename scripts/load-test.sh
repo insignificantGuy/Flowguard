@@ -144,13 +144,14 @@ function textSummary(data, options = {}) {
   }
   if (data.metrics.http_req_duration) {
     const d = data.metrics.http_req_duration.values;
+    const fmt = (v) => (typeof v === 'number' ? v.toFixed(2) + 'ms' : 'n/a');
     output += indent + `Request Duration:\n`;
-    output += indent + `  avg: ${d.avg.toFixed(2)}ms\n`;
-    output += indent + `  min: ${d.min.toFixed(2)}ms\n`;
-    output += indent + `  max: ${d.max.toFixed(2)}ms\n`;
-    output += indent + `  p(90): ${d['p(90)'].toFixed(2)}ms\n`;
-    output += indent + `  p(95): ${d['p(95)'].toFixed(2)}ms\n`;
-    output += indent + `  p(99): ${d['p(99)'].toFixed(2)}ms\n`;
+    output += indent + `  avg: ${fmt(d.avg)}\n`;
+    output += indent + `  min: ${fmt(d.min)}\n`;
+    output += indent + `  max: ${fmt(d.max)}\n`;
+    output += indent + `  p(90): ${fmt(d['p(90)'])}\n`;
+    output += indent + `  p(95): ${fmt(d['p(95)'])}\n`;
+    output += indent + `  p(99): ${fmt(d['p(99)'])}\n`;
   }
   if (data.metrics.http_req_failed) {
     output += indent + `Error Rate: ${(data.metrics.http_req_failed.values.rate * 100).toFixed(2)}%\n`;
