@@ -60,6 +60,14 @@ type Config struct {
 	// CircuitBreakerCooldown is the cooldown period after which the circuit breaker allows a trial call.
 	// 0 means use default (30s).
 	CircuitBreakerCooldown int
+	// ConsumerMaxConcurrency is the number of messages processed simultaneously.
+	// When 0, defaults to 4. Higher values allow more in-flight messages,
+	// which makes backpressure more likely to trigger under load.
+	ConsumerMaxConcurrency int
+	// HandlerProcessingMs is the simulated processing time per message.
+	// When 0, defaults to 5ms. Higher values slow the handler relative to
+	// the producer, which is what causes the in-flight queue to back up.
+	HandlerProcessingMs int
 }
 
 // Load reads configuration from the environment with sane defaults.
@@ -81,6 +89,8 @@ func Load() (Config, error) {
 		BackpressureCheckInterval:    getEnvInt("BACKPRESSURE_CHECK_INTERVAL_MS", 0),
 		CircuitBreakerThreshold:      getEnvInt("CIRCUIT_BREAKER_THRESHOLD", 0),
 		CircuitBreakerCooldown:       getEnvInt("CIRCUIT_BREAKER_COOLDOWN_MS", 0),
+		ConsumerMaxConcurrency:       getEnvInt("CONSUMER_MAX_CONCURRENCY", 0),
+		HandlerProcessingMs:          getEnvInt("HANDLER_PROCESSING_MS", 0),
 	}
 
 	if c.Port < 1 || c.Port > 65535 {
@@ -106,6 +116,12 @@ func Load() (Config, error) {
 	}
 	if c.CircuitBreakerCooldown < 0 {
 		return Config{}, fmt.Errorf("CIRCUIT_BREAKER_COOLDOWN_MS must be >= 0, got %d", c.CircuitBreakerCooldown)
+	}
+	if c.ConsumerMaxConcurrency < 0 {
+		return Config{}, fmt.Errorf("CONSUMER_MAX_CONCURRENCY must be >= 0, got %d", c.ConsumerMaxConcurrency)
+	}
+	if c.HandlerProcessingMs < 0 {
+		return Config{}, fmt.Errorf("HANDLER_PROCESSING_MS must be >= 0, got %d", c.HandlerProcessingMs)
 	}
 	switch c.Env {
 	case "development", "staging", "production":

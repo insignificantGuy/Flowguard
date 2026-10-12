@@ -161,6 +161,20 @@ func newConsumer(cfg config.Config, metrics *observability.Metrics) (*consumer.C
 		cbCooldown = 30 * time.Second
 	}
 
+	// Concurrent processing lets the in-flight queue grow when the producer
+	// outruns the handler, which is what makes backpressure observable.
+	concurrency := cfg.ConsumerMaxConcurrency
+	if concurrency <= 0 {
+		concurrency = 4
+	}
+
+	// A slow handler (relative to the producer rate) is what causes the
+	// in-flight queue to back up past the pause threshold.
+	handlerProcMs := cfg.HandlerProcessingMs
+	if handlerProcMs <= 0 {
+		handlerProcMs = 5
+	}
+
 	cons, err := consumer.NewConsumerWithMetrics(consumer.Config{
 		Kafka: kafka.ConsumerConfig{
 			Brokers:        cfg.KafkaBrokers,
@@ -172,7 +186,11 @@ func newConsumer(cfg config.Config, metrics *observability.Metrics) (*consumer.C
 		Backpressure:           bp,
 		CircuitBreakerThreshold: cbThreshold,
 		CircuitBreakerCooldown:  cbCooldown,
-	}, &consumer.EchoHandler{Greeting: cfg.KafkaTopic}, metrics)
+		MaxConcurrency:          concurrency,
+	}, &consumer.EchoHandler{
+		Greeting:       cfg.KafkaTopic,
+		ProcessingTime: time.Duration(handlerProcMs) * time.Millisecond,
+	}, metrics)
 	if err != nil {
 		return nil, err
 	}

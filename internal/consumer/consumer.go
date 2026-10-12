@@ -53,6 +53,12 @@ type Config struct {
 	// DeadLetterTopic is the topic to send dead-letter messages to.
 	// When empty, messages are stored in-memory in the dead-letter queue.
 	DeadLetterTopic string
+	// MaxConcurrency is the maximum number of messages processed
+	// simultaneously. When > 1, the consumer fetches and queues messages
+	// concurrently, which is what makes backpressure observable: the
+	// in-flight queue depth grows when the producer outruns the handler.
+	// When 0 or 1, processing is serial (no in-flight queue).
+	MaxConcurrency int
 }
 
 // Consumer reads messages from Kafka and processes them with resilience.
@@ -63,6 +69,12 @@ type Consumer struct {
 	dlq         *resilience.DeadLetterQueue
 	backpressure *resilience.BackpressureController
 	metrics     *observability.Metrics
+
+	// maxConcurrency caps the number of messages processed simultaneously.
+	// Messages beyond this limit are queued in the Kafka consumer's internal
+	// buffer; if that fills, the broker stops fetching (natural backpressure).
+	// When set to 0 or 1, processing is serial (no in-flight queue).
+	maxConcurrency int
 
 	mu      sync.Mutex
 	running bool
@@ -82,8 +94,9 @@ func NewConsumerWithMetrics(cfg Config, handler Handler, metrics *observability.
 	}
 
 	c := &Consumer{
-		kafka:   kc,
-		handler: handler,
+		kafka:          kc,
+		handler:        handler,
+		maxConcurrency: cfg.MaxConcurrency,
 		breaker: resilience.NewCircuitBreaker(
 			cfg.CircuitBreakerThreshold,
 			cfg.CircuitBreakerCooldown,
@@ -110,6 +123,11 @@ func NewConsumerWithMetrics(cfg Config, handler Handler, metrics *observability.
 //
 // This method blocks until the context is cancelled or the consumer is
 // closed. It is safe to call Run concurrently with other goroutines.
+//
+// When MaxConcurrency > 1, messages are dispatched to a bounded pool of
+// worker goroutines. The pool's buffered channel acts as the in-flight
+// queue: when it fills, the consumer stops fetching from Kafka, which is
+// the mechanism by which backpressure pauses intake.
 func (c *Consumer) Run(ctx context.Context) error {
 	c.mu.Lock()
 	if c.running {
@@ -125,17 +143,62 @@ func (c *Consumer) Run(ctx context.Context) error {
 		c.mu.Unlock()
 	}()
 
+	concurrency := c.maxConcurrency
+	if concurrency <= 0 {
+		concurrency = 1
+	}
+
+	if concurrency == 1 {
+		// Serial path — no in-flight queue, backpressure depth stays near 0.
+		for {
+			select {
+			case <-ctx.Done():
+				return ctx.Err()
+			case msg, ok := <-c.kafka.Messages():
+				if !ok {
+					return nil
+				}
+				c.processMessage(msg)
+			case err := <-c.kafka.Errors():
+				if err != nil {
+					return err
+				}
+			}
+		}
+	}
+
+	// Concurrent path — a bounded worker pool lets the in-flight queue
+	// grow when the producer outruns the handler, which is what makes
+	// backpressure observable.
+	jobs := make(chan *kafka.ConsumerMessage, concurrency*2)
+	var wg sync.WaitGroup
+	for i := 0; i < concurrency; i++ {
+		wg.Add(1)
+		go func() {
+			defer wg.Done()
+			for msg := range jobs {
+				c.processMessage(msg)
+			}
+		}()
+	}
+
 	for {
 		select {
 		case <-ctx.Done():
+			close(jobs)
+			wg.Wait()
 			return ctx.Err()
 		case msg, ok := <-c.kafka.Messages():
 			if !ok {
+				close(jobs)
+				wg.Wait()
 				return nil
 			}
-			c.processMessage(msg)
+			jobs <- msg
 		case err := <-c.kafka.Errors():
 			if err != nil {
+				close(jobs)
+				wg.Wait()
 				return err
 			}
 		}
