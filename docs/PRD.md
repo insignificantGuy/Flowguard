@@ -29,6 +29,13 @@ circuit breaker, and dead-letter queue protection.
 - k6 load testing script
 - Comparison runs with resilience mechanisms enabled/disabled
 
+### Phase 4: Ship
+- System runnable end-to-end with one command (`docker-compose up`)
+- README fully written: problem statement, architecture diagram, resilience mechanisms explained with design decisions, how to run it, load-test results embedded
+- No placeholder or "(planned)" language anywhere
+- Portfolio write-up paragraph written (problem, three hardest design decisions, what would be improved with more time)
+- Roadmap checklist (all 4 phases) fully checked
+
 ## Architecture
 
 ```

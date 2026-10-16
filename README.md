@@ -215,7 +215,7 @@ The PRD document is published to Kafka for end-to-end pipeline demonstration:
 ./bin/publish-prd kafka:9092 RECONCILIATION docs/PRD.md
 
 # Or run from inside the Docker container
-docker compose exec flowguard /flowguard publish-prd kafka:9092 RECONCILIATION /app/docs/PRD.md
+docker compose exec flowguard /publish-prd kafka:9092 RECONCILIATION /app/docs/PRD.md
 ```
 
 The PRD is stored at `docs/PRD.md` and can be published to any Kafka topic for testing the full pipeline: file → Kafka → consumer → handler.
@@ -223,6 +223,20 @@ The PRD is stored at `docs/PRD.md` and can be published to any Kafka topic for t
 ### Design Rationale
 
 The flowguard pipeline implements resilience through three complementary mechanisms: backpressure prevents system overload by pausing intake when queue depth exceeds thresholds, circuit breaker stops repeated calls to failing dependencies to allow recovery, and dead-letter queue provides graceful degradation by preserving messages that cannot be processed. These mechanisms work together to ensure the system remains operational under varying load conditions and failure scenarios. The backpressure configuration uses hysteresis (different pause/resume thresholds) to prevent oscillation near the threshold boundary. Circuit breaker follows the standard closed/open/half-open states with configurable failure threshold and cooldown period. Dead-letter queue stores messages with failure reasons for later inspection and replay. All mechanisms are independently observable through Prometheus metrics, enabling operators to tune parameters based on observed behavior in production.
+
+### Portfolio Write-up
+
+**Problem:** Building a reliable message pipeline that can ingest HTTP requests, buffer them via Kafka, and process them resiliently despite real-world failures like traffic spikes, downstream outages, or processing bugs—without dropping messages or crashing the system.
+
+**Three Hardest Design Decisions:**
+1. **Choosing hysteresis-based backpressure thresholds** (pause at 800, resume at 200) to avoid oscillation near the boundary while still protecting against unbounded queue growth.
+2. **Implementing the circuit breaker with a half-open state** to safely test dependency recovery without overwhelming a healing service.
+3. **Decoupling the dead-letter queue from Kafka** (in-memory fallback) so graceful degradation works even when Kafka itself is unavailable, trading durability for availability during total outages.
+
+**What I’d Improve with More Time:**
+- Add persistent dead-letter queue (e.g., to a separate Kafka topic or disk) for replay after recovery.
+- Introduce adaptive backpressure that tunes pause/resume thresholds based on observed latency and error rates.
+- Expand observability with end-to-end latency tracing (e.g., OpenTelemetry) to pinpoint bottlenecks across HTTP→Kafka→consumer→handler.
 
 ## Testing
 

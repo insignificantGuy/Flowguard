@@ -18,7 +18,9 @@ RUN go mod download
 COPY . .
 
 RUN go build -ldflags="-s -w -X main.version=1.0.0 -X main.commit=unknown -X main.date=2026-01-01T00:00:00Z" \
-    -trimpath -o /out/flowguard ./cmd/server
+    -trimpath -o /out/flowguard ./cmd/server && \
+    go build -ldflags="-s -w -X main.version=1.0.0" \
+    -trimpath -o /out/publish-prd ./cmd/publish-prd
 
 # ---------------------------------------------------------------------------
 # Runtime — minimal distroless or alpine
@@ -28,6 +30,8 @@ FROM alpine:3.21 AS runtime
 ENV ENV=production PORT=3000 HOST=0.0.0.0 LOG_LEVEL=info
 
 COPY --from=builder /out/flowguard /flowguard
+COPY --from=builder /out/publish-prd /publish-prd
+COPY docs/PRD.md /app/docs/PRD.md
 
 # Create user at runtime (alpine may not have same uid/gid)
 RUN addgroup -g 1001 -S appgroup && adduser -u 1001 -S appuser -G appgroup \
