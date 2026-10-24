@@ -1,0 +1,17 @@
+	flowguard/cmd/evidence		coverage: 0.0% of statements
+	flowguard/cmd/publish-prd		coverage: 0.0% of statements
+	flowguard/cmd/server		coverage: 0.0% of statements
+	flowguard/internal/config		coverage: 0.0% of statements
+ok  	flowguard/internal/consumer	1.674s	coverage: 66.9% of statements
+	flowguard/internal/errors		coverage: 0.0% of statements
+	flowguard/internal/handler		coverage: 0.0% of statements
+ok  	flowguard/internal/kafka	2.379s	coverage: 36.6% of statements
+	flowguard/internal/logger		coverage: 0.0% of statements
+	flowguard/internal/middleware		coverage: 0.0% of statements
+?   	flowguard/internal/model	[no test files]
+ok  	flowguard/internal/observability	1.838s	coverage: 56.5% of statements
+ok  	flowguard/internal/resilience	1.623s	coverage: 89.7% of statements
+	flowguard/internal/response		coverage: 0.0% of statements
+	flowguard/internal/router		coverage: 0.0% of statements
+	flowguard/internal/service		coverage: 0.0% of statements
+ok  	flowguard/test	1.338s	coverage: [no statements]

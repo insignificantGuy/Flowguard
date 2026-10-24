@@ -30,7 +30,23 @@ jobs:
         run: go vet ./...
 
       - name: Test (race detector)
-        run: go test ./... -race -count=1 -v
+        run: go test ./... -race -count=1 -v -coverprofile=coverage.out -covermode=atomic
+
+      - name: Build CLI artifacts
+        run: |
+          mkdir -p bin
+          go build -o bin/flowguard ./cmd/server
+          go build -o bin/publish-prd ./cmd/publish-prd
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: binaries
+          path: bin/
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: coverage
+          path: coverage.out
 
       - name: Upload coverage
         uses: codecov/codecov-action@v4

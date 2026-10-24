@@ -51,7 +51,7 @@ func New(c Config) (Producer, error) {
 	cfg := sarama.NewConfig()
 	cfg.Producer.Return.Successes = true
 	cfg.Producer.Return.Errors = true
-	cfg.Producer.RequiredAcks = sarama.NoResponse // wait for leader ack only
+	cfg.Producer.RequiredAcks = sarama.WaitForAll // acknowledge replicated writes
 	cfg.Producer.Retry.Max = 5
 	if c.Timeout > 0 {
 		cfg.Producer.Timeout = c.Timeout
@@ -71,6 +71,9 @@ type producer struct {
 }
 
 func (pr *producer) Publish(ctx context.Context, topic, key, value string) error {
+	if err := ctx.Err(); err != nil {
+		return err
+	}
 	if pr.timeout > 0 {
 		var cancel context.CancelFunc
 		ctx, cancel = context.WithTimeout(ctx, pr.timeout)

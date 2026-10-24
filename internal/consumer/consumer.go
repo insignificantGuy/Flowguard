@@ -57,24 +57,29 @@ type Config struct {
 	// simultaneously. When > 1, the consumer fetches and queues messages
 	// concurrently, which is what makes backpressure observable: the
 	// in-flight queue depth grows when the producer outruns the handler.
-	// When 0 or 1, processing is serial (no in-flight queue).
-	MaxConcurrency int
+	// When 0 or 1, one worker processes the bounded queue.
+	MaxConcurrency        int
+	DisableBackpressure   bool
+	DisableCircuitBreaker bool
 }
 
 // Consumer reads messages from Kafka and processes them with resilience.
 type Consumer struct {
-	kafka       kafka.Consumer
-	handler     Handler
-	breaker     *resilience.CircuitBreaker
-	dlq         *resilience.DeadLetterQueue
+	kafka        kafka.Consumer
+	handler      Handler
+	breaker      *resilience.CircuitBreaker
+	dlq          *resilience.DeadLetterQueue
 	backpressure *resilience.BackpressureController
-	metrics     *observability.Metrics
+	metrics      *observability.Metrics
 
-	// maxConcurrency caps the number of messages processed simultaneously.
-	// Messages beyond this limit are queued in the Kafka consumer's internal
-	// buffer; if that fills, the broker stops fetching (natural backpressure).
-	// When set to 0 or 1, processing is serial (no in-flight queue).
-	maxConcurrency int
+	// maxConcurrency caps workers; queueCapacity bounds waiting jobs.
+	maxConcurrency        int
+	queueCapacity         int
+	disableBackpressure   bool
+	disableCircuitBreaker bool
+	topic                 string
+	done                  chan struct{}
+	stop                  context.CancelFunc
 
 	mu      sync.Mutex
 	running bool
@@ -94,9 +99,13 @@ func NewConsumerWithMetrics(cfg Config, handler Handler, metrics *observability.
 	}
 
 	c := &Consumer{
-		kafka:          kc,
-		handler:        handler,
-		maxConcurrency: cfg.MaxConcurrency,
+		kafka:                 kc,
+		handler:               handler,
+		maxConcurrency:        cfg.MaxConcurrency,
+		queueCapacity:         cfg.Backpressure.MaxQueueDepth,
+		disableBackpressure:   cfg.DisableBackpressure,
+		disableCircuitBreaker: cfg.DisableCircuitBreaker,
+		topic:                 cfg.Kafka.Topic,
 		breaker: resilience.NewCircuitBreaker(
 			cfg.CircuitBreakerThreshold,
 			cfg.CircuitBreakerCooldown,
@@ -107,14 +116,25 @@ func NewConsumerWithMetrics(cfg Config, handler Handler, metrics *observability.
 
 	// Set up backpressure controller
 	pauseFn := func() error {
-		c.kafka.Pause()
+		if !c.disableBackpressure {
+			c.kafka.Pause()
+		}
 		return nil
 	}
 	resumeFn := func() error {
-		c.kafka.Resume()
+		if !c.disableBackpressure {
+			c.kafka.Resume()
+		}
 		return nil
 	}
 	c.backpressure = resilience.NewBackpressureController(cfg.Backpressure, pauseFn, resumeFn)
+	if metrics != nil {
+		metrics.MessagesPublishedTotal.WithLabelValues(cfg.Kafka.Topic)
+		metrics.MessagesConsumedTotal.WithLabelValues(cfg.Kafka.Topic)
+		metrics.ProcessingErrorsTotal.WithLabelValues(cfg.Kafka.Topic, "handler_error")
+		metrics.ProcessingErrorsTotal.WithLabelValues(cfg.Kafka.Topic, "circuit_breaker_open")
+	}
+	c.updateMetrics()
 
 	return c, nil
 }
@@ -122,9 +142,9 @@ func NewConsumerWithMetrics(cfg Config, handler Handler, metrics *observability.
 // Run starts consuming messages and processing them.
 //
 // This method blocks until the context is cancelled or the consumer is
-// closed. It is safe to call Run concurrently with other goroutines.
+// closed. A second concurrent Run call is rejected.
 //
-// When MaxConcurrency > 1, messages are dispatched to a bounded pool of
+// Messages are dispatched to a bounded pool of
 // worker goroutines. The pool's buffered channel acts as the in-flight
 // queue: when it fills, the consumer stops fetching from Kafka, which is
 // the mechanism by which backpressure pauses intake.
@@ -134,43 +154,22 @@ func (c *Consumer) Run(ctx context.Context) error {
 		c.mu.Unlock()
 		return errors.New("consumer: already running")
 	}
+	ctx, cancel := context.WithCancel(ctx)
 	c.running = true
+	c.stop = cancel
+	c.done = make(chan struct{})
+	done := c.done
 	c.mu.Unlock()
-
-	defer func() {
-		c.mu.Lock()
-		c.running = false
-		c.mu.Unlock()
-	}()
-
+	defer func() { cancel(); c.mu.Lock(); c.running = false; close(done); c.mu.Unlock() }()
 	concurrency := c.maxConcurrency
-	if concurrency <= 0 {
+	if concurrency < 1 {
 		concurrency = 1
 	}
-
-	if concurrency == 1 {
-		// Serial path — no in-flight queue, backpressure depth stays near 0.
-		for {
-			select {
-			case <-ctx.Done():
-				return ctx.Err()
-			case msg, ok := <-c.kafka.Messages():
-				if !ok {
-					return nil
-				}
-				c.processMessage(msg)
-			case err := <-c.kafka.Errors():
-				if err != nil {
-					return err
-				}
-			}
-		}
+	capacity := c.queueCapacity
+	if capacity < 1 {
+		capacity = 1000
 	}
-
-	// Concurrent path — a bounded worker pool lets the in-flight queue
-	// grow when the producer outruns the handler, which is what makes
-	// backpressure observable.
-	jobs := make(chan *kafka.ConsumerMessage, concurrency*2)
+	jobs := make(chan *kafka.ConsumerMessage, capacity)
 	var wg sync.WaitGroup
 	for i := 0; i < concurrency; i++ {
 		wg.Add(1)
@@ -178,31 +177,75 @@ func (c *Consumer) Run(ctx context.Context) error {
 			defer wg.Done()
 			for msg := range jobs {
 				c.processMessage(msg)
+				c.backpressure.Remove()
+				c.updateMetrics()
+				if msg.Ack != nil {
+					msg.Ack()
+				}
 			}
 		}()
 	}
-
+	defer func() { close(jobs); wg.Wait(); c.updateMetrics() }()
+	// Update gauges even when no messages arrive (pause/resume and idle zero).
+	metricsDone := make(chan struct{})
+	defer close(metricsDone)
+	go func() {
+		ticker := time.NewTicker(20 * time.Millisecond)
+		defer ticker.Stop()
+		for {
+			select {
+			case <-metricsDone:
+				return
+			case <-ticker.C:
+				c.updateMetrics()
+			}
+		}
+	}()
+	errs := c.kafka.Errors()
 	for {
+		// Gate local intake too: Kafka Pause does not discard already fetched records.
+		if !c.disableBackpressure && c.backpressure.IsPaused() {
+			select {
+			case <-ctx.Done():
+				return ctx.Err()
+			case <-time.After(time.Millisecond):
+			}
+			continue
+		}
 		select {
 		case <-ctx.Done():
-			close(jobs)
-			wg.Wait()
 			return ctx.Err()
+		case err, ok := <-errs:
+			if !ok {
+				errs = nil
+				continue
+			}
+			if err != nil {
+				return err
+			}
 		case msg, ok := <-c.kafka.Messages():
 			if !ok {
-				close(jobs)
-				wg.Wait()
 				return nil
 			}
-			jobs <- msg
-		case err := <-c.kafka.Errors():
-			if err != nil {
-				close(jobs)
-				wg.Wait()
-				return err
+			c.backpressure.Record() // queued + executing, including pending dispatch
+			select {
+			case jobs <- msg:
+			case <-ctx.Done():
+				c.backpressure.Remove()
+				return ctx.Err()
 			}
 		}
 	}
+}
+
+func (c *Consumer) updateMetrics() {
+	if c.metrics == nil {
+		return
+	}
+	c.metrics.SetBackpressureDepth(c.topic, c.backpressure.Depth())
+	c.metrics.SetBackpressurePaused(c.topic, !c.disableBackpressure && c.backpressure.IsPaused())
+	c.metrics.SetCircuitBreakerState("default", int(c.breaker.State()))
+	c.metrics.SetDeadLetterQueueDepth(c.topic, c.dlq.Count())
 }
 
 // processMessage handles a single message with the resilience mechanisms.
@@ -210,8 +253,7 @@ func (c *Consumer) processMessage(msg *kafka.ConsumerMessage) {
 	start := time.Now()
 
 	// Record the message in the backpressure controller
-	c.backpressure.Record()
-	defer c.backpressure.Remove()
+	// Intake accounts for queued and executing messages.
 
 	// Record metrics
 	if c.metrics != nil {
@@ -223,9 +265,14 @@ func (c *Consumer) processMessage(msg *kafka.ConsumerMessage) {
 	}
 
 	// Process the message through the circuit breaker
-	err := c.breaker.Execute(func() error {
-		return c.handler.Handle(msg)
-	})
+	call := func() error { return c.handler.Handle(msg) }
+	var err error
+	if c.disableCircuitBreaker {
+		err = call()
+	} else {
+		err = c.breaker.Execute(call)
+	}
+	defer c.updateMetrics()
 
 	if err != nil {
 		// Circuit breaker is open — graceful degradation
@@ -268,11 +315,18 @@ func (c *Consumer) BackpressureDepth() int64 {
 
 // BackpressureIsPaused returns whether intake is currently paused.
 func (c *Consumer) BackpressureIsPaused() bool {
-	return c.backpressure.IsPaused()
+	return !c.disableBackpressure && c.backpressure.IsPaused()
 }
 
 // Close shuts down the consumer and releases resources.
 func (c *Consumer) Close() error {
+	c.mu.Lock()
+	stop, done := c.stop, c.done
+	c.mu.Unlock()
+	if stop != nil {
+		stop()
+		<-done
+	}
 	c.backpressure.Stop()
 	return c.kafka.Close()
 }
@@ -286,7 +340,7 @@ func DefaultConsumerConfig() Config {
 			ConsumerOffset:  kafka.OffsetOldest,
 			ConsumerTimeout: 5 * time.Second,
 		},
-		Backpressure: resilience.DefaultBackpressureConfig(),
+		Backpressure:            resilience.DefaultBackpressureConfig(),
 		CircuitBreakerThreshold: 3,
 		CircuitBreakerCooldown:  30 * time.Second,
 	}

@@ -1,0 +1,167 @@
+{
+    "metrics": {
+        "http_req_waiting": {
+            "p(95)": 1.535,
+            "p(99)": 2.901,
+            "avg": 0.869212595801399,
+            "min": 0.3,
+            "max": 15.825,
+            "p(90)": 1.218
+        },
+        "http_req_duration": {
+            "avg": 0.936104965011661,
+            "min": 0.318,
+            "max": 16.211,
+            "p(90)": 1.295,
+            "p(95)": 1.613,
+            "p(99)": 2.978,
+            "thresholds": {
+                "p(95)<500": false
+            }
+        },
+        "http_reqs": {
+            "count": 3001,
+            "rate": 199.842390213543
+        },
+        "http_req_duration{expected_response:true}": {
+            "p(99)": 2.978,
+            "avg": 0.936104965011661,
+            "min": 0.318,
+            "max": 16.211,
+            "p(90)": 1.295,
+            "p(95)": 1.613
+        },
+        "http_req_sending": {
+            "avg": 0.026421192935688443,
+            "min": 0.003,
+            "max": 0.937,
+            "p(90)": 0.038,
+            "p(95)": 0.048,
+            "p(99)": 0.099
+        },
+        "requests_total": {
+            "count": 3001,
+            "rate": 199.842390213543
+        },
+        "iteration_duration": {
+            "p(95)": 12.283375,
+            "p(99)": 14.423583,
+            "avg": 11.304553962345883,
+            "min": 10.437291,
+            "max": 26.644584,
+            "p(90)": 11.789167
+        },
+        "http_req_tls_handshaking": {
+            "avg": 0,
+            "min": 0,
+            "max": 0,
+            "p(90)": 0,
+            "p(95)": 0,
+            "p(99)": 0
+        },
+        "data_received": {
+            "count": 1034031,
+            "rate": 68858.12282402535
+        },
+        "http_req_blocked": {
+            "p(99)": 0.24,
+            "avg": 0.018745418193935486,
+            "min": 0,
+            "max": 0.879,
+            "p(90)": 0.014,
+            "p(95)": 0.14
+        },
+        "data_sent": {
+            "count": 539559,
+            "rate": 35930.27664819362
+        },
+        "http_req_receiving": {
+            "max": 0.385,
+            "p(90)": 0.063,
+            "p(95)": 0.077,
+            "p(99)": 0.127,
+            "avg": 0.04047117627457549,
+            "min": 0.007
+        },
+        "checks": {
+            "passes": 9003,
+            "fails": 0,
+            "value": 1
+        },
+        "vus_max": {
+            "value": 200,
+            "min": 200,
+            "max": 200
+        },
+        "errors": {
+            "passes": 0,
+            "fails": 3001,
+            "thresholds": {
+                "rate<0.1": false
+            },
+            "value": 0
+        },
+        "request_duration": {
+            "avg": 1.162279240253249,
+            "min": 0,
+            "max": 16,
+            "p(90)": 2,
+            "p(95)": 2,
+            "p(99)": 3
+        },
+        "vus": {
+            "value": 2,
+            "min": 2,
+            "max": 3
+        },
+        "http_req_failed": {
+            "passes": 0,
+            "fails": 3001,
+            "thresholds": {
+                "rate<0.1": false
+            },
+            "value": 0
+        },
+        "http_req_connecting": {
+            "avg": 0.010493502165944685,
+            "min": 0,
+            "max": 0.689,
+            "p(90)": 0,
+            "p(95)": 0.12,
+            "p(99)": 0.194
+        },
+        "iterations": {
+            "count": 3001,
+            "rate": 199.842390213543
+        }
+    },
+    "root_group": {
+        "name": "",
+        "path": "",
+        "id": "d41d8cd98f00b204e9800998ecf8427e",
+        "groups": {},
+        "checks": {
+                "status is 200": {
+                    "name": "status is 200",
+                    "path": "::status is 200",
+                    "id": "6210a8cd14cd70477eba5c5e4cb3fb5f",
+                    "passes": 3001,
+                    "fails": 0
+                },
+                "has trace id": {
+                    "name": "has trace id",
+                    "path": "::has trace id",
+                    "id": "2dcda26f05df7c8d30bb310115a7947b",
+                    "passes": 3001,
+                    "fails": 0
+                },
+                "has echo": {
+                    "name": "has echo",
+                    "path": "::has echo",
+                    "id": "3c3ce7905d0d1d0f12ffcc7487972e28",
+                    "passes": 3001,
+                    "fails": 0
+                }
+            }
+    }
+}

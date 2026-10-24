@@ -1,0 +1,16 @@
+
+ =========================
+ LOAD TEST RESULTS SUMMARY
+ =========================
+
+ Total Requests: 3000
+ Request Duration:
+   avg: 1.48ms
+   min: 0.32ms
+   max: 84.23ms
+   p(90): 1.53ms
+   p(95): 2.22ms
+   p(99): 11.71ms
+ Error Rate: 0.00%
+ Custom Error Rate: 0.00%
+

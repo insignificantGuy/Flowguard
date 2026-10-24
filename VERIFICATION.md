@@ -1,74 +1,31 @@
-# Flowguard Phase 3 Implementation Verification
+# Verification — 24 Oct 2026
 
-## ✅ Phase 3: Observability + Load Testing - COMPLETE
+The earlier uncontrolled October runs and their enabled/disabled claims are
+superseded by the paired experiments linked in [README.md](README.md).
 
-### Implemented Components:
+- [Raw paired results and exact settings](docs/evidence/results.json)
+- [Breaker transition log](docs/evidence/breaker-enabled.log)
+- [Race-enabled local test result](docs/evidence/tests.txt)
+- [Function coverage](docs/evidence/coverage.txt)
+- [Reproduction runner](scripts/run-evidence.py)
 
-#### 1. Prometheus Metrics Endpoint (`/metrics`)
-- Added `/metrics` endpoint serving Prometheus format
-- Integrated metrics recording throughout the pipeline
-- Messages published/consumed counters
-- Processing latency histograms
-- Error counters with reason labels
-- Circuit breaker state gauge
-- Dead letter queue depth gauge
-- Backpressure depth and pause state gauges
+Run:
 
-#### 2. Docker Compose Observability Stack
-- **Prometheus**: Configured to scrape flowguard metrics
-- **Grafana**: Pre-configured with dashboard showing:
-  - Message throughput (published vs consumed)
-  - Error rates
-  - Circuit breaker state
-  - Backpressure depth and paused state
-  - Dead letter queue depth
-  - Processing latency (p50, p95, p99 quantiles)
-  - Processing errors by reason
-  - Summary table of all key metrics
-
-#### 3. Load Testing Script (`scripts/load-test.sh`)
-- k6-based load test script
-- Configurable duration, VUS, and rate
-- Custom metrics for error rates and request duration
-- Thresholds for SLA validation
-- HTML summary report
-
-#### 4. Integration Points
-- Modified `router.go` to expose `/metrics` endpoint
-- Updated `handler/send-message.go` to record publish metrics
-- Enhanced `consumer/consumer.go` to record all resilience metrics
-- Added metrics parameter to handler constructors
-- Updated test files to use isolated metric registries
-
-### Key Features:
-- **Zero duplicate metric registration** - uses `NewTestMetrics()` in tests
-- **Production-ready metrics** - follows Prometheus naming conventions
-- **Rich labeling** - all metrics properly labeled for filtering
-- **Graceful degradation visibility** - dead letter queue depth visible
-- **Backpressure visibility** - shows when intake is paused/resumed
-- **Circuit breaker visibility** - shows open/closed/half-open states
-- **Latency tracking** - processing time histogram with useful quantiles
-
-### Verification:
-- All existing tests pass
-- New metrics endpoint accessible at `/metrics`
-- Docker compose stack builds successfully
-- Load test script is executable and functional
-- README updated with comprehensive documentation
-
-### Usage:
 ```bash
-# Start observability stack
-docker compose up --build
-
-# Access services:
-# - API: http://localhost:3000
-# - Metrics: http://localhost:3000/metrics  
-# - Grafana: http://localhost:3002 (admin/admin)
-# - Prometheus: http://localhost:9090
-
-# Run load test
-./scripts/load-test.sh --duration 1m --vus 20 --rate 150
+go test ./... -race -count=1 -coverprofile=coverage.out -covermode=atomic
+go vet ./...
+docker compose -p flowthrough-evidence -f deploy/evidence/compose.yml up -d --wait
+go build -o bin/evidence ./cmd/evidence
+python3 scripts/run-evidence.py
 ```
 
-This completes Phase 3 implementation, providing the observability and load testing capabilities needed to validate and demonstrate the resilience mechanisms implemented in Phase 2.
+The runner fails if k6 fails or drops iterations, a topic already exists,
+messages do not drain within the deadline, or dashboard capture fails. Each run
+starts with a fresh topic and group and zero counters. It samples every 100ms;
+the server tracks peak outstanding count every 5ms. There are no forced breaker
+state changes; the injected downstream outage opens it and a successful probe
+closes it. Screenshots show an explicit historical time within each experiment,
+captured after load generation to avoid adding browser CPU load to the test.
+
+These are local demonstration results, not a production capacity claim. Kafka
+redelivery after crashes remains possible; the fallback DLQ is process-local.

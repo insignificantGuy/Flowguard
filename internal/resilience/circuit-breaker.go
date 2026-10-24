@@ -16,6 +16,7 @@ package resilience
 
 import (
 	"errors"
+	"log"
 	"sync"
 	"time"
 )
@@ -60,13 +61,14 @@ var ErrCircuitBreakerOpen = errors.New("circuit breaker is open")
 //
 // The breaker is safe for concurrent use.
 type CircuitBreaker struct {
-	mu              sync.Mutex
-	state           CircuitBreakerState
+	mu                  sync.Mutex
+	state               CircuitBreakerState
 	consecutiveFailures int
 	lastFailureTime     time.Time
-	opensAt            time.Time
-	threshold          int
-	cooldown           time.Duration
+	opensAt             time.Time
+	threshold           int
+	cooldown            time.Duration
+	generation          uint64
 }
 
 // NewCircuitBreaker creates a circuit breaker with the given failure threshold
@@ -79,9 +81,9 @@ func NewCircuitBreaker(threshold int, cooldown time.Duration) *CircuitBreaker {
 		cooldown = 0
 	}
 	return &CircuitBreaker{
-		state:    StateClosed,
+		state:     StateClosed,
 		threshold: threshold,
-		cooldown: cooldown,
+		cooldown:  cooldown,
 	}
 }
 
@@ -94,53 +96,50 @@ func NewCircuitBreaker(threshold int, cooldown time.Duration) *CircuitBreaker {
 //
 // If fn returns an error, the breaker records a failure. If fn succeeds,
 // the breaker records a success and closes if it was half-open.
+// transition runs under mu, so logs include even brief half-open transitions.
+func (cb *CircuitBreaker) transition(state CircuitBreakerState) {
+	if cb.state == state {
+		return
+	}
+	log.Printf("circuit_breaker from=%s to=%s", cb.state, state)
+	cb.state = state
+	cb.generation++
+}
 func (cb *CircuitBreaker) Execute(fn func() error) error {
 	cb.mu.Lock()
-
-	switch cb.state {
-	case StateOpen:
-		if time.Since(cb.opensAt) >= cb.cooldown {
-			// Cooldown elapsed — allow a trial call (half-open)
-			cb.state = StateHalfOpen
-		} else {
-			// Still in cooldown — reject immediately
+	if cb.state == StateOpen {
+		if time.Since(cb.opensAt) < cb.cooldown {
 			cb.mu.Unlock()
 			return ErrCircuitBreakerOpen
 		}
-	case StateHalfOpen:
-		// Only one trial call at a time — reject while a trial is in flight
+		cb.transition(StateHalfOpen)
+	} else if cb.state == StateHalfOpen {
 		cb.mu.Unlock()
 		return ErrCircuitBreakerOpen
 	}
-
-	// StateClosed or transitioning to half-open — allow the call
+	generation := cb.generation
+	trial := cb.state == StateHalfOpen
 	cb.mu.Unlock()
-
 	err := fn()
-
 	cb.mu.Lock()
 	defer cb.mu.Unlock()
-
-	if err != nil {
-		cb.consecutiveFailures++
-		cb.lastFailureTime = time.Now()
-		if cb.consecutiveFailures >= cb.threshold {
-			cb.state = StateOpen
-			cb.opensAt = time.Now()
-		}
+	// Ignore results from calls admitted before a state change.
+	if generation != cb.generation {
 		return err
 	}
-
-	// Success
-	if cb.state == StateHalfOpen {
-		// Trial succeeded — close the breaker
-		cb.state = StateClosed
-		cb.consecutiveFailures = 0
+	if err != nil {
+		cb.consecutiveFailures++
+		if trial || cb.consecutiveFailures >= cb.threshold {
+			cb.transition(StateOpen)
+			cb.opensAt = time.Now()
+		}
 	} else {
-		// Closed state — reset failure count on success
 		cb.consecutiveFailures = 0
+		if trial {
+			cb.transition(StateClosed)
+		}
 	}
-	return nil
+	return err
 }
 
 // State returns the current state of the circuit breaker.
@@ -161,7 +160,7 @@ func (cb *CircuitBreaker) ConsecutiveFailures() int {
 func (cb *CircuitBreaker) Reset() {
 	cb.mu.Lock()
 	defer cb.mu.Unlock()
-	cb.state = StateClosed
+	cb.transition(StateClosed)
 	cb.consecutiveFailures = 0
 }
 
@@ -169,7 +168,7 @@ func (cb *CircuitBreaker) Reset() {
 func (cb *CircuitBreaker) ForceOpen() {
 	cb.mu.Lock()
 	defer cb.mu.Unlock()
-	cb.state = StateOpen
+	cb.transition(StateOpen)
 	cb.opensAt = time.Now()
 }
 
@@ -177,5 +176,5 @@ func (cb *CircuitBreaker) ForceOpen() {
 func (cb *CircuitBreaker) ForceHalfOpen() {
 	cb.mu.Lock()
 	defer cb.mu.Unlock()
-	cb.state = StateHalfOpen
+	cb.transition(StateHalfOpen)
 }

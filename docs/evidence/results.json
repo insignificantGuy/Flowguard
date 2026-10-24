@@ -1,0 +1,216 @@
+[
+  {
+    "name": "backpressure-enabled",
+    "settings": {
+      "duration_seconds": 15,
+      "rate": 200,
+      "vus": 200,
+      "workers": 4,
+      "queue_capacity": 512,
+      "pause": 32,
+      "resume": 8,
+      "delay_ms": 50,
+      "failure_window_seconds": null
+    },
+    "before": {
+      "breaker_state": 0,
+      "dead_lettered": 0,
+      "downstream_calls": 0,
+      "downstream_failures": 0,
+      "metrics": {
+        "consumed": 0,
+        "published": 0
+      },
+      "mode": "enabled",
+      "outstanding": 0,
+      "paused": false,
+      "paused_samples_5ms": 0,
+      "peak_outstanding": 0,
+      "scenario": "backpressure",
+      "succeeded": 0,
+      "time_utc": "2026-10-24T07:44:58.159717Z",
+      "topic": "evidence-20261024074454-backpressure-enabled"
+    },
+    "after": {
+      "breaker_state": 0,
+      "dead_lettered": 0,
+      "downstream_calls": 3001,
+      "downstream_failures": 0,
+      "metrics": {
+        "consumed": 3001,
+        "published": 3001
+      },
+      "mode": "enabled",
+      "outstanding": 0,
+      "paused": false,
+      "paused_samples_5ms": 7361,
+      "peak_outstanding": 32,
+      "scenario": "backpressure",
+      "succeeded": 3001,
+      "time_utc": "2026-10-24T07:45:36.172836Z",
+      "topic": "evidence-20261024074454-backpressure-enabled"
+    }
+  },
+  {
+    "name": "backpressure-disabled",
+    "settings": {
+      "duration_seconds": 15,
+      "rate": 200,
+      "vus": 200,
+      "workers": 4,
+      "queue_capacity": 512,
+      "pause": 32,
+      "resume": 8,
+      "delay_ms": 50,
+      "failure_window_seconds": null
+    },
+    "before": {
+      "breaker_state": 0,
+      "dead_lettered": 0,
+      "downstream_calls": 0,
+      "downstream_failures": 0,
+      "metrics": {
+        "consumed": 0,
+        "published": 0
+      },
+      "mode": "disabled",
+      "outstanding": 0,
+      "paused": false,
+      "paused_samples_5ms": 0,
+      "peak_outstanding": 0,
+      "scenario": "backpressure",
+      "succeeded": 0,
+      "time_utc": "2026-10-24T07:45:45.426089Z",
+      "topic": "evidence-20261024074454-backpressure-disabled"
+    },
+    "after": {
+      "breaker_state": 0,
+      "dead_lettered": 0,
+      "downstream_calls": 3000,
+      "downstream_failures": 0,
+      "metrics": {
+        "consumed": 3000,
+        "published": 3000
+      },
+      "mode": "disabled",
+      "outstanding": 0,
+      "paused": false,
+      "paused_samples_5ms": 0,
+      "peak_outstanding": 517,
+      "scenario": "backpressure",
+      "succeeded": 3000,
+      "time_utc": "2026-10-24T07:46:23.19538Z",
+      "topic": "evidence-20261024074454-backpressure-disabled"
+    }
+  },
+  {
+    "name": "breaker-enabled",
+    "settings": {
+      "duration_seconds": 15,
+      "rate": 200,
+      "vus": 200,
+      "workers": 4,
+      "queue_capacity": 512,
+      "pause": 32,
+      "resume": 8,
+      "delay_ms": 5,
+      "failure_window_seconds": [
+        2,
+        8
+      ]
+    },
+    "before": {
+      "breaker_state": 0,
+      "dead_lettered": 0,
+      "downstream_calls": 0,
+      "downstream_failures": 0,
+      "metrics": {
+        "consumed": 0,
+        "published": 0
+      },
+      "mode": "enabled",
+      "outstanding": 0,
+      "paused": false,
+      "paused_samples_5ms": 0,
+      "peak_outstanding": 0,
+      "scenario": "breaker",
+      "succeeded": 0,
+      "time_utc": "2026-10-24T07:46:31.516253Z",
+      "topic": "evidence-20261024074454-breaker-enabled"
+    },
+    "after": {
+      "breaker_state": 0,
+      "dead_lettered": 1208,
+      "downstream_calls": 1798,
+      "downstream_failures": 6,
+      "metrics": {
+        "consumed": 3000,
+        "published": 3000
+      },
+      "mode": "enabled",
+      "outstanding": 0,
+      "paused": false,
+      "paused_samples_5ms": 0,
+      "peak_outstanding": 18,
+      "scenario": "breaker",
+      "succeeded": 1792,
+      "time_utc": "2026-10-24T07:46:47.197978Z",
+      "topic": "evidence-20261024074454-breaker-enabled"
+    }
+  },
+  {
+    "name": "breaker-disabled",
+    "settings": {
+      "duration_seconds": 15,
+      "rate": 200,
+      "vus": 200,
+      "workers": 4,
+      "queue_capacity": 512,
+      "pause": 32,
+      "resume": 8,
+      "delay_ms": 5,
+      "failure_window_seconds": [
+        2,
+        8
+      ]
+    },
+    "before": {
+      "breaker_state": 0,
+      "dead_lettered": 0,
+      "downstream_calls": 0,
+      "downstream_failures": 0,
+      "metrics": {
+        "consumed": 0,
+        "published": 0
+      },
+      "mode": "disabled",
+      "outstanding": 0,
+      "paused": false,
+      "paused_samples_5ms": 0,
+      "peak_outstanding": 0,
+      "scenario": "breaker",
+      "succeeded": 0,
+      "time_utc": "2026-10-24T07:46:55.555426Z",
+      "topic": "evidence-20261024074454-breaker-disabled"
+    },
+    "after": {
+      "breaker_state": 0,
+      "dead_lettered": 1200,
+      "downstream_calls": 3001,
+      "downstream_failures": 1200,
+      "metrics": {
+        "consumed": 3001,
+        "published": 3001
+      },
+      "mode": "disabled",
+      "outstanding": 0,
+      "paused": false,
+      "paused_samples_5ms": 0,
+      "peak_outstanding": 4,
+      "scenario": "breaker",
+      "succeeded": 1801,
+      "time_utc": "2026-10-24T07:47:11.100325Z",
+      "topic": "evidence-20261024074454-breaker-disabled"
+    }
+  }
+]

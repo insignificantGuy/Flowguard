@@ -56,13 +56,14 @@ func DefaultBackpressureConfig() BackpressureConfig {
 //
 // The controller is safe for concurrent use.
 type BackpressureController struct {
-	cfg        BackpressureConfig
-	pauseFn    func() error
-	resumeFn   func() error
-	depth      atomic.Int64
-	paused     atomic.Bool
-	stopCh     chan struct{}
-	mu         sync.Mutex
+	cfg      BackpressureConfig
+	pauseFn  func() error
+	resumeFn func() error
+	depth    atomic.Int64
+	paused   atomic.Bool
+	stopCh   chan struct{}
+	mu       sync.Mutex
+	stopOnce sync.Once
 }
 
 // NewBackpressureController creates a backpressure controller.
@@ -116,22 +117,20 @@ func (bp *BackpressureController) run() {
 // check evaluates the current queue depth and decides whether to pause or
 // resume intake.
 func (bp *BackpressureController) check() {
+	bp.mu.Lock()
+	defer bp.mu.Unlock()
 	depth := bp.depth.Load()
 	paused := bp.paused.Load()
 
 	if depth >= int64(bp.cfg.PauseAfterDepth) && !paused {
-		bp.mu.Lock()
 		if err := bp.pauseFn(); err != nil {
-			// Log the error but don't crash — backpressure is best-effort
+			return
 		}
-		bp.mu.Unlock()
 		bp.paused.Store(true)
 	} else if depth <= int64(bp.cfg.ResumeAfterDepth) && paused {
-		bp.mu.Lock()
 		if err := bp.resumeFn(); err != nil {
-			// Log the error but don't crash
+			return
 		}
-		bp.mu.Unlock()
 		bp.paused.Store(false)
 	}
 }
@@ -139,11 +138,13 @@ func (bp *BackpressureController) check() {
 // Record records a new message in the queue depth counter.
 func (bp *BackpressureController) Record() {
 	bp.depth.Add(1)
+	bp.check()
 }
 
 // Remove removes a message from the queue depth counter.
 func (bp *BackpressureController) Remove() {
 	bp.depth.Add(-1)
+	bp.check()
 }
 
 // Depth returns the current queue depth.
@@ -158,5 +159,5 @@ func (bp *BackpressureController) IsPaused() bool {
 
 // Stop stops the backpressure controller.
 func (bp *BackpressureController) Stop() {
-	close(bp.stopCh)
+	bp.stopOnce.Do(func() { close(bp.stopCh) })
 }

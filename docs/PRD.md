@@ -1,5 +1,17 @@
 # Flowguard Product Requirements Document (PRD)
 
+## Broker decision — 24 Oct 2026
+
+**Kafka is the broker for this repository.** This repository-local PRD supersedes
+the RabbitMQ wording in the original Notion planning page. It does not require
+publishing the PRD itself as a message. The external Notion page has not been edited.
+
+Use Kafka topics/partitions, consumer groups and completion offsets rather than
+exchanges, queue bindings or RabbitMQ ack/nack terminology. Completion marks are
+committed only through contiguous finished records in each partition. Kafka can
+redeliver after a crash; this is at-least-once delivery, not exactly once. A
+process-local DLQ is the current demonstration fallback and is not durable.
+
 ## Overview
 
 Flowguard is a scalable, production-grade web server in Go that provides a
@@ -27,12 +39,16 @@ circuit breaker, and dead-letter queue protection.
 - Prometheus metrics endpoint
 - Grafana dashboard for visualization
 - k6 load testing script
-- Comparison runs with resilience mechanisms enabled/disabled
+- Like-for-like enabled/disabled comparisons using fresh topics and groups
+- Overload run must show paused intake in Grafana and a bounded outstanding count
+- Failure run must record open → half-open → closed transitions and downstream call reduction
+- After drain: published = consumed = succeeded + dead-lettered; no historical counters
+- Store raw k6 summaries, consumer snapshots, logs and Grafana captures with results
 
 ### Phase 4: Ship
 - System runnable end-to-end with one command (`docker-compose up`)
 - README fully written: problem statement, architecture diagram, resilience mechanisms explained with design decisions, how to run it, load-test results embedded
-- No placeholder or "(planned)" language anywhere
+- Documentation must state remaining limitations without claiming unverified acceptance criteria
 - Portfolio write-up paragraph written (problem, three hardest design decisions, what would be improved with more time)
 - Roadmap checklist (all 4 phases) fully checked
 

@@ -83,11 +83,6 @@ func main() {
 
 	logger.Log.Info().Msg("shutting down...")
 
-	// Flush the Kafka producer first so in-flight publishes complete.
-	if err := app.Close(); err != nil {
-		logger.Log.Error().Err(err).Msg("kafka producer close failed")
-	}
-
 	ctx, cancel := context.WithTimeout(context.Background(), 10*time.Second)
 	defer cancel()
 
@@ -95,5 +90,10 @@ func main() {
 		logger.Log.Error().Err(err).Msg("graceful shutdown failed")
 		os.Exit(1)
 	}
+	// HTTP has drained; stop consumer workers and release Kafka resources.
+	if err := app.Close(); err != nil {
+		logger.Log.Error().Err(err).Msg("kafka producer close failed")
+	}
+
 	logger.Log.Info().Msg("server stopped")
 }

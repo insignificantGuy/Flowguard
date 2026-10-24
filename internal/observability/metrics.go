@@ -26,6 +26,7 @@ import (
 
 // Metrics holds the Prometheus collectors for the pipeline.
 type Metrics struct {
+	gatherer                 prometheus.Gatherer
 	MessagesPublishedTotal   *prometheus.CounterVec
 	MessagesConsumedTotal    *prometheus.CounterVec
 	ProcessingLatencySeconds *prometheus.HistogramVec
@@ -37,8 +38,8 @@ type Metrics struct {
 }
 
 // newMetrics creates a Metrics instance with all collectors registered.
-func newMetrics(reg prometheus.Registerer) *Metrics {
-	m := &Metrics{
+func newMetrics(reg *prometheus.Registry) *Metrics {
+	m := &Metrics{gatherer: reg,
 		MessagesPublishedTotal: prometheus.NewCounterVec(
 			prometheus.CounterOpts{
 				Name: "flowguard_messages_published_total",
@@ -111,14 +112,12 @@ func newMetrics(reg prometheus.Registerer) *Metrics {
 	return m
 }
 
-// NewMetrics creates a new Metrics instance registered with the default Prometheus registry.
-// For production use. Tests should use NewTestMetrics() to avoid duplicate registration.
+// NewMetrics owns its registry so independent applications never double-register.
 func NewMetrics() *Metrics {
-	return newMetrics(prometheus.DefaultRegisterer)
+	return newMetrics(prometheus.NewRegistry())
 }
 
-// NewTestMetrics creates a new Metrics instance with a fresh Prometheus registry.
-// Use this in tests to avoid duplicate registration panics.
+// NewTestMetrics creates isolated collectors for tests.
 func NewTestMetrics() *Metrics {
 	return newMetrics(prometheus.NewRegistry())
 }
@@ -169,5 +168,5 @@ func (m *Metrics) SetBackpressurePaused(topic string, paused bool) {
 
 // Handler returns an HTTP handler that serves Prometheus metrics at /metrics.
 func (m *Metrics) Handler() http.Handler {
-	return promhttp.HandlerFor(prometheus.DefaultGatherer, promhttp.HandlerOpts{})
+	return promhttp.HandlerFor(m.gatherer, promhttp.HandlerOpts{})
 }

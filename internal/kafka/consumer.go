@@ -1,231 +1,153 @@
-// Package kafka wraps the sarama Kafka client behind narrow interfaces.
-//
-// Keeping the client behind an interface lets the service and handler stay
-// decoupled from the concrete Kafka library, which makes them trivially
-// testable with an in-memory stub.
+// Package kafka adapts Kafka consumer groups behind a testable interface.
 package kafka
 
 import (
+	"context"
 	"errors"
+	"sync"
 	"time"
 
 	"github.com/IBM/sarama"
 )
 
-// OffsetOldest stands for the oldest offset available on the broker for a
-// given partition. It is a thin alias of sarama.OffsetOldest so callers
-// don't need to import sarama directly.
 const OffsetOldest = sarama.OffsetOldest
-
-// OffsetNewest stands for the log head offset, i.e. the offset that will be
-// used for the next message that will be produced. It is a thin alias of
-// sarama.OffsetNewest so callers don't need to import sarama directly.
 const OffsetNewest = sarama.OffsetNewest
 
-// ConsumerMessage represents a single Kafka message received by the consumer.
 type ConsumerMessage struct {
-	// Topic is the Kafka topic the message was published to.
-	Topic string
-
-	// Partition is the partition within the topic.
-	Partition int32
-
-	// Offset is the offset of the message within the partition.
-	Offset int64
-
-	// Key is the message key as stored in Kafka.
-	Key string
-
-	// Value is the message value as stored in Kafka.
-	Value string
+	Topic      string
+	Partition  int32
+	Offset     int64
+	Key, Value string
+	// Ack marks processing complete. Offsets advance only through contiguous
+	// completed records in the current consumer-group session.
+	Ack func()
 }
-
-// ConsumerConfig holds the configuration for creating a Kafka consumer.
 type ConsumerConfig struct {
-	// Brokers is the list of Kafka broker addresses.
-	Brokers []string
-	// Topic is the topic to consume from.
-	Topic string
-	// GroupID is the consumer group ID for consumer group coordination.
-	GroupID string
-	// ConsumerOffset is the starting offset (Oldest or Newest).
-	// Use sarama.OffsetOldest (-2) or sarama.OffsetNewest (-1).
-	ConsumerOffset int64
-	// ConsumerTimeout is how long the consumer waits for messages before returning.
+	Brokers         []string
+	Topic, GroupID  string
+	ConsumerOffset  int64
 	ConsumerTimeout time.Duration
-	// ReturnErrors controls whether errors are returned via the Errors channel.
-	ReturnErrors bool
+	ReturnErrors    bool
 }
-
-// Consumer is the interface the rest of the service depends on.
-//
-// Consume waits for incoming messages from the Kafka broker and delivers
-// them via the Messages channel. The caller must call Close() when done.
-//
-// The returned error from Close() indicates whether there were in-flight
-// messages that were not flushed.
 type Consumer interface {
-	// Messages returns the read-only channel of incoming messages.
-	// Each message contains the topic, partition, key, value, and offset.
 	Messages() <-chan *ConsumerMessage
-
-	// Errors returns the read-only channel of errors that occurred
-	// during consumption.
 	Errors() <-chan error
-
-	// Close shuts down the consumer. It must be called before the process
-	// exits to flush in-flight messages and release the consumer's resources.
 	Close() error
-
-	// Pause suspends fetching from the requested partitions. Future calls
-	// to the broker will not return any records from these partitions until
-	// they have been resumed using Resume().
 	Pause()
-
-	// Resume resumes specified partitions which have been paused with Pause().
-	// New calls to the broker will return records from these partitions if
-	// there are any to be fetched.
 	Resume()
 }
-
-// consumer implements the Consumer interface using sarama's Consumer.
 type consumer struct {
-	cons       sarama.Consumer
-	partitionCon sarama.PartitionConsumer
-	topic        string
-	partition    int32
-	messages     chan *ConsumerMessage
-	errors       chan error
-	closeOnce    func()
-	cfg          *ConsumerConfig
+	group     sarama.ConsumerGroup
+	messages  chan *ConsumerMessage
+	errors    chan error
+	cancel    context.CancelFunc
+	done      chan struct{}
+	once      sync.Once
+	closeErr  error
+	ready     chan struct{}
+	readyOnce sync.Once
 }
 
-// NewConsumer creates a real sarama-backed consumer.
-//
-// It fails fast: if the brokers are unreachable or the configuration is
-// invalid, the returned error means the process should not start consuming
-// traffic.
 func NewConsumer(cfg ConsumerConfig) (Consumer, error) {
-	if len(cfg.Brokers) == 0 {
-		return nil, errors.New("kafka: no brokers configured")
+	if len(cfg.Brokers) == 0 || cfg.Topic == "" || cfg.GroupID == "" {
+		return nil, errors.New("kafka: brokers, topic and groupID are required")
 	}
-
-	if cfg.Topic == "" {
-		return nil, errors.New("kafka: topic must not be empty")
-	}
-
-	if cfg.GroupID == "" {
-		return nil, errors.New("kafka: groupID must not be empty")
-	}
-
-	// Determine starting offset
-	offsetType := sarama.OffsetOldest
+	conf := sarama.NewConfig()
+	conf.Consumer.Return.Errors = false
+	conf.ChannelBufferSize = 1
+	conf.Consumer.Offsets.Initial = OffsetOldest
 	if cfg.ConsumerOffset != 0 {
-		offsetType = cfg.ConsumerOffset
+		conf.Consumer.Offsets.Initial = cfg.ConsumerOffset
 	}
-
-	cons, err := sarama.NewConsumer(cfg.Brokers, nil)
+	group, err := sarama.NewConsumerGroup(cfg.Brokers, cfg.GroupID, conf)
 	if err != nil {
 		return nil, err
 	}
+	ctx, cancel := context.WithCancel(context.Background())
+	c := &consumer{group: group, messages: make(chan *ConsumerMessage), errors: make(chan error, 1), cancel: cancel, done: make(chan struct{}), ready: make(chan struct{})}
+	go func() {
+		defer close(c.done)
+		defer close(c.messages)
+		defer close(c.errors)
+		for ctx.Err() == nil {
+			if err := group.Consume(ctx, []string{cfg.Topic}, c); err != nil && ctx.Err() == nil {
+				select {
+				case c.errors <- err:
+				case <-ctx.Done():
+				}
+				return
+			}
+		}
+	}()
 
-	partitionConsumer, err := cons.ConsumePartition(cfg.Topic, 0, offsetType)
-	if err != nil {
-		cons.Close()
-		return nil, err
+	timeout := cfg.ConsumerTimeout
+	if timeout <= 0 {
+		timeout = 20 * time.Second
 	}
-
-	c := &consumer{
-		cons:         cons,
-		partitionCon: partitionConsumer,
-		topic:        cfg.Topic,
-		partition:    0,
-		cfg:          &cfg,
+	select {
+	case <-c.ready:
+		return c, nil
+	case <-time.After(timeout):
+		c.Close()
+		return nil, errors.New("kafka: consumer group assignment timed out")
 	}
-
-	// Initialize channels
-	c.messages = make(chan *ConsumerMessage, 100)
-	c.errors = make(chan error, 100)
-
-	// Start a goroutine to read from the partition consumer and forward to channels
-	go c.forwardMessages()
-
-	return c, nil
 }
-
-// forwardMessages reads from the sarama PartitionConsumer and forwards
-// messages and errors to the internal channels.
-func (c *consumer) forwardMessages() {
-	for msg := range c.partitionCon.Messages() {
-		c.messages <- &ConsumerMessage{
-			Topic:   msg.Topic,
-			Partition: msg.Partition,
-			Offset:    msg.Offset,
-			Key:     string(msg.Key),
-			Value:   string(msg.Value),
+func (c *consumer) Setup(s sarama.ConsumerGroupSession) error {
+	c.readyOnce.Do(func() { close(c.ready) })
+	return nil
+}
+func (c *consumer) Cleanup(s sarama.ConsumerGroupSession) error { return nil }
+func (c *consumer) ConsumeClaim(s sarama.ConsumerGroupSession, claim sarama.ConsumerGroupClaim) error {
+	// Local sequence numbers avoid assuming Kafka offsets are gap-free.
+	var mu sync.Mutex
+	next, issued := int64(0), int64(0)
+	completed := map[int64]*sarama.ConsumerMessage{}
+	for {
+		select {
+		case <-s.Context().Done():
+			return nil
+		case m, ok := <-claim.Messages():
+			if !ok {
+				return nil
+			}
+			seq := issued
+			issued++
+			var once sync.Once
+			msg := &ConsumerMessage{Topic: m.Topic, Partition: m.Partition, Offset: m.Offset, Key: string(m.Key), Value: string(m.Value)}
+			msg.Ack = func() {
+				once.Do(func() {
+					mu.Lock()
+					defer mu.Unlock()
+					if s.Context().Err() != nil {
+						return
+					}
+					completed[seq] = m
+					for {
+						record, ok := completed[next]
+						if !ok {
+							break
+						}
+						s.MarkMessage(record, "")
+						delete(completed, next)
+						next++
+					}
+				})
+			}
+			select {
+			case c.messages <- msg:
+			case <-s.Context().Done():
+				return nil
+			}
 		}
 	}
-
-	// If the loop exits, there was an error
-	select {
-	case err := <-c.partitionCon.Errors():
-		c.errors <- err
-	default:
-	}
-
-	// Close our channels to signal completion
-	close(c.messages)
-	close(c.errors)
 }
-
-// Messages implements the Consumer interface.
-func (c *consumer) Messages() <-chan *ConsumerMessage {
-	return c.messages
-}
-
-// Errors implements the Consumer interface.
-func (c *consumer) Errors() <-chan error {
-	return c.errors
-}
-
-// Close implements the Consumer interface.
-//
-// It initiates an async close of the partition consumer, waits for the
-// messages and errors channels to drain, and then closes the underlying
-// sarama consumer.
+func (c *consumer) Messages() <-chan *ConsumerMessage { return c.messages }
+func (c *consumer) Errors() <-chan error              { return c.errors }
+func (c *consumer) Pause()                            { c.group.PauseAll() }
+func (c *consumer) Resume()                           { c.group.ResumeAll() }
 func (c *consumer) Close() error {
-	var err error
-
-	// Initiate async close
-	c.partitionCon.AsyncClose()
-
-	// Wait a moment for messages to drain
-	// We'll drain what we can and then close
-	close(c.messages)
-	close(c.errors)
-
-	// Close the underlying sarama consumer
-	if c.cons != nil {
-		err = c.cons.Close()
-	}
-
-	return err
-}
-
-// Pause implements the Consumer interface.
-//
-// It delegates to the underlying sarama PartitionConsumer to pause
-// fetching from the requested partitions.
-func (c *consumer) Pause() {
-	c.partitionCon.Pause()
-}
-
-// Resume implements the Consumer interface.
-//
-// It delegates to the underlying sarama PartitionConsumer to resume
-// fetching from the requested partitions.
-func (c *consumer) Resume() {
-	c.partitionCon.Resume()
+	c.once.Do(func() { c.cancel(); <-c.done; c.closeErr = c.group.Close() })
+	return c.closeErr
 }
 
 // StubConsumer is a stub consumer for testing purposes.
@@ -259,13 +181,10 @@ func (s *StubConsumer) Messages() <-chan *ConsumerMessage {
 
 func (s *StubConsumer) Errors() <-chan error {
 	// stub returns nil channel for errors
-	errCh := make(chan error, 1)
-	close(errCh)
-	return errCh
+	return nil
 }
 
 func (s *StubConsumer) Close() error {
-	close(s.messages)
 	return nil
 }
 

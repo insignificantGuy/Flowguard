@@ -105,7 +105,12 @@ func Build(cfg config.Config) (*App, error) {
 	if err != nil {
 		return nil, err
 	}
-	return BuildWithProducer(cfg, producer)
+	app, err := BuildWithProducer(cfg, producer)
+	if err != nil {
+		producer.Close()
+		return nil, err
+	}
+	return app, nil
 }
 
 // newProducer builds the Kafka producer from config.
@@ -177,16 +182,18 @@ func newConsumer(cfg config.Config, metrics *observability.Metrics) (*consumer.C
 
 	cons, err := consumer.NewConsumerWithMetrics(consumer.Config{
 		Kafka: kafka.ConsumerConfig{
-			Brokers:        cfg.KafkaBrokers,
-			Topic:          cfg.KafkaTopic,
-			GroupID:        "flowguard-consumers",
-			ConsumerOffset: kafka.OffsetOldest,
+			Brokers:         cfg.KafkaBrokers,
+			Topic:           cfg.KafkaTopic,
+			GroupID:         "flowguard-consumers",
+			ConsumerOffset:  kafka.OffsetOldest,
 			ConsumerTimeout: 5 * time.Second,
 		},
-		Backpressure:           bp,
+		Backpressure:            bp,
 		CircuitBreakerThreshold: cbThreshold,
 		CircuitBreakerCooldown:  cbCooldown,
 		MaxConcurrency:          concurrency,
+		DisableBackpressure:     cfg.DisableBackpressure,
+		DisableCircuitBreaker:   cfg.DisableCircuitBreaker,
 	}, &consumer.EchoHandler{
 		Greeting:       cfg.KafkaTopic,
 		ProcessingTime: time.Duration(handlerProcMs) * time.Millisecond,

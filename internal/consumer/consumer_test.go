@@ -25,10 +25,10 @@ func TestConsumer_Success(t *testing.T) {
 	cfg.Kafka.Topic = "test-topic"
 	cfg.Kafka.GroupID = "test-group"
 	cfg.Backpressure = resilience.BackpressureConfig{
-		MaxQueueDepth:      10,
-		PauseAfterDepth:    5,
-		ResumeAfterDepth:   2,
-		CheckInterval:      1 * time.Millisecond,
+		MaxQueueDepth:    10,
+		PauseAfterDepth:  5,
+		ResumeAfterDepth: 2,
+		CheckInterval:    1 * time.Millisecond,
 	}
 	cfg.CircuitBreakerThreshold = 3
 	cfg.CircuitBreakerCooldown = 10 * time.Millisecond
@@ -47,6 +47,7 @@ func TestConsumer_Success(t *testing.T) {
 			func() error { return nil }),
 	}
 
+	t.Cleanup(func() { c.Close() })
 	ctx, cancel := context.WithTimeout(context.Background(), 100*time.Millisecond)
 	defer cancel()
 
@@ -61,11 +62,11 @@ func TestConsumer_CircuitBreakerOpensAndDegrades(t *testing.T) {
 	// Seed some messages
 	for i := 0; i < 3; i++ {
 		stubKafka.MessagesChan() <- &kafka.ConsumerMessage{
-			Topic:   "test-topic",
+			Topic:     "test-topic",
 			Partition: 0,
 			Offset:    int64(i),
-			Key:     "key",
-			Value:   "value",
+			Key:       "key",
+			Value:     "value",
 		}
 	}
 	close(stubKafka.MessagesChan())
@@ -82,6 +83,7 @@ func TestConsumer_CircuitBreakerOpensAndDegrades(t *testing.T) {
 			func() error { return nil }),
 	}
 
+	t.Cleanup(func() { c.Close() })
 	ctx, cancel := context.WithTimeout(context.Background(), 200*time.Millisecond)
 	defer cancel()
 
@@ -105,11 +107,11 @@ func TestConsumer_DeadLetterQueueOnError(t *testing.T) {
 	stubKafka := kafka.NewStubConsumer("test-topic")
 	// Seed one message
 	stubKafka.MessagesChan() <- &kafka.ConsumerMessage{
-		Topic:   "test-topic",
+		Topic:     "test-topic",
 		Partition: 0,
 		Offset:    0,
-		Key:     "key",
-		Value:   "value",
+		Key:       "key",
+		Value:     "value",
 	}
 	close(stubKafka.MessagesChan())
 
@@ -125,6 +127,7 @@ func TestConsumer_DeadLetterQueueOnError(t *testing.T) {
 			func() error { return nil }),
 	}
 
+	t.Cleanup(func() { c.Close() })
 	ctx, cancel := context.WithTimeout(context.Background(), 100*time.Millisecond)
 	defer cancel()
 

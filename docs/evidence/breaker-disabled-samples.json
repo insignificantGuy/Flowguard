@@ -1,0 +1,2852 @@
+[
+  {
+    "breaker_state": 0,
+    "dead_lettered": 0,
+    "downstream_calls": 0,
+    "downstream_failures": 0,
+    "metrics": {
+      "consumed": 0,
+      "published": 0
+    },
+    "mode": "disabled",
+    "outstanding": 0,
+    "paused": false,
+    "paused_samples_5ms": 0,
+    "peak_outstanding": 0,
+    "scenario": "breaker",
+    "succeeded": 0,
+    "time_utc": "2026-10-24T07:46:55.573039Z",
+    "topic": "evidence-20261024074454-breaker-disabled"
+  },
+  {
+    "breaker_state": 0,
+    "dead_lettered": 0,
+    "downstream_calls": 9,
+    "downstream_failures": 0,
+    "metrics": {
+      "consumed": 9,
+      "published": 9
+    },
+    "mode": "disabled",
+    "outstanding": 1,
+    "paused": false,
+    "paused_samples_5ms": 0,
+    "peak_outstanding": 2,
+    "scenario": "breaker",
+    "succeeded": 8,
+    "time_utc": "2026-10-24T07:46:55.678501Z",
+    "topic": "evidence-20261024074454-breaker-disabled"
+  },
+  {
+    "breaker_state": 0,
+    "dead_lettered": 0,
+    "downstream_calls": 30,
+    "downstream_failures": 0,
+    "metrics": {
+      "consumed": 30,
+      "published": 30
+    },
+    "mode": "disabled",
+    "outstanding": 1,
+    "paused": false,
+    "paused_samples_5ms": 0,
+    "peak_outstanding": 2,
+    "scenario": "breaker",
+    "succeeded": 29,
+    "time_utc": "2026-10-24T07:46:55.786816Z",
+    "topic": "evidence-20261024074454-breaker-disabled"
+  },
+  {
+    "breaker_state": 0,
+    "dead_lettered": 0,
+    "downstream_calls": 51,
+    "downstream_failures": 0,
+    "metrics": {
+      "consumed": 51,
+      "published": 51
+    },
+    "mode": "disabled",
+    "outstanding": 1,
+    "paused": false,
+    "paused_samples_5ms": 0,
+    "peak_outstanding": 2,
+    "scenario": "breaker",
+    "succeeded": 50,
+    "time_utc": "2026-10-24T07:46:55.889194Z",
+    "topic": "evidence-20261024074454-breaker-disabled"
+  },
+  {
+    "breaker_state": 0,
+    "dead_lettered": 0,
+    "downstream_calls": 72,
+    "downstream_failures": 0,
+    "metrics": {
+      "consumed": 72,
+      "published": 72
+    },
+    "mode": "disabled",
+    "outstanding": 1,
+    "paused": false,
+    "paused_samples_5ms": 0,
+    "peak_outstanding": 2,
+    "scenario": "breaker",
+    "succeeded": 71,
+    "time_utc": "2026-10-24T07:46:55.992195Z",
+    "topic": "evidence-20261024074454-breaker-disabled"
+  },
+  {
+    "breaker_state": 0,
+    "dead_lettered": 0,
+    "downstream_calls": 92,
+    "downstream_failures": 0,
+    "metrics": {
+      "consumed": 92,
+      "published": 92
+    },
+    "mode": "disabled",
+    "outstanding": 1,
+    "paused": false,
+    "paused_samples_5ms": 0,
+    "peak_outstanding": 2,
+    "scenario": "breaker",
+    "succeeded": 91,
+    "time_utc": "2026-10-24T07:46:56.093406Z",
+    "topic": "evidence-20261024074454-breaker-disabled"
+  },
+  {
+    "breaker_state": 0,
+    "dead_lettered": 0,
+    "downstream_calls": 112,
+    "downstream_failures": 0,
+    "metrics": {
+      "consumed": 112,
+      "published": 112
+    },
+    "mode": "disabled",
+    "outstanding": 1,
+    "paused": false,
+    "paused_samples_5ms": 0,
+    "peak_outstanding": 2,
+    "scenario": "breaker",
+    "succeeded": 111,
+    "time_utc": "2026-10-24T07:46:56.194443Z",
+    "topic": "evidence-20261024074454-breaker-disabled"
+  },
+  {
+    "breaker_state": 0,
+    "dead_lettered": 0,
+    "downstream_calls": 132,
+    "downstream_failures": 0,
+    "metrics": {
+      "consumed": 132,
+      "published": 132
+    },
+    "mode": "disabled",
+    "outstanding": 0,
+    "paused": false,
+    "paused_samples_5ms": 0,
+    "peak_outstanding": 3,
+    "scenario": "breaker",
+    "succeeded": 132,
+    "time_utc": "2026-10-24T07:46:56.299155Z",
+    "topic": "evidence-20261024074454-breaker-disabled"
+  },
+  {
+    "breaker_state": 0,
+    "dead_lettered": 0,
+    "downstream_calls": 154,
+    "downstream_failures": 0,
+    "metrics": {
+      "consumed": 154,
+      "published": 154
+    },
+    "mode": "disabled",
+    "outstanding": 1,
+    "paused": false,
+    "paused_samples_5ms": 0,
+    "peak_outstanding": 3,
+    "scenario": "breaker",
+    "succeeded": 153,
+    "time_utc": "2026-10-24T07:46:56.402512Z",
+    "topic": "evidence-20261024074454-breaker-disabled"
+  },
+  {
+    "breaker_state": 0,
+    "dead_lettered": 0,
+    "downstream_calls": 175,
+    "downstream_failures": 0,
+    "metrics": {
+      "consumed": 175,
+      "published": 175
+    },
+    "mode": "disabled",
+    "outstanding": 1,
+    "paused": false,
+    "paused_samples_5ms": 0,
+    "peak_outstanding": 3,
+    "scenario": "breaker",
+    "succeeded": 174,
+    "time_utc": "2026-10-24T07:46:56.50781Z",
+    "topic": "evidence-20261024074454-breaker-disabled"
+  },
+  {
+    "breaker_state": 0,
+    "dead_lettered": 0,
+    "downstream_calls": 195,
+    "downstream_failures": 0,
+    "metrics": {
+      "consumed": 195,
+      "published": 195
+    },
+    "mode": "disabled",
+    "outstanding": 0,
+    "paused": false,
+    "paused_samples_5ms": 0,
+    "peak_outstanding": 3,
+    "scenario": "breaker",
+    "succeeded": 195,
+    "time_utc": "2026-10-24T07:46:56.612797Z",
+    "topic": "evidence-20261024074454-breaker-disabled"
+  },
+  {
+    "breaker_state": 0,
+    "dead_lettered": 0,
+    "downstream_calls": 217,
+    "downstream_failures": 0,
+    "metrics": {
+      "consumed": 217,
+      "published": 217
+    },
+    "mode": "disabled",
+    "outstanding": 1,
+    "paused": false,
+    "paused_samples_5ms": 0,
+    "peak_outstanding": 3,
+    "scenario": "breaker",
+    "succeeded": 216,
+    "time_utc": "2026-10-24T07:46:56.717359Z",
+    "topic": "evidence-20261024074454-breaker-disabled"
+  },
+  {
+    "breaker_state": 0,
+    "dead_lettered": 0,
+    "downstream_calls": 237,
+    "downstream_failures": 0,
+    "metrics": {
+      "consumed": 237,
+      "published": 237
+    },
+    "mode": "disabled",
+    "outstanding": 1,
+    "paused": false,
+    "paused_samples_5ms": 0,
+    "peak_outstanding": 3,
+    "scenario": "breaker",
+    "succeeded": 236,
+    "time_utc": "2026-10-24T07:46:56.819568Z",
+    "topic": "evidence-20261024074454-breaker-disabled"
+  },
+  {
+    "breaker_state": 0,
+    "dead_lettered": 0,
+    "downstream_calls": 258,
+    "downstream_failures": 0,
+    "metrics": {
+      "consumed": 258,
+      "published": 258
+    },
+    "mode": "disabled",
+    "outstanding": 1,
+    "paused": false,
+    "paused_samples_5ms": 0,
+    "peak_outstanding": 3,
+    "scenario": "breaker",
+    "succeeded": 257,
+    "time_utc": "2026-10-24T07:46:56.922183Z",
+    "topic": "evidence-20261024074454-breaker-disabled"
+  },
+  {
+    "breaker_state": 0,
+    "dead_lettered": 0,
+    "downstream_calls": 279,
+    "downstream_failures": 0,
+    "metrics": {
+      "consumed": 279,
+      "published": 279
+    },
+    "mode": "disabled",
+    "outstanding": 1,
+    "paused": false,
+    "paused_samples_5ms": 0,
+    "peak_outstanding": 3,
+    "scenario": "breaker",
+    "succeeded": 278,
+    "time_utc": "2026-10-24T07:46:57.02738Z",
+    "topic": "evidence-20261024074454-breaker-disabled"
+  },
+  {
+    "breaker_state": 0,
+    "dead_lettered": 0,
+    "downstream_calls": 300,
+    "downstream_failures": 0,
+    "metrics": {
+      "consumed": 300,
+      "published": 300
+    },
+    "mode": "disabled",
+    "outstanding": 2,
+    "paused": false,
+    "paused_samples_5ms": 0,
+    "peak_outstanding": 3,
+    "scenario": "breaker",
+    "succeeded": 298,
+    "time_utc": "2026-10-24T07:46:57.133094Z",
+    "topic": "evidence-20261024074454-breaker-disabled"
+  },
+  {
+    "breaker_state": 0,
+    "dead_lettered": 0,
+    "downstream_calls": 321,
+    "downstream_failures": 0,
+    "metrics": {
+      "consumed": 321,
+      "published": 321
+    },
+    "mode": "disabled",
+    "outstanding": 1,
+    "paused": false,
+    "paused_samples_5ms": 0,
+    "peak_outstanding": 3,
+    "scenario": "breaker",
+    "succeeded": 320,
+    "time_utc": "2026-10-24T07:46:57.237847Z",
+    "topic": "evidence-20261024074454-breaker-disabled"
+  },
+  {
+    "breaker_state": 0,
+    "dead_lettered": 0,
+    "downstream_calls": 341,
+    "downstream_failures": 0,
+    "metrics": {
+      "consumed": 341,
+      "published": 341
+    },
+    "mode": "disabled",
+    "outstanding": 1,
+    "paused": false,
+    "paused_samples_5ms": 0,
+    "peak_outstanding": 3,
+    "scenario": "breaker",
+    "succeeded": 340,
+    "time_utc": "2026-10-24T07:46:57.340813Z",
+    "topic": "evidence-20261024074454-breaker-disabled"
+  },
+  {
+    "breaker_state": 0,
+    "dead_lettered": 0,
+    "downstream_calls": 362,
+    "downstream_failures": 0,
+    "metrics": {
+      "consumed": 362,
+      "published": 362
+    },
+    "mode": "disabled",
+    "outstanding": 1,
+    "paused": false,
+    "paused_samples_5ms": 0,
+    "peak_outstanding": 3,
+    "scenario": "breaker",
+    "succeeded": 361,
+    "time_utc": "2026-10-24T07:46:57.442696Z",
+    "topic": "evidence-20261024074454-breaker-disabled"
+  },
+  {
+    "breaker_state": 0,
+    "dead_lettered": 0,
+    "downstream_calls": 382,
+    "downstream_failures": 0,
+    "metrics": {
+      "consumed": 382,
+      "published": 382
+    },
+    "mode": "disabled",
+    "outstanding": 1,
+    "paused": false,
+    "paused_samples_5ms": 0,
+    "peak_outstanding": 3,
+    "scenario": "breaker",
+    "succeeded": 381,
+    "time_utc": "2026-10-24T07:46:57.545389Z",
+    "topic": "evidence-20261024074454-breaker-disabled"
+  },
+  {
+    "breaker_state": 0,
+    "dead_lettered": 2,
+    "downstream_calls": 403,
+    "downstream_failures": 2,
+    "metrics": {
+      "consumed": 403,
+      "published": 403
+    },
+    "mode": "disabled",
+    "outstanding": 1,
+    "paused": false,
+    "paused_samples_5ms": 0,
+    "peak_outstanding": 3,
+    "scenario": "breaker",
+    "succeeded": 400,
+    "time_utc": "2026-10-24T07:46:57.651406Z",
+    "topic": "evidence-20261024074454-breaker-disabled"
+  },
+  {
+    "breaker_state": 0,
+    "dead_lettered": 23,
+    "downstream_calls": 424,
+    "downstream_failures": 23,
+    "metrics": {
+      "consumed": 424,
+      "published": 424
+    },
+    "mode": "disabled",
+    "outstanding": 1,
+    "paused": false,
+    "paused_samples_5ms": 0,
+    "peak_outstanding": 3,
+    "scenario": "breaker",
+    "succeeded": 400,
+    "time_utc": "2026-10-24T07:46:57.752829Z",
+    "topic": "evidence-20261024074454-breaker-disabled"
+  },
+  {
+    "breaker_state": 0,
+    "dead_lettered": 44,
+    "downstream_calls": 445,
+    "downstream_failures": 44,
+    "metrics": {
+      "consumed": 445,
+      "published": 445
+    },
+    "mode": "disabled",
+    "outstanding": 1,
+    "paused": false,
+    "paused_samples_5ms": 0,
+    "peak_outstanding": 3,
+    "scenario": "breaker",
+    "succeeded": 400,
+    "time_utc": "2026-10-24T07:46:57.857841Z",
+    "topic": "evidence-20261024074454-breaker-disabled"
+  },
+  {
+    "breaker_state": 0,
+    "dead_lettered": 65,
+    "downstream_calls": 466,
+    "downstream_failures": 65,
+    "metrics": {
+      "consumed": 466,
+      "published": 466
+    },
+    "mode": "disabled",
+    "outstanding": 1,
+    "paused": false,
+    "paused_samples_5ms": 0,
+    "peak_outstanding": 4,
+    "scenario": "breaker",
+    "succeeded": 400,
+    "time_utc": "2026-10-24T07:46:57.962502Z",
+    "topic": "evidence-20261024074454-breaker-disabled"
+  },
+  {
+    "breaker_state": 0,
+    "dead_lettered": 85,
+    "downstream_calls": 486,
+    "downstream_failures": 85,
+    "metrics": {
+      "consumed": 486,
+      "published": 486
+    },
+    "mode": "disabled",
+    "outstanding": 1,
+    "paused": false,
+    "paused_samples_5ms": 0,
+    "peak_outstanding": 4,
+    "scenario": "breaker",
+    "succeeded": 400,
+    "time_utc": "2026-10-24T07:46:58.063677Z",
+    "topic": "evidence-20261024074454-breaker-disabled"
+  },
+  {
+    "breaker_state": 0,
+    "dead_lettered": 105,
+    "downstream_calls": 507,
+    "downstream_failures": 105,
+    "metrics": {
+      "consumed": 507,
+      "published": 507
+    },
+    "mode": "disabled",
+    "outstanding": 2,
+    "paused": false,
+    "paused_samples_5ms": 0,
+    "peak_outstanding": 4,
+    "scenario": "breaker",
+    "succeeded": 400,
+    "time_utc": "2026-10-24T07:46:58.167383Z",
+    "topic": "evidence-20261024074454-breaker-disabled"
+  },
+  {
+    "breaker_state": 0,
+    "dead_lettered": 126,
+    "downstream_calls": 527,
+    "downstream_failures": 126,
+    "metrics": {
+      "consumed": 527,
+      "published": 527
+    },
+    "mode": "disabled",
+    "outstanding": 1,
+    "paused": false,
+    "paused_samples_5ms": 0,
+    "peak_outstanding": 4,
+    "scenario": "breaker",
+    "succeeded": 400,
+    "time_utc": "2026-10-24T07:46:58.268709Z",
+    "topic": "evidence-20261024074454-breaker-disabled"
+  },
+  {
+    "breaker_state": 0,
+    "dead_lettered": 147,
+    "downstream_calls": 548,
+    "downstream_failures": 147,
+    "metrics": {
+      "consumed": 548,
+      "published": 548
+    },
+    "mode": "disabled",
+    "outstanding": 1,
+    "paused": false,
+    "paused_samples_5ms": 0,
+    "peak_outstanding": 4,
+    "scenario": "breaker",
+    "succeeded": 400,
+    "time_utc": "2026-10-24T07:46:58.372558Z",
+    "topic": "evidence-20261024074454-breaker-disabled"
+  },
+  {
+    "breaker_state": 0,
+    "dead_lettered": 167,
+    "downstream_calls": 568,
+    "downstream_failures": 167,
+    "metrics": {
+      "consumed": 568,
+      "published": 568
+    },
+    "mode": "disabled",
+    "outstanding": 1,
+    "paused": false,
+    "paused_samples_5ms": 0,
+    "peak_outstanding": 4,
+    "scenario": "breaker",
+    "succeeded": 400,
+    "time_utc": "2026-10-24T07:46:58.474705Z",
+    "topic": "evidence-20261024074454-breaker-disabled"
+  },
+  {
+    "breaker_state": 0,
+    "dead_lettered": 188,
+    "downstream_calls": 589,
+    "downstream_failures": 188,
+    "metrics": {
+      "consumed": 589,
+      "published": 589
+    },
+    "mode": "disabled",
+    "outstanding": 1,
+    "paused": false,
+    "paused_samples_5ms": 0,
+    "peak_outstanding": 4,
+    "scenario": "breaker",
+    "succeeded": 400,
+    "time_utc": "2026-10-24T07:46:58.580877Z",
+    "topic": "evidence-20261024074454-breaker-disabled"
+  },
+  {
+    "breaker_state": 0,
+    "dead_lettered": 209,
+    "downstream_calls": 610,
+    "downstream_failures": 209,
+    "metrics": {
+      "consumed": 610,
+      "published": 610
+    },
+    "mode": "disabled",
+    "outstanding": 1,
+    "paused": false,
+    "paused_samples_5ms": 0,
+    "peak_outstanding": 4,
+    "scenario": "breaker",
+    "succeeded": 400,
+    "time_utc": "2026-10-24T07:46:58.683205Z",
+    "topic": "evidence-20261024074454-breaker-disabled"
+  },
+  {
+    "breaker_state": 0,
+    "dead_lettered": 229,
+    "downstream_calls": 630,
+    "downstream_failures": 229,
+    "metrics": {
+      "consumed": 630,
+      "published": 631
+    },
+    "mode": "disabled",
+    "outstanding": 1,
+    "paused": false,
+    "paused_samples_5ms": 0,
+    "peak_outstanding": 4,
+    "scenario": "breaker",
+    "succeeded": 400,
+    "time_utc": "2026-10-24T07:46:58.787455Z",
+    "topic": "evidence-20261024074454-breaker-disabled"
+  },
+  {
+    "breaker_state": 0,
+    "dead_lettered": 250,
+    "downstream_calls": 651,
+    "downstream_failures": 250,
+    "metrics": {
+      "consumed": 651,
+      "published": 651
+    },
+    "mode": "disabled",
+    "outstanding": 1,
+    "paused": false,
+    "paused_samples_5ms": 0,
+    "peak_outstanding": 4,
+    "scenario": "breaker",
+    "succeeded": 400,
+    "time_utc": "2026-10-24T07:46:58.888663Z",
+    "topic": "evidence-20261024074454-breaker-disabled"
+  },
+  {
+    "breaker_state": 0,
+    "dead_lettered": 271,
+    "downstream_calls": 672,
+    "downstream_failures": 271,
+    "metrics": {
+      "consumed": 672,
+      "published": 672
+    },
+    "mode": "disabled",
+    "outstanding": 1,
+    "paused": false,
+    "paused_samples_5ms": 0,
+    "peak_outstanding": 4,
+    "scenario": "breaker",
+    "succeeded": 400,
+    "time_utc": "2026-10-24T07:46:58.993241Z",
+    "topic": "evidence-20261024074454-breaker-disabled"
+  },
+  {
+    "breaker_state": 0,
+    "dead_lettered": 291,
+    "downstream_calls": 692,
+    "downstream_failures": 291,
+    "metrics": {
+      "consumed": 692,
+      "published": 692
+    },
+    "mode": "disabled",
+    "outstanding": 1,
+    "paused": false,
+    "paused_samples_5ms": 0,
+    "peak_outstanding": 4,
+    "scenario": "breaker",
+    "succeeded": 400,
+    "time_utc": "2026-10-24T07:46:59.096861Z",
+    "topic": "evidence-20261024074454-breaker-disabled"
+  },
+  {
+    "breaker_state": 0,
+    "dead_lettered": 312,
+    "downstream_calls": 713,
+    "downstream_failures": 312,
+    "metrics": {
+      "consumed": 713,
+      "published": 713
+    },
+    "mode": "disabled",
+    "outstanding": 1,
+    "paused": false,
+    "paused_samples_5ms": 0,
+    "peak_outstanding": 4,
+    "scenario": "breaker",
+    "succeeded": 400,
+    "time_utc": "2026-10-24T07:46:59.198023Z",
+    "topic": "evidence-20261024074454-breaker-disabled"
+  },
+  {
+    "breaker_state": 0,
+    "dead_lettered": 333,
+    "downstream_calls": 734,
+    "downstream_failures": 333,
+    "metrics": {
+      "consumed": 734,
+      "published": 734
+    },
+    "mode": "disabled",
+    "outstanding": 1,
+    "paused": false,
+    "paused_samples_5ms": 0,
+    "peak_outstanding": 4,
+    "scenario": "breaker",
+    "succeeded": 400,
+    "time_utc": "2026-10-24T07:46:59.303728Z",
+    "topic": "evidence-20261024074454-breaker-disabled"
+  },
+  {
+    "breaker_state": 0,
+    "dead_lettered": 354,
+    "downstream_calls": 755,
+    "downstream_failures": 354,
+    "metrics": {
+      "consumed": 755,
+      "published": 755
+    },
+    "mode": "disabled",
+    "outstanding": 1,
+    "paused": false,
+    "paused_samples_5ms": 0,
+    "peak_outstanding": 4,
+    "scenario": "breaker",
+    "succeeded": 400,
+    "time_utc": "2026-10-24T07:46:59.408183Z",
+    "topic": "evidence-20261024074454-breaker-disabled"
+  },
+  {
+    "breaker_state": 0,
+    "dead_lettered": 374,
+    "downstream_calls": 775,
+    "downstream_failures": 374,
+    "metrics": {
+      "consumed": 775,
+      "published": 775
+    },
+    "mode": "disabled",
+    "outstanding": 1,
+    "paused": false,
+    "paused_samples_5ms": 0,
+    "peak_outstanding": 4,
+    "scenario": "breaker",
+    "succeeded": 400,
+    "time_utc": "2026-10-24T07:46:59.51194Z",
+    "topic": "evidence-20261024074454-breaker-disabled"
+  },
+  {
+    "breaker_state": 0,
+    "dead_lettered": 396,
+    "downstream_calls": 797,
+    "downstream_failures": 396,
+    "metrics": {
+      "consumed": 797,
+      "published": 797
+    },
+    "mode": "disabled",
+    "outstanding": 1,
+    "paused": false,
+    "paused_samples_5ms": 0,
+    "peak_outstanding": 4,
+    "scenario": "breaker",
+    "succeeded": 400,
+    "time_utc": "2026-10-24T07:46:59.618012Z",
+    "topic": "evidence-20261024074454-breaker-disabled"
+  },
+  {
+    "breaker_state": 0,
+    "dead_lettered": 416,
+    "downstream_calls": 818,
+    "downstream_failures": 416,
+    "metrics": {
+      "consumed": 818,
+      "published": 818
+    },
+    "mode": "disabled",
+    "outstanding": 2,
+    "paused": false,
+    "paused_samples_5ms": 0,
+    "peak_outstanding": 4,
+    "scenario": "breaker",
+    "succeeded": 400,
+    "time_utc": "2026-10-24T07:46:59.722654Z",
+    "topic": "evidence-20261024074454-breaker-disabled"
+  },
+  {
+    "breaker_state": 0,
+    "dead_lettered": 438,
+    "downstream_calls": 839,
+    "downstream_failures": 438,
+    "metrics": {
+      "consumed": 839,
+      "published": 839
+    },
+    "mode": "disabled",
+    "outstanding": 1,
+    "paused": false,
+    "paused_samples_5ms": 0,
+    "peak_outstanding": 4,
+    "scenario": "breaker",
+    "succeeded": 400,
+    "time_utc": "2026-10-24T07:46:59.828239Z",
+    "topic": "evidence-20261024074454-breaker-disabled"
+  },
+  {
+    "breaker_state": 0,
+    "dead_lettered": 458,
+    "downstream_calls": 859,
+    "downstream_failures": 458,
+    "metrics": {
+      "consumed": 859,
+      "published": 859
+    },
+    "mode": "disabled",
+    "outstanding": 1,
+    "paused": false,
+    "paused_samples_5ms": 0,
+    "peak_outstanding": 4,
+    "scenario": "breaker",
+    "succeeded": 400,
+    "time_utc": "2026-10-24T07:46:59.932761Z",
+    "topic": "evidence-20261024074454-breaker-disabled"
+  },
+  {
+    "breaker_state": 0,
+    "dead_lettered": 480,
+    "downstream_calls": 881,
+    "downstream_failures": 480,
+    "metrics": {
+      "consumed": 881,
+      "published": 881
+    },
+    "mode": "disabled",
+    "outstanding": 1,
+    "paused": false,
+    "paused_samples_5ms": 0,
+    "peak_outstanding": 4,
+    "scenario": "breaker",
+    "succeeded": 400,
+    "time_utc": "2026-10-24T07:47:00.038374Z",
+    "topic": "evidence-20261024074454-breaker-disabled"
+  },
+  {
+    "breaker_state": 0,
+    "dead_lettered": 501,
+    "downstream_calls": 901,
+    "downstream_failures": 501,
+    "metrics": {
+      "consumed": 901,
+      "published": 901
+    },
+    "mode": "disabled",
+    "outstanding": 0,
+    "paused": false,
+    "paused_samples_5ms": 0,
+    "peak_outstanding": 4,
+    "scenario": "breaker",
+    "succeeded": 400,
+    "time_utc": "2026-10-24T07:47:00.144566Z",
+    "topic": "evidence-20261024074454-breaker-disabled"
+  },
+  {
+    "breaker_state": 0,
+    "dead_lettered": 522,
+    "downstream_calls": 923,
+    "downstream_failures": 522,
+    "metrics": {
+      "consumed": 923,
+      "published": 923
+    },
+    "mode": "disabled",
+    "outstanding": 1,
+    "paused": false,
+    "paused_samples_5ms": 0,
+    "peak_outstanding": 4,
+    "scenario": "breaker",
+    "succeeded": 400,
+    "time_utc": "2026-10-24T07:47:00.249495Z",
+    "topic": "evidence-20261024074454-breaker-disabled"
+  },
+  {
+    "breaker_state": 0,
+    "dead_lettered": 543,
+    "downstream_calls": 944,
+    "downstream_failures": 543,
+    "metrics": {
+      "consumed": 944,
+      "published": 944
+    },
+    "mode": "disabled",
+    "outstanding": 1,
+    "paused": false,
+    "paused_samples_5ms": 0,
+    "peak_outstanding": 4,
+    "scenario": "breaker",
+    "succeeded": 400,
+    "time_utc": "2026-10-24T07:47:00.353628Z",
+    "topic": "evidence-20261024074454-breaker-disabled"
+  },
+  {
+    "breaker_state": 0,
+    "dead_lettered": 564,
+    "downstream_calls": 965,
+    "downstream_failures": 564,
+    "metrics": {
+      "consumed": 965,
+      "published": 965
+    },
+    "mode": "disabled",
+    "outstanding": 1,
+    "paused": false,
+    "paused_samples_5ms": 0,
+    "peak_outstanding": 4,
+    "scenario": "breaker",
+    "succeeded": 400,
+    "time_utc": "2026-10-24T07:47:00.458814Z",
+    "topic": "evidence-20261024074454-breaker-disabled"
+  },
+  {
+    "breaker_state": 0,
+    "dead_lettered": 585,
+    "downstream_calls": 986,
+    "downstream_failures": 585,
+    "metrics": {
+      "consumed": 986,
+      "published": 986
+    },
+    "mode": "disabled",
+    "outstanding": 1,
+    "paused": false,
+    "paused_samples_5ms": 0,
+    "peak_outstanding": 4,
+    "scenario": "breaker",
+    "succeeded": 400,
+    "time_utc": "2026-10-24T07:47:00.564094Z",
+    "topic": "evidence-20261024074454-breaker-disabled"
+  },
+  {
+    "breaker_state": 0,
+    "dead_lettered": 606,
+    "downstream_calls": 1007,
+    "downstream_failures": 606,
+    "metrics": {
+      "consumed": 1007,
+      "published": 1007
+    },
+    "mode": "disabled",
+    "outstanding": 1,
+    "paused": false,
+    "paused_samples_5ms": 0,
+    "peak_outstanding": 4,
+    "scenario": "breaker",
+    "succeeded": 400,
+    "time_utc": "2026-10-24T07:47:00.669765Z",
+    "topic": "evidence-20261024074454-breaker-disabled"
+  },
+  {
+    "breaker_state": 0,
+    "dead_lettered": 627,
+    "downstream_calls": 1028,
+    "downstream_failures": 627,
+    "metrics": {
+      "consumed": 1028,
+      "published": 1028
+    },
+    "mode": "disabled",
+    "outstanding": 1,
+    "paused": false,
+    "paused_samples_5ms": 0,
+    "peak_outstanding": 4,
+    "scenario": "breaker",
+    "succeeded": 400,
+    "time_utc": "2026-10-24T07:47:00.776028Z",
+    "topic": "evidence-20261024074454-breaker-disabled"
+  },
+  {
+    "breaker_state": 0,
+    "dead_lettered": 648,
+    "downstream_calls": 1049,
+    "downstream_failures": 648,
+    "metrics": {
+      "consumed": 1049,
+      "published": 1049
+    },
+    "mode": "disabled",
+    "outstanding": 1,
+    "paused": false,
+    "paused_samples_5ms": 0,
+    "peak_outstanding": 4,
+    "scenario": "breaker",
+    "succeeded": 400,
+    "time_utc": "2026-10-24T07:47:00.881901Z",
+    "topic": "evidence-20261024074454-breaker-disabled"
+  },
+  {
+    "breaker_state": 0,
+    "dead_lettered": 669,
+    "downstream_calls": 1070,
+    "downstream_failures": 669,
+    "metrics": {
+      "consumed": 1070,
+      "published": 1070
+    },
+    "mode": "disabled",
+    "outstanding": 1,
+    "paused": false,
+    "paused_samples_5ms": 0,
+    "peak_outstanding": 4,
+    "scenario": "breaker",
+    "succeeded": 400,
+    "time_utc": "2026-10-24T07:47:00.984317Z",
+    "topic": "evidence-20261024074454-breaker-disabled"
+  },
+  {
+    "breaker_state": 0,
+    "dead_lettered": 690,
+    "downstream_calls": 1091,
+    "downstream_failures": 690,
+    "metrics": {
+      "consumed": 1091,
+      "published": 1091
+    },
+    "mode": "disabled",
+    "outstanding": 1,
+    "paused": false,
+    "paused_samples_5ms": 0,
+    "peak_outstanding": 4,
+    "scenario": "breaker",
+    "succeeded": 400,
+    "time_utc": "2026-10-24T07:47:01.08781Z",
+    "topic": "evidence-20261024074454-breaker-disabled"
+  },
+  {
+    "breaker_state": 0,
+    "dead_lettered": 710,
+    "downstream_calls": 1111,
+    "downstream_failures": 710,
+    "metrics": {
+      "consumed": 1111,
+      "published": 1111
+    },
+    "mode": "disabled",
+    "outstanding": 1,
+    "paused": false,
+    "paused_samples_5ms": 0,
+    "peak_outstanding": 4,
+    "scenario": "breaker",
+    "succeeded": 400,
+    "time_utc": "2026-10-24T07:47:01.19117Z",
+    "topic": "evidence-20261024074454-breaker-disabled"
+  },
+  {
+    "breaker_state": 0,
+    "dead_lettered": 731,
+    "downstream_calls": 1132,
+    "downstream_failures": 731,
+    "metrics": {
+      "consumed": 1132,
+      "published": 1133
+    },
+    "mode": "disabled",
+    "outstanding": 1,
+    "paused": false,
+    "paused_samples_5ms": 0,
+    "peak_outstanding": 4,
+    "scenario": "breaker",
+    "succeeded": 400,
+    "time_utc": "2026-10-24T07:47:01.297257Z",
+    "topic": "evidence-20261024074454-breaker-disabled"
+  },
+  {
+    "breaker_state": 0,
+    "dead_lettered": 752,
+    "downstream_calls": 1153,
+    "downstream_failures": 752,
+    "metrics": {
+      "consumed": 1153,
+      "published": 1153
+    },
+    "mode": "disabled",
+    "outstanding": 1,
+    "paused": false,
+    "paused_samples_5ms": 0,
+    "peak_outstanding": 4,
+    "scenario": "breaker",
+    "succeeded": 400,
+    "time_utc": "2026-10-24T07:47:01.402435Z",
+    "topic": "evidence-20261024074454-breaker-disabled"
+  },
+  {
+    "breaker_state": 0,
+    "dead_lettered": 773,
+    "downstream_calls": 1174,
+    "downstream_failures": 773,
+    "metrics": {
+      "consumed": 1174,
+      "published": 1174
+    },
+    "mode": "disabled",
+    "outstanding": 1,
+    "paused": false,
+    "paused_samples_5ms": 0,
+    "peak_outstanding": 4,
+    "scenario": "breaker",
+    "succeeded": 400,
+    "time_utc": "2026-10-24T07:47:01.507624Z",
+    "topic": "evidence-20261024074454-breaker-disabled"
+  },
+  {
+    "breaker_state": 0,
+    "dead_lettered": 795,
+    "downstream_calls": 1196,
+    "downstream_failures": 795,
+    "metrics": {
+      "consumed": 1196,
+      "published": 1196
+    },
+    "mode": "disabled",
+    "outstanding": 1,
+    "paused": false,
+    "paused_samples_5ms": 0,
+    "peak_outstanding": 4,
+    "scenario": "breaker",
+    "succeeded": 400,
+    "time_utc": "2026-10-24T07:47:01.613219Z",
+    "topic": "evidence-20261024074454-breaker-disabled"
+  },
+  {
+    "breaker_state": 0,
+    "dead_lettered": 816,
+    "downstream_calls": 1217,
+    "downstream_failures": 816,
+    "metrics": {
+      "consumed": 1217,
+      "published": 1217
+    },
+    "mode": "disabled",
+    "outstanding": 1,
+    "paused": false,
+    "paused_samples_5ms": 0,
+    "peak_outstanding": 4,
+    "scenario": "breaker",
+    "succeeded": 400,
+    "time_utc": "2026-10-24T07:47:01.718446Z",
+    "topic": "evidence-20261024074454-breaker-disabled"
+  },
+  {
+    "breaker_state": 0,
+    "dead_lettered": 837,
+    "downstream_calls": 1238,
+    "downstream_failures": 837,
+    "metrics": {
+      "consumed": 1238,
+      "published": 1238
+    },
+    "mode": "disabled",
+    "outstanding": 1,
+    "paused": false,
+    "paused_samples_5ms": 0,
+    "peak_outstanding": 4,
+    "scenario": "breaker",
+    "succeeded": 400,
+    "time_utc": "2026-10-24T07:47:01.823747Z",
+    "topic": "evidence-20261024074454-breaker-disabled"
+  },
+  {
+    "breaker_state": 0,
+    "dead_lettered": 857,
+    "downstream_calls": 1258,
+    "downstream_failures": 857,
+    "metrics": {
+      "consumed": 1258,
+      "published": 1258
+    },
+    "mode": "disabled",
+    "outstanding": 1,
+    "paused": false,
+    "paused_samples_5ms": 0,
+    "peak_outstanding": 4,
+    "scenario": "breaker",
+    "succeeded": 400,
+    "time_utc": "2026-10-24T07:47:01.925393Z",
+    "topic": "evidence-20261024074454-breaker-disabled"
+  },
+  {
+    "breaker_state": 0,
+    "dead_lettered": 878,
+    "downstream_calls": 1279,
+    "downstream_failures": 878,
+    "metrics": {
+      "consumed": 1279,
+      "published": 1279
+    },
+    "mode": "disabled",
+    "outstanding": 1,
+    "paused": false,
+    "paused_samples_5ms": 0,
+    "peak_outstanding": 4,
+    "scenario": "breaker",
+    "succeeded": 400,
+    "time_utc": "2026-10-24T07:47:02.0315Z",
+    "topic": "evidence-20261024074454-breaker-disabled"
+  },
+  {
+    "breaker_state": 0,
+    "dead_lettered": 899,
+    "downstream_calls": 1300,
+    "downstream_failures": 899,
+    "metrics": {
+      "consumed": 1300,
+      "published": 1300
+    },
+    "mode": "disabled",
+    "outstanding": 1,
+    "paused": false,
+    "paused_samples_5ms": 0,
+    "peak_outstanding": 4,
+    "scenario": "breaker",
+    "succeeded": 400,
+    "time_utc": "2026-10-24T07:47:02.133388Z",
+    "topic": "evidence-20261024074454-breaker-disabled"
+  },
+  {
+    "breaker_state": 0,
+    "dead_lettered": 920,
+    "downstream_calls": 1321,
+    "downstream_failures": 920,
+    "metrics": {
+      "consumed": 1321,
+      "published": 1321
+    },
+    "mode": "disabled",
+    "outstanding": 1,
+    "paused": false,
+    "paused_samples_5ms": 0,
+    "peak_outstanding": 4,
+    "scenario": "breaker",
+    "succeeded": 400,
+    "time_utc": "2026-10-24T07:47:02.239874Z",
+    "topic": "evidence-20261024074454-breaker-disabled"
+  },
+  {
+    "breaker_state": 0,
+    "dead_lettered": 941,
+    "downstream_calls": 1342,
+    "downstream_failures": 941,
+    "metrics": {
+      "consumed": 1342,
+      "published": 1342
+    },
+    "mode": "disabled",
+    "outstanding": 1,
+    "paused": false,
+    "paused_samples_5ms": 0,
+    "peak_outstanding": 4,
+    "scenario": "breaker",
+    "succeeded": 400,
+    "time_utc": "2026-10-24T07:47:02.343666Z",
+    "topic": "evidence-20261024074454-breaker-disabled"
+  },
+  {
+    "breaker_state": 0,
+    "dead_lettered": 962,
+    "downstream_calls": 1363,
+    "downstream_failures": 962,
+    "metrics": {
+      "consumed": 1363,
+      "published": 1363
+    },
+    "mode": "disabled",
+    "outstanding": 1,
+    "paused": false,
+    "paused_samples_5ms": 0,
+    "peak_outstanding": 4,
+    "scenario": "breaker",
+    "succeeded": 400,
+    "time_utc": "2026-10-24T07:47:02.448429Z",
+    "topic": "evidence-20261024074454-breaker-disabled"
+  },
+  {
+    "breaker_state": 0,
+    "dead_lettered": 982,
+    "downstream_calls": 1383,
+    "downstream_failures": 982,
+    "metrics": {
+      "consumed": 1383,
+      "published": 1383
+    },
+    "mode": "disabled",
+    "outstanding": 1,
+    "paused": false,
+    "paused_samples_5ms": 0,
+    "peak_outstanding": 4,
+    "scenario": "breaker",
+    "succeeded": 400,
+    "time_utc": "2026-10-24T07:47:02.550476Z",
+    "topic": "evidence-20261024074454-breaker-disabled"
+  },
+  {
+    "breaker_state": 0,
+    "dead_lettered": 1003,
+    "downstream_calls": 1404,
+    "downstream_failures": 1003,
+    "metrics": {
+      "consumed": 1404,
+      "published": 1404
+    },
+    "mode": "disabled",
+    "outstanding": 1,
+    "paused": false,
+    "paused_samples_5ms": 0,
+    "peak_outstanding": 4,
+    "scenario": "breaker",
+    "succeeded": 400,
+    "time_utc": "2026-10-24T07:47:02.654316Z",
+    "topic": "evidence-20261024074454-breaker-disabled"
+  },
+  {
+    "breaker_state": 0,
+    "dead_lettered": 1023,
+    "downstream_calls": 1425,
+    "downstream_failures": 1023,
+    "metrics": {
+      "consumed": 1425,
+      "published": 1425
+    },
+    "mode": "disabled",
+    "outstanding": 2,
+    "paused": false,
+    "paused_samples_5ms": 0,
+    "peak_outstanding": 4,
+    "scenario": "breaker",
+    "succeeded": 400,
+    "time_utc": "2026-10-24T07:47:02.757773Z",
+    "topic": "evidence-20261024074454-breaker-disabled"
+  },
+  {
+    "breaker_state": 0,
+    "dead_lettered": 1045,
+    "downstream_calls": 1446,
+    "downstream_failures": 1045,
+    "metrics": {
+      "consumed": 1446,
+      "published": 1446
+    },
+    "mode": "disabled",
+    "outstanding": 1,
+    "paused": false,
+    "paused_samples_5ms": 0,
+    "peak_outstanding": 4,
+    "scenario": "breaker",
+    "succeeded": 400,
+    "time_utc": "2026-10-24T07:47:02.863312Z",
+    "topic": "evidence-20261024074454-breaker-disabled"
+  },
+  {
+    "breaker_state": 0,
+    "dead_lettered": 1066,
+    "downstream_calls": 1467,
+    "downstream_failures": 1066,
+    "metrics": {
+      "consumed": 1467,
+      "published": 1467
+    },
+    "mode": "disabled",
+    "outstanding": 1,
+    "paused": false,
+    "paused_samples_5ms": 0,
+    "peak_outstanding": 4,
+    "scenario": "breaker",
+    "succeeded": 400,
+    "time_utc": "2026-10-24T07:47:02.967874Z",
+    "topic": "evidence-20261024074454-breaker-disabled"
+  },
+  {
+    "breaker_state": 0,
+    "dead_lettered": 1087,
+    "downstream_calls": 1488,
+    "downstream_failures": 1087,
+    "metrics": {
+      "consumed": 1488,
+      "published": 1488
+    },
+    "mode": "disabled",
+    "outstanding": 1,
+    "paused": false,
+    "paused_samples_5ms": 0,
+    "peak_outstanding": 4,
+    "scenario": "breaker",
+    "succeeded": 400,
+    "time_utc": "2026-10-24T07:47:03.073486Z",
+    "topic": "evidence-20261024074454-breaker-disabled"
+  },
+  {
+    "breaker_state": 0,
+    "dead_lettered": 1108,
+    "downstream_calls": 1508,
+    "downstream_failures": 1108,
+    "metrics": {
+      "consumed": 1508,
+      "published": 1508
+    },
+    "mode": "disabled",
+    "outstanding": 0,
+    "paused": false,
+    "paused_samples_5ms": 0,
+    "peak_outstanding": 4,
+    "scenario": "breaker",
+    "succeeded": 400,
+    "time_utc": "2026-10-24T07:47:03.177463Z",
+    "topic": "evidence-20261024074454-breaker-disabled"
+  },
+  {
+    "breaker_state": 0,
+    "dead_lettered": 1129,
+    "downstream_calls": 1529,
+    "downstream_failures": 1129,
+    "metrics": {
+      "consumed": 1529,
+      "published": 1529
+    },
+    "mode": "disabled",
+    "outstanding": 0,
+    "paused": false,
+    "paused_samples_5ms": 0,
+    "peak_outstanding": 4,
+    "scenario": "breaker",
+    "succeeded": 400,
+    "time_utc": "2026-10-24T07:47:03.283668Z",
+    "topic": "evidence-20261024074454-breaker-disabled"
+  },
+  {
+    "breaker_state": 0,
+    "dead_lettered": 1150,
+    "downstream_calls": 1551,
+    "downstream_failures": 1150,
+    "metrics": {
+      "consumed": 1551,
+      "published": 1551
+    },
+    "mode": "disabled",
+    "outstanding": 1,
+    "paused": false,
+    "paused_samples_5ms": 0,
+    "peak_outstanding": 4,
+    "scenario": "breaker",
+    "succeeded": 400,
+    "time_utc": "2026-10-24T07:47:03.390036Z",
+    "topic": "evidence-20261024074454-breaker-disabled"
+  },
+  {
+    "breaker_state": 0,
+    "dead_lettered": 1171,
+    "downstream_calls": 1572,
+    "downstream_failures": 1171,
+    "metrics": {
+      "consumed": 1572,
+      "published": 1572
+    },
+    "mode": "disabled",
+    "outstanding": 1,
+    "paused": false,
+    "paused_samples_5ms": 0,
+    "peak_outstanding": 4,
+    "scenario": "breaker",
+    "succeeded": 400,
+    "time_utc": "2026-10-24T07:47:03.494389Z",
+    "topic": "evidence-20261024074454-breaker-disabled"
+  },
+  {
+    "breaker_state": 0,
+    "dead_lettered": 1192,
+    "downstream_calls": 1593,
+    "downstream_failures": 1192,
+    "metrics": {
+      "consumed": 1593,
+      "published": 1593
+    },
+    "mode": "disabled",
+    "outstanding": 1,
+    "paused": false,
+    "paused_samples_5ms": 0,
+    "peak_outstanding": 4,
+    "scenario": "breaker",
+    "succeeded": 400,
+    "time_utc": "2026-10-24T07:47:03.601574Z",
+    "topic": "evidence-20261024074454-breaker-disabled"
+  },
+  {
+    "breaker_state": 0,
+    "dead_lettered": 1200,
+    "downstream_calls": 1614,
+    "downstream_failures": 1200,
+    "metrics": {
+      "consumed": 1614,
+      "published": 1614
+    },
+    "mode": "disabled",
+    "outstanding": 1,
+    "paused": false,
+    "paused_samples_5ms": 0,
+    "peak_outstanding": 4,
+    "scenario": "breaker",
+    "succeeded": 413,
+    "time_utc": "2026-10-24T07:47:03.705829Z",
+    "topic": "evidence-20261024074454-breaker-disabled"
+  },
+  {
+    "breaker_state": 0,
+    "dead_lettered": 1200,
+    "downstream_calls": 1635,
+    "downstream_failures": 1200,
+    "metrics": {
+      "consumed": 1635,
+      "published": 1635
+    },
+    "mode": "disabled",
+    "outstanding": 1,
+    "paused": false,
+    "paused_samples_5ms": 0,
+    "peak_outstanding": 4,
+    "scenario": "breaker",
+    "succeeded": 434,
+    "time_utc": "2026-10-24T07:47:03.811209Z",
+    "topic": "evidence-20261024074454-breaker-disabled"
+  },
+  {
+    "breaker_state": 0,
+    "dead_lettered": 1200,
+    "downstream_calls": 1656,
+    "downstream_failures": 1200,
+    "metrics": {
+      "consumed": 1656,
+      "published": 1656
+    },
+    "mode": "disabled",
+    "outstanding": 1,
+    "paused": false,
+    "paused_samples_5ms": 0,
+    "peak_outstanding": 4,
+    "scenario": "breaker",
+    "succeeded": 455,
+    "time_utc": "2026-10-24T07:47:03.917412Z",
+    "topic": "evidence-20261024074454-breaker-disabled"
+  },
+  {
+    "breaker_state": 0,
+    "dead_lettered": 1200,
+    "downstream_calls": 1677,
+    "downstream_failures": 1200,
+    "metrics": {
+      "consumed": 1677,
+      "published": 1677
+    },
+    "mode": "disabled",
+    "outstanding": 1,
+    "paused": false,
+    "paused_samples_5ms": 0,
+    "peak_outstanding": 4,
+    "scenario": "breaker",
+    "succeeded": 476,
+    "time_utc": "2026-10-24T07:47:04.022057Z",
+    "topic": "evidence-20261024074454-breaker-disabled"
+  },
+  {
+    "breaker_state": 0,
+    "dead_lettered": 1200,
+    "downstream_calls": 1698,
+    "downstream_failures": 1200,
+    "metrics": {
+      "consumed": 1698,
+      "published": 1698
+    },
+    "mode": "disabled",
+    "outstanding": 1,
+    "paused": false,
+    "paused_samples_5ms": 0,
+    "peak_outstanding": 4,
+    "scenario": "breaker",
+    "succeeded": 497,
+    "time_utc": "2026-10-24T07:47:04.124788Z",
+    "topic": "evidence-20261024074454-breaker-disabled"
+  },
+  {
+    "breaker_state": 0,
+    "dead_lettered": 1200,
+    "downstream_calls": 1718,
+    "downstream_failures": 1200,
+    "metrics": {
+      "consumed": 1718,
+      "published": 1718
+    },
+    "mode": "disabled",
+    "outstanding": 1,
+    "paused": false,
+    "paused_samples_5ms": 0,
+    "peak_outstanding": 4,
+    "scenario": "breaker",
+    "succeeded": 517,
+    "time_utc": "2026-10-24T07:47:04.226926Z",
+    "topic": "evidence-20261024074454-breaker-disabled"
+  },
+  {
+    "breaker_state": 0,
+    "dead_lettered": 1200,
+    "downstream_calls": 1739,
+    "downstream_failures": 1200,
+    "metrics": {
+      "consumed": 1739,
+      "published": 1739
+    },
+    "mode": "disabled",
+    "outstanding": 1,
+    "paused": false,
+    "paused_samples_5ms": 0,
+    "peak_outstanding": 4,
+    "scenario": "breaker",
+    "succeeded": 538,
+    "time_utc": "2026-10-24T07:47:04.3291Z",
+    "topic": "evidence-20261024074454-breaker-disabled"
+  },
+  {
+    "breaker_state": 0,
+    "dead_lettered": 1200,
+    "downstream_calls": 1760,
+    "downstream_failures": 1200,
+    "metrics": {
+      "consumed": 1760,
+      "published": 1760
+    },
+    "mode": "disabled",
+    "outstanding": 1,
+    "paused": false,
+    "paused_samples_5ms": 0,
+    "peak_outstanding": 4,
+    "scenario": "breaker",
+    "succeeded": 559,
+    "time_utc": "2026-10-24T07:47:04.432755Z",
+    "topic": "evidence-20261024074454-breaker-disabled"
+  },
+  {
+    "breaker_state": 0,
+    "dead_lettered": 1200,
+    "downstream_calls": 1781,
+    "downstream_failures": 1200,
+    "metrics": {
+      "consumed": 1781,
+      "published": 1781
+    },
+    "mode": "disabled",
+    "outstanding": 1,
+    "paused": false,
+    "paused_samples_5ms": 0,
+    "peak_outstanding": 4,
+    "scenario": "breaker",
+    "succeeded": 580,
+    "time_utc": "2026-10-24T07:47:04.538268Z",
+    "topic": "evidence-20261024074454-breaker-disabled"
+  },
+  {
+    "breaker_state": 0,
+    "dead_lettered": 1200,
+    "downstream_calls": 1801,
+    "downstream_failures": 1200,
+    "metrics": {
+      "consumed": 1801,
+      "published": 1801
+    },
+    "mode": "disabled",
+    "outstanding": 1,
+    "paused": false,
+    "paused_samples_5ms": 0,
+    "peak_outstanding": 4,
+    "scenario": "breaker",
+    "succeeded": 600,
+    "time_utc": "2026-10-24T07:47:04.640141Z",
+    "topic": "evidence-20261024074454-breaker-disabled"
+  },
+  {
+    "breaker_state": 0,
+    "dead_lettered": 1200,
+    "downstream_calls": 1821,
+    "downstream_failures": 1200,
+    "metrics": {
+      "consumed": 1821,
+      "published": 1821
+    },
+    "mode": "disabled",
+    "outstanding": 1,
+    "paused": false,
+    "paused_samples_5ms": 0,
+    "peak_outstanding": 4,
+    "scenario": "breaker",
+    "succeeded": 620,
+    "time_utc": "2026-10-24T07:47:04.742048Z",
+    "topic": "evidence-20261024074454-breaker-disabled"
+  },
+  {
+    "breaker_state": 0,
+    "dead_lettered": 1200,
+    "downstream_calls": 1842,
+    "downstream_failures": 1200,
+    "metrics": {
+      "consumed": 1842,
+      "published": 1842
+    },
+    "mode": "disabled",
+    "outstanding": 1,
+    "paused": false,
+    "paused_samples_5ms": 0,
+    "peak_outstanding": 4,
+    "scenario": "breaker",
+    "succeeded": 641,
+    "time_utc": "2026-10-24T07:47:04.846137Z",
+    "topic": "evidence-20261024074454-breaker-disabled"
+  },
+  {
+    "breaker_state": 0,
+    "dead_lettered": 1200,
+    "downstream_calls": 1863,
+    "downstream_failures": 1200,
+    "metrics": {
+      "consumed": 1863,
+      "published": 1863
+    },
+    "mode": "disabled",
+    "outstanding": 1,
+    "paused": false,
+    "paused_samples_5ms": 0,
+    "peak_outstanding": 4,
+    "scenario": "breaker",
+    "succeeded": 662,
+    "time_utc": "2026-10-24T07:47:04.947864Z",
+    "topic": "evidence-20261024074454-breaker-disabled"
+  },
+  {
+    "breaker_state": 0,
+    "dead_lettered": 1200,
+    "downstream_calls": 1884,
+    "downstream_failures": 1200,
+    "metrics": {
+      "consumed": 1884,
+      "published": 1884
+    },
+    "mode": "disabled",
+    "outstanding": 1,
+    "paused": false,
+    "paused_samples_5ms": 0,
+    "peak_outstanding": 4,
+    "scenario": "breaker",
+    "succeeded": 683,
+    "time_utc": "2026-10-24T07:47:05.053659Z",
+    "topic": "evidence-20261024074454-breaker-disabled"
+  },
+  {
+    "breaker_state": 0,
+    "dead_lettered": 1200,
+    "downstream_calls": 1904,
+    "downstream_failures": 1200,
+    "metrics": {
+      "consumed": 1904,
+      "published": 1904
+    },
+    "mode": "disabled",
+    "outstanding": 0,
+    "paused": false,
+    "paused_samples_5ms": 0,
+    "peak_outstanding": 4,
+    "scenario": "breaker",
+    "succeeded": 704,
+    "time_utc": "2026-10-24T07:47:05.1592Z",
+    "topic": "evidence-20261024074454-breaker-disabled"
+  },
+  {
+    "breaker_state": 0,
+    "dead_lettered": 1200,
+    "downstream_calls": 1926,
+    "downstream_failures": 1200,
+    "metrics": {
+      "consumed": 1926,
+      "published": 1926
+    },
+    "mode": "disabled",
+    "outstanding": 1,
+    "paused": false,
+    "paused_samples_5ms": 0,
+    "peak_outstanding": 4,
+    "scenario": "breaker",
+    "succeeded": 725,
+    "time_utc": "2026-10-24T07:47:05.262939Z",
+    "topic": "evidence-20261024074454-breaker-disabled"
+  },
+  {
+    "breaker_state": 0,
+    "dead_lettered": 1200,
+    "downstream_calls": 1947,
+    "downstream_failures": 1200,
+    "metrics": {
+      "consumed": 1947,
+      "published": 1947
+    },
+    "mode": "disabled",
+    "outstanding": 1,
+    "paused": false,
+    "paused_samples_5ms": 0,
+    "peak_outstanding": 4,
+    "scenario": "breaker",
+    "succeeded": 746,
+    "time_utc": "2026-10-24T07:47:05.367881Z",
+    "topic": "evidence-20261024074454-breaker-disabled"
+  },
+  {
+    "breaker_state": 0,
+    "dead_lettered": 1200,
+    "downstream_calls": 1967,
+    "downstream_failures": 1200,
+    "metrics": {
+      "consumed": 1967,
+      "published": 1967
+    },
+    "mode": "disabled",
+    "outstanding": 1,
+    "paused": false,
+    "paused_samples_5ms": 0,
+    "peak_outstanding": 4,
+    "scenario": "breaker",
+    "succeeded": 766,
+    "time_utc": "2026-10-24T07:47:05.471988Z",
+    "topic": "evidence-20261024074454-breaker-disabled"
+  },
+  {
+    "breaker_state": 0,
+    "dead_lettered": 1200,
+    "downstream_calls": 1988,
+    "downstream_failures": 1200,
+    "metrics": {
+      "consumed": 1988,
+      "published": 1988
+    },
+    "mode": "disabled",
+    "outstanding": 1,
+    "paused": false,
+    "paused_samples_5ms": 0,
+    "peak_outstanding": 4,
+    "scenario": "breaker",
+    "succeeded": 787,
+    "time_utc": "2026-10-24T07:47:05.575306Z",
+    "topic": "evidence-20261024074454-breaker-disabled"
+  },
+  {
+    "breaker_state": 0,
+    "dead_lettered": 1200,
+    "downstream_calls": 2009,
+    "downstream_failures": 1200,
+    "metrics": {
+      "consumed": 2009,
+      "published": 2009
+    },
+    "mode": "disabled",
+    "outstanding": 1,
+    "paused": false,
+    "paused_samples_5ms": 0,
+    "peak_outstanding": 4,
+    "scenario": "breaker",
+    "succeeded": 808,
+    "time_utc": "2026-10-24T07:47:05.67776Z",
+    "topic": "evidence-20261024074454-breaker-disabled"
+  },
+  {
+    "breaker_state": 0,
+    "dead_lettered": 1200,
+    "downstream_calls": 2030,
+    "downstream_failures": 1200,
+    "metrics": {
+      "consumed": 2030,
+      "published": 2030
+    },
+    "mode": "disabled",
+    "outstanding": 1,
+    "paused": false,
+    "paused_samples_5ms": 0,
+    "peak_outstanding": 4,
+    "scenario": "breaker",
+    "succeeded": 829,
+    "time_utc": "2026-10-24T07:47:05.783746Z",
+    "topic": "evidence-20261024074454-breaker-disabled"
+  },
+  {
+    "breaker_state": 0,
+    "dead_lettered": 1200,
+    "downstream_calls": 2051,
+    "downstream_failures": 1200,
+    "metrics": {
+      "consumed": 2051,
+      "published": 2051
+    },
+    "mode": "disabled",
+    "outstanding": 1,
+    "paused": false,
+    "paused_samples_5ms": 0,
+    "peak_outstanding": 4,
+    "scenario": "breaker",
+    "succeeded": 850,
+    "time_utc": "2026-10-24T07:47:05.888564Z",
+    "topic": "evidence-20261024074454-breaker-disabled"
+  },
+  {
+    "breaker_state": 0,
+    "dead_lettered": 1200,
+    "downstream_calls": 2071,
+    "downstream_failures": 1200,
+    "metrics": {
+      "consumed": 2071,
+      "published": 2071
+    },
+    "mode": "disabled",
+    "outstanding": 0,
+    "paused": false,
+    "paused_samples_5ms": 0,
+    "peak_outstanding": 4,
+    "scenario": "breaker",
+    "succeeded": 871,
+    "time_utc": "2026-10-24T07:47:05.9924Z",
+    "topic": "evidence-20261024074454-breaker-disabled"
+  },
+  {
+    "breaker_state": 0,
+    "dead_lettered": 1200,
+    "downstream_calls": 2092,
+    "downstream_failures": 1200,
+    "metrics": {
+      "consumed": 2092,
+      "published": 2092
+    },
+    "mode": "disabled",
+    "outstanding": 1,
+    "paused": false,
+    "paused_samples_5ms": 0,
+    "peak_outstanding": 4,
+    "scenario": "breaker",
+    "succeeded": 891,
+    "time_utc": "2026-10-24T07:47:06.093602Z",
+    "topic": "evidence-20261024074454-breaker-disabled"
+  },
+  {
+    "breaker_state": 0,
+    "dead_lettered": 1200,
+    "downstream_calls": 2113,
+    "downstream_failures": 1200,
+    "metrics": {
+      "consumed": 2113,
+      "published": 2113
+    },
+    "mode": "disabled",
+    "outstanding": 1,
+    "paused": false,
+    "paused_samples_5ms": 0,
+    "peak_outstanding": 4,
+    "scenario": "breaker",
+    "succeeded": 912,
+    "time_utc": "2026-10-24T07:47:06.199005Z",
+    "topic": "evidence-20261024074454-breaker-disabled"
+  },
+  {
+    "breaker_state": 0,
+    "dead_lettered": 1200,
+    "downstream_calls": 2134,
+    "downstream_failures": 1200,
+    "metrics": {
+      "consumed": 2134,
+      "published": 2134
+    },
+    "mode": "disabled",
+    "outstanding": 2,
+    "paused": false,
+    "paused_samples_5ms": 0,
+    "peak_outstanding": 4,
+    "scenario": "breaker",
+    "succeeded": 932,
+    "time_utc": "2026-10-24T07:47:06.302597Z",
+    "topic": "evidence-20261024074454-breaker-disabled"
+  },
+  {
+    "breaker_state": 0,
+    "dead_lettered": 1200,
+    "downstream_calls": 2155,
+    "downstream_failures": 1200,
+    "metrics": {
+      "consumed": 2155,
+      "published": 2155
+    },
+    "mode": "disabled",
+    "outstanding": 1,
+    "paused": false,
+    "paused_samples_5ms": 0,
+    "peak_outstanding": 4,
+    "scenario": "breaker",
+    "succeeded": 954,
+    "time_utc": "2026-10-24T07:47:06.408152Z",
+    "topic": "evidence-20261024074454-breaker-disabled"
+  },
+  {
+    "breaker_state": 0,
+    "dead_lettered": 1200,
+    "downstream_calls": 2176,
+    "downstream_failures": 1200,
+    "metrics": {
+      "consumed": 2176,
+      "published": 2176
+    },
+    "mode": "disabled",
+    "outstanding": 1,
+    "paused": false,
+    "paused_samples_5ms": 0,
+    "peak_outstanding": 4,
+    "scenario": "breaker",
+    "succeeded": 975,
+    "time_utc": "2026-10-24T07:47:06.513035Z",
+    "topic": "evidence-20261024074454-breaker-disabled"
+  },
+  {
+    "breaker_state": 0,
+    "dead_lettered": 1200,
+    "downstream_calls": 2196,
+    "downstream_failures": 1200,
+    "metrics": {
+      "consumed": 2196,
+      "published": 2196
+    },
+    "mode": "disabled",
+    "outstanding": 1,
+    "paused": false,
+    "paused_samples_5ms": 0,
+    "peak_outstanding": 4,
+    "scenario": "breaker",
+    "succeeded": 995,
+    "time_utc": "2026-10-24T07:47:06.61756Z",
+    "topic": "evidence-20261024074454-breaker-disabled"
+  },
+  {
+    "breaker_state": 0,
+    "dead_lettered": 1200,
+    "downstream_calls": 2218,
+    "downstream_failures": 1200,
+    "metrics": {
+      "consumed": 2218,
+      "published": 2218
+    },
+    "mode": "disabled",
+    "outstanding": 2,
+    "paused": false,
+    "paused_samples_5ms": 0,
+    "peak_outstanding": 4,
+    "scenario": "breaker",
+    "succeeded": 1016,
+    "time_utc": "2026-10-24T07:47:06.722169Z",
+    "topic": "evidence-20261024074454-breaker-disabled"
+  },
+  {
+    "breaker_state": 0,
+    "dead_lettered": 1200,
+    "downstream_calls": 2238,
+    "downstream_failures": 1200,
+    "metrics": {
+      "consumed": 2238,
+      "published": 2238
+    },
+    "mode": "disabled",
+    "outstanding": 1,
+    "paused": false,
+    "paused_samples_5ms": 0,
+    "peak_outstanding": 4,
+    "scenario": "breaker",
+    "succeeded": 1037,
+    "time_utc": "2026-10-24T07:47:06.82508Z",
+    "topic": "evidence-20261024074454-breaker-disabled"
+  },
+  {
+    "breaker_state": 0,
+    "dead_lettered": 1200,
+    "downstream_calls": 2259,
+    "downstream_failures": 1200,
+    "metrics": {
+      "consumed": 2259,
+      "published": 2259
+    },
+    "mode": "disabled",
+    "outstanding": 1,
+    "paused": false,
+    "paused_samples_5ms": 0,
+    "peak_outstanding": 4,
+    "scenario": "breaker",
+    "succeeded": 1058,
+    "time_utc": "2026-10-24T07:47:06.930416Z",
+    "topic": "evidence-20261024074454-breaker-disabled"
+  },
+  {
+    "breaker_state": 0,
+    "dead_lettered": 1200,
+    "downstream_calls": 2280,
+    "downstream_failures": 1200,
+    "metrics": {
+      "consumed": 2280,
+      "published": 2280
+    },
+    "mode": "disabled",
+    "outstanding": 1,
+    "paused": false,
+    "paused_samples_5ms": 0,
+    "peak_outstanding": 4,
+    "scenario": "breaker",
+    "succeeded": 1079,
+    "time_utc": "2026-10-24T07:47:07.035233Z",
+    "topic": "evidence-20261024074454-breaker-disabled"
+  },
+  {
+    "breaker_state": 0,
+    "dead_lettered": 1200,
+    "downstream_calls": 2301,
+    "downstream_failures": 1200,
+    "metrics": {
+      "consumed": 2301,
+      "published": 2301
+    },
+    "mode": "disabled",
+    "outstanding": 1,
+    "paused": false,
+    "paused_samples_5ms": 0,
+    "peak_outstanding": 4,
+    "scenario": "breaker",
+    "succeeded": 1100,
+    "time_utc": "2026-10-24T07:47:07.137833Z",
+    "topic": "evidence-20261024074454-breaker-disabled"
+  },
+  {
+    "breaker_state": 0,
+    "dead_lettered": 1200,
+    "downstream_calls": 2322,
+    "downstream_failures": 1200,
+    "metrics": {
+      "consumed": 2322,
+      "published": 2322
+    },
+    "mode": "disabled",
+    "outstanding": 1,
+    "paused": false,
+    "paused_samples_5ms": 0,
+    "peak_outstanding": 4,
+    "scenario": "breaker",
+    "succeeded": 1121,
+    "time_utc": "2026-10-24T07:47:07.243511Z",
+    "topic": "evidence-20261024074454-breaker-disabled"
+  },
+  {
+    "breaker_state": 0,
+    "dead_lettered": 1200,
+    "downstream_calls": 2343,
+    "downstream_failures": 1200,
+    "metrics": {
+      "consumed": 2343,
+      "published": 2343
+    },
+    "mode": "disabled",
+    "outstanding": 1,
+    "paused": false,
+    "paused_samples_5ms": 0,
+    "peak_outstanding": 4,
+    "scenario": "breaker",
+    "succeeded": 1142,
+    "time_utc": "2026-10-24T07:47:07.347705Z",
+    "topic": "evidence-20261024074454-breaker-disabled"
+  },
+  {
+    "breaker_state": 0,
+    "dead_lettered": 1200,
+    "downstream_calls": 2363,
+    "downstream_failures": 1200,
+    "metrics": {
+      "consumed": 2363,
+      "published": 2363
+    },
+    "mode": "disabled",
+    "outstanding": 0,
+    "paused": false,
+    "paused_samples_5ms": 0,
+    "peak_outstanding": 4,
+    "scenario": "breaker",
+    "succeeded": 1163,
+    "time_utc": "2026-10-24T07:47:07.452425Z",
+    "topic": "evidence-20261024074454-breaker-disabled"
+  },
+  {
+    "breaker_state": 0,
+    "dead_lettered": 1200,
+    "downstream_calls": 2385,
+    "downstream_failures": 1200,
+    "metrics": {
+      "consumed": 2385,
+      "published": 2385
+    },
+    "mode": "disabled",
+    "outstanding": 1,
+    "paused": false,
+    "paused_samples_5ms": 0,
+    "peak_outstanding": 4,
+    "scenario": "breaker",
+    "succeeded": 1184,
+    "time_utc": "2026-10-24T07:47:07.558038Z",
+    "topic": "evidence-20261024074454-breaker-disabled"
+  },
+  {
+    "breaker_state": 0,
+    "dead_lettered": 1200,
+    "downstream_calls": 2406,
+    "downstream_failures": 1200,
+    "metrics": {
+      "consumed": 2406,
+      "published": 2406
+    },
+    "mode": "disabled",
+    "outstanding": 1,
+    "paused": false,
+    "paused_samples_5ms": 0,
+    "peak_outstanding": 4,
+    "scenario": "breaker",
+    "succeeded": 1205,
+    "time_utc": "2026-10-24T07:47:07.663853Z",
+    "topic": "evidence-20261024074454-breaker-disabled"
+  },
+  {
+    "breaker_state": 0,
+    "dead_lettered": 1200,
+    "downstream_calls": 2426,
+    "downstream_failures": 1200,
+    "metrics": {
+      "consumed": 2426,
+      "published": 2426
+    },
+    "mode": "disabled",
+    "outstanding": 1,
+    "paused": false,
+    "paused_samples_5ms": 0,
+    "peak_outstanding": 4,
+    "scenario": "breaker",
+    "succeeded": 1225,
+    "time_utc": "2026-10-24T07:47:07.765949Z",
+    "topic": "evidence-20261024074454-breaker-disabled"
+  },
+  {
+    "breaker_state": 0,
+    "dead_lettered": 1200,
+    "downstream_calls": 2447,
+    "downstream_failures": 1200,
+    "metrics": {
+      "consumed": 2447,
+      "published": 2447
+    },
+    "mode": "disabled",
+    "outstanding": 1,
+    "paused": false,
+    "paused_samples_5ms": 0,
+    "peak_outstanding": 4,
+    "scenario": "breaker",
+    "succeeded": 1246,
+    "time_utc": "2026-10-24T07:47:07.871971Z",
+    "topic": "evidence-20261024074454-breaker-disabled"
+  },
+  {
+    "breaker_state": 0,
+    "dead_lettered": 1200,
+    "downstream_calls": 2468,
+    "downstream_failures": 1200,
+    "metrics": {
+      "consumed": 2468,
+      "published": 2468
+    },
+    "mode": "disabled",
+    "outstanding": 1,
+    "paused": false,
+    "paused_samples_5ms": 0,
+    "peak_outstanding": 4,
+    "scenario": "breaker",
+    "succeeded": 1267,
+    "time_utc": "2026-10-24T07:47:07.973595Z",
+    "topic": "evidence-20261024074454-breaker-disabled"
+  },
+  {
+    "breaker_state": 0,
+    "dead_lettered": 1200,
+    "downstream_calls": 2488,
+    "downstream_failures": 1200,
+    "metrics": {
+      "consumed": 2488,
+      "published": 2488
+    },
+    "mode": "disabled",
+    "outstanding": 1,
+    "paused": false,
+    "paused_samples_5ms": 0,
+    "peak_outstanding": 4,
+    "scenario": "breaker",
+    "succeeded": 1287,
+    "time_utc": "2026-10-24T07:47:08.076005Z",
+    "topic": "evidence-20261024074454-breaker-disabled"
+  },
+  {
+    "breaker_state": 0,
+    "dead_lettered": 1200,
+    "downstream_calls": 2509,
+    "downstream_failures": 1200,
+    "metrics": {
+      "consumed": 2509,
+      "published": 2509
+    },
+    "mode": "disabled",
+    "outstanding": 1,
+    "paused": false,
+    "paused_samples_5ms": 0,
+    "peak_outstanding": 4,
+    "scenario": "breaker",
+    "succeeded": 1308,
+    "time_utc": "2026-10-24T07:47:08.181153Z",
+    "topic": "evidence-20261024074454-breaker-disabled"
+  },
+  {
+    "breaker_state": 0,
+    "dead_lettered": 1200,
+    "downstream_calls": 2530,
+    "downstream_failures": 1200,
+    "metrics": {
+      "consumed": 2530,
+      "published": 2530
+    },
+    "mode": "disabled",
+    "outstanding": 1,
+    "paused": false,
+    "paused_samples_5ms": 0,
+    "peak_outstanding": 4,
+    "scenario": "breaker",
+    "succeeded": 1329,
+    "time_utc": "2026-10-24T07:47:08.286991Z",
+    "topic": "evidence-20261024074454-breaker-disabled"
+  },
+  {
+    "breaker_state": 0,
+    "dead_lettered": 1200,
+    "downstream_calls": 2552,
+    "downstream_failures": 1200,
+    "metrics": {
+      "consumed": 2552,
+      "published": 2552
+    },
+    "mode": "disabled",
+    "outstanding": 1,
+    "paused": false,
+    "paused_samples_5ms": 0,
+    "peak_outstanding": 4,
+    "scenario": "breaker",
+    "succeeded": 1351,
+    "time_utc": "2026-10-24T07:47:08.393097Z",
+    "topic": "evidence-20261024074454-breaker-disabled"
+  },
+  {
+    "breaker_state": 0,
+    "dead_lettered": 1200,
+    "downstream_calls": 2573,
+    "downstream_failures": 1200,
+    "metrics": {
+      "consumed": 2573,
+      "published": 2573
+    },
+    "mode": "disabled",
+    "outstanding": 1,
+    "paused": false,
+    "paused_samples_5ms": 0,
+    "peak_outstanding": 4,
+    "scenario": "breaker",
+    "succeeded": 1372,
+    "time_utc": "2026-10-24T07:47:08.498138Z",
+    "topic": "evidence-20261024074454-breaker-disabled"
+  },
+  {
+    "breaker_state": 0,
+    "dead_lettered": 1200,
+    "downstream_calls": 2594,
+    "downstream_failures": 1200,
+    "metrics": {
+      "consumed": 2594,
+      "published": 2594
+    },
+    "mode": "disabled",
+    "outstanding": 1,
+    "paused": false,
+    "paused_samples_5ms": 0,
+    "peak_outstanding": 4,
+    "scenario": "breaker",
+    "succeeded": 1393,
+    "time_utc": "2026-10-24T07:47:08.603681Z",
+    "topic": "evidence-20261024074454-breaker-disabled"
+  },
+  {
+    "breaker_state": 0,
+    "dead_lettered": 1200,
+    "downstream_calls": 2614,
+    "downstream_failures": 1200,
+    "metrics": {
+      "consumed": 2614,
+      "published": 2614
+    },
+    "mode": "disabled",
+    "outstanding": 1,
+    "paused": false,
+    "paused_samples_5ms": 0,
+    "peak_outstanding": 4,
+    "scenario": "breaker",
+    "succeeded": 1413,
+    "time_utc": "2026-10-24T07:47:08.707162Z",
+    "topic": "evidence-20261024074454-breaker-disabled"
+  },
+  {
+    "breaker_state": 0,
+    "dead_lettered": 1200,
+    "downstream_calls": 2636,
+    "downstream_failures": 1200,
+    "metrics": {
+      "consumed": 2636,
+      "published": 2636
+    },
+    "mode": "disabled",
+    "outstanding": 1,
+    "paused": false,
+    "paused_samples_5ms": 0,
+    "peak_outstanding": 4,
+    "scenario": "breaker",
+    "succeeded": 1435,
+    "time_utc": "2026-10-24T07:47:08.813084Z",
+    "topic": "evidence-20261024074454-breaker-disabled"
+  },
+  {
+    "breaker_state": 0,
+    "dead_lettered": 1200,
+    "downstream_calls": 2657,
+    "downstream_failures": 1200,
+    "metrics": {
+      "consumed": 2657,
+      "published": 2657
+    },
+    "mode": "disabled",
+    "outstanding": 1,
+    "paused": false,
+    "paused_samples_5ms": 0,
+    "peak_outstanding": 4,
+    "scenario": "breaker",
+    "succeeded": 1456,
+    "time_utc": "2026-10-24T07:47:08.91866Z",
+    "topic": "evidence-20261024074454-breaker-disabled"
+  },
+  {
+    "breaker_state": 0,
+    "dead_lettered": 1200,
+    "downstream_calls": 2678,
+    "downstream_failures": 1200,
+    "metrics": {
+      "consumed": 2678,
+      "published": 2678
+    },
+    "mode": "disabled",
+    "outstanding": 1,
+    "paused": false,
+    "paused_samples_5ms": 0,
+    "peak_outstanding": 4,
+    "scenario": "breaker",
+    "succeeded": 1477,
+    "time_utc": "2026-10-24T07:47:09.02401Z",
+    "topic": "evidence-20261024074454-breaker-disabled"
+  },
+  {
+    "breaker_state": 0,
+    "dead_lettered": 1200,
+    "downstream_calls": 2699,
+    "downstream_failures": 1200,
+    "metrics": {
+      "consumed": 2699,
+      "published": 2699
+    },
+    "mode": "disabled",
+    "outstanding": 1,
+    "paused": false,
+    "paused_samples_5ms": 0,
+    "peak_outstanding": 4,
+    "scenario": "breaker",
+    "succeeded": 1498,
+    "time_utc": "2026-10-24T07:47:09.127968Z",
+    "topic": "evidence-20261024074454-breaker-disabled"
+  },
+  {
+    "breaker_state": 0,
+    "dead_lettered": 1200,
+    "downstream_calls": 2719,
+    "downstream_failures": 1200,
+    "metrics": {
+      "consumed": 2719,
+      "published": 2719
+    },
+    "mode": "disabled",
+    "outstanding": 1,
+    "paused": false,
+    "paused_samples_5ms": 0,
+    "peak_outstanding": 4,
+    "scenario": "breaker",
+    "succeeded": 1518,
+    "time_utc": "2026-10-24T07:47:09.22989Z",
+    "topic": "evidence-20261024074454-breaker-disabled"
+  },
+  {
+    "breaker_state": 0,
+    "dead_lettered": 1200,
+    "downstream_calls": 2740,
+    "downstream_failures": 1200,
+    "metrics": {
+      "consumed": 2740,
+      "published": 2740
+    },
+    "mode": "disabled",
+    "outstanding": 1,
+    "paused": false,
+    "paused_samples_5ms": 0,
+    "peak_outstanding": 4,
+    "scenario": "breaker",
+    "succeeded": 1539,
+    "time_utc": "2026-10-24T07:47:09.3328Z",
+    "topic": "evidence-20261024074454-breaker-disabled"
+  },
+  {
+    "breaker_state": 0,
+    "dead_lettered": 1200,
+    "downstream_calls": 2761,
+    "downstream_failures": 1200,
+    "metrics": {
+      "consumed": 2761,
+      "published": 2761
+    },
+    "mode": "disabled",
+    "outstanding": 1,
+    "paused": false,
+    "paused_samples_5ms": 0,
+    "peak_outstanding": 4,
+    "scenario": "breaker",
+    "succeeded": 1560,
+    "time_utc": "2026-10-24T07:47:09.438266Z",
+    "topic": "evidence-20261024074454-breaker-disabled"
+  },
+  {
+    "breaker_state": 0,
+    "dead_lettered": 1200,
+    "downstream_calls": 2782,
+    "downstream_failures": 1200,
+    "metrics": {
+      "consumed": 2782,
+      "published": 2782
+    },
+    "mode": "disabled",
+    "outstanding": 1,
+    "paused": false,
+    "paused_samples_5ms": 0,
+    "peak_outstanding": 4,
+    "scenario": "breaker",
+    "succeeded": 1581,
+    "time_utc": "2026-10-24T07:47:09.543901Z",
+    "topic": "evidence-20261024074454-breaker-disabled"
+  },
+  {
+    "breaker_state": 0,
+    "dead_lettered": 1200,
+    "downstream_calls": 2803,
+    "downstream_failures": 1200,
+    "metrics": {
+      "consumed": 2803,
+      "published": 2803
+    },
+    "mode": "disabled",
+    "outstanding": 1,
+    "paused": false,
+    "paused_samples_5ms": 0,
+    "peak_outstanding": 4,
+    "scenario": "breaker",
+    "succeeded": 1602,
+    "time_utc": "2026-10-24T07:47:09.648139Z",
+    "topic": "evidence-20261024074454-breaker-disabled"
+  },
+  {
+    "breaker_state": 0,
+    "dead_lettered": 1200,
+    "downstream_calls": 2824,
+    "downstream_failures": 1200,
+    "metrics": {
+      "consumed": 2824,
+      "published": 2824
+    },
+    "mode": "disabled",
+    "outstanding": 1,
+    "paused": false,
+    "paused_samples_5ms": 0,
+    "peak_outstanding": 4,
+    "scenario": "breaker",
+    "succeeded": 1623,
+    "time_utc": "2026-10-24T07:47:09.753688Z",
+    "topic": "evidence-20261024074454-breaker-disabled"
+  },
+  {
+    "breaker_state": 0,
+    "dead_lettered": 1200,
+    "downstream_calls": 2844,
+    "downstream_failures": 1200,
+    "metrics": {
+      "consumed": 2844,
+      "published": 2844
+    },
+    "mode": "disabled",
+    "outstanding": 1,
+    "paused": false,
+    "paused_samples_5ms": 0,
+    "peak_outstanding": 4,
+    "scenario": "breaker",
+    "succeeded": 1643,
+    "time_utc": "2026-10-24T07:47:09.857553Z",
+    "topic": "evidence-20261024074454-breaker-disabled"
+  },
+  {
+    "breaker_state": 0,
+    "dead_lettered": 1200,
+    "downstream_calls": 2865,
+    "downstream_failures": 1200,
+    "metrics": {
+      "consumed": 2865,
+      "published": 2865
+    },
+    "mode": "disabled",
+    "outstanding": 1,
+    "paused": false,
+    "paused_samples_5ms": 0,
+    "peak_outstanding": 4,
+    "scenario": "breaker",
+    "succeeded": 1664,
+    "time_utc": "2026-10-24T07:47:09.962049Z",
+    "topic": "evidence-20261024074454-breaker-disabled"
+  },
+  {
+    "breaker_state": 0,
+    "dead_lettered": 1200,
+    "downstream_calls": 2886,
+    "downstream_failures": 1200,
+    "metrics": {
+      "consumed": 2886,
+      "published": 2886
+    },
+    "mode": "disabled",
+    "outstanding": 1,
+    "paused": false,
+    "paused_samples_5ms": 0,
+    "peak_outstanding": 4,
+    "scenario": "breaker",
+    "succeeded": 1685,
+    "time_utc": "2026-10-24T07:47:10.064712Z",
+    "topic": "evidence-20261024074454-breaker-disabled"
+  },
+  {
+    "breaker_state": 0,
+    "dead_lettered": 1200,
+    "downstream_calls": 2907,
+    "downstream_failures": 1200,
+    "metrics": {
+      "consumed": 2907,
+      "published": 2907
+    },
+    "mode": "disabled",
+    "outstanding": 1,
+    "paused": false,
+    "paused_samples_5ms": 0,
+    "peak_outstanding": 4,
+    "scenario": "breaker",
+    "succeeded": 1706,
+    "time_utc": "2026-10-24T07:47:10.167935Z",
+    "topic": "evidence-20261024074454-breaker-disabled"
+  },
+  {
+    "breaker_state": 0,
+    "dead_lettered": 1200,
+    "downstream_calls": 2927,
+    "downstream_failures": 1200,
+    "metrics": {
+      "consumed": 2927,
+      "published": 2927
+    },
+    "mode": "disabled",
+    "outstanding": 1,
+    "paused": false,
+    "paused_samples_5ms": 0,
+    "peak_outstanding": 4,
+    "scenario": "breaker",
+    "succeeded": 1726,
+    "time_utc": "2026-10-24T07:47:10.269582Z",
+    "topic": "evidence-20261024074454-breaker-disabled"
+  },
+  {
+    "breaker_state": 0,
+    "dead_lettered": 1200,
+    "downstream_calls": 2948,
+    "downstream_failures": 1200,
+    "metrics": {
+      "consumed": 2948,
+      "published": 2948
+    },
+    "mode": "disabled",
+    "outstanding": 1,
+    "paused": false,
+    "paused_samples_5ms": 0,
+    "peak_outstanding": 4,
+    "scenario": "breaker",
+    "succeeded": 1747,
+    "time_utc": "2026-10-24T07:47:10.372969Z",
+    "topic": "evidence-20261024074454-breaker-disabled"
+  },
+  {
+    "breaker_state": 0,
+    "dead_lettered": 1200,
+    "downstream_calls": 2968,
+    "downstream_failures": 1200,
+    "metrics": {
+      "consumed": 2968,
+      "published": 2968
+    },
+    "mode": "disabled",
+    "outstanding": 1,
+    "paused": false,
+    "paused_samples_5ms": 0,
+    "peak_outstanding": 4,
+    "scenario": "breaker",
+    "succeeded": 1767,
+    "time_utc": "2026-10-24T07:47:10.475286Z",
+    "topic": "evidence-20261024074454-breaker-disabled"
+  },
+  {
+    "breaker_state": 0,
+    "dead_lettered": 1200,
+    "downstream_calls": 2989,
+    "downstream_failures": 1200,
+    "metrics": {
+      "consumed": 2989,
+      "published": 2989
+    },
+    "mode": "disabled",
+    "outstanding": 1,
+    "paused": false,
+    "paused_samples_5ms": 0,
+    "peak_outstanding": 4,
+    "scenario": "breaker",
+    "succeeded": 1788,
+    "time_utc": "2026-10-24T07:47:10.578873Z",
+    "topic": "evidence-20261024074454-breaker-disabled"
+  },
+  {
+    "breaker_state": 0,
+    "dead_lettered": 1200,
+    "downstream_calls": 3001,
+    "downstream_failures": 1200,
+    "metrics": {
+      "consumed": 3001,
+      "published": 3001
+    },
+    "mode": "disabled",
+    "outstanding": 0,
+    "paused": false,
+    "paused_samples_5ms": 0,
+    "peak_outstanding": 4,
+    "scenario": "breaker",
+    "succeeded": 1801,
+    "time_utc": "2026-10-24T07:47:10.682707Z",
+    "topic": "evidence-20261024074454-breaker-disabled"
+  },
+  {
+    "breaker_state": 0,
+    "dead_lettered": 1200,
+    "downstream_calls": 3001,
+    "downstream_failures": 1200,
+    "metrics": {
+      "consumed": 3001,
+      "published": 3001
+    },
+    "mode": "disabled",
+    "outstanding": 0,
+    "paused": false,
+    "paused_samples_5ms": 0,
+    "peak_outstanding": 4,
+    "scenario": "breaker",
+    "succeeded": 1801,
+    "time_utc": "2026-10-24T07:47:10.785027Z",
+    "topic": "evidence-20261024074454-breaker-disabled"
+  },
+  {
+    "breaker_state": 0,
+    "dead_lettered": 1200,
+    "downstream_calls": 3001,
+    "downstream_failures": 1200,
+    "metrics": {
+      "consumed": 3001,
+      "published": 3001
+    },
+    "mode": "disabled",
+    "outstanding": 0,
+    "paused": false,
+    "paused_samples_5ms": 0,
+    "peak_outstanding": 4,
+    "scenario": "breaker",
+    "succeeded": 1801,
+    "time_utc": "2026-10-24T07:47:10.89133Z",
+    "topic": "evidence-20261024074454-breaker-disabled"
+  },
+  {
+    "breaker_state": 0,
+    "dead_lettered": 1200,
+    "downstream_calls": 3001,
+    "downstream_failures": 1200,
+    "metrics": {
+      "consumed": 3001,
+      "published": 3001
+    },
+    "mode": "disabled",
+    "outstanding": 0,
+    "paused": false,
+    "paused_samples_5ms": 0,
+    "peak_outstanding": 4,
+    "scenario": "breaker",
+    "succeeded": 1801,
+    "time_utc": "2026-10-24T07:47:10.9951Z",
+    "topic": "evidence-20261024074454-breaker-disabled"
+  },
+  {
+    "breaker_state": 0,
+    "dead_lettered": 1200,
+    "downstream_calls": 3001,
+    "downstream_failures": 1200,
+    "metrics": {
+      "consumed": 3001,
+      "published": 3001
+    },
+    "mode": "disabled",
+    "outstanding": 0,
+    "paused": false,
+    "paused_samples_5ms": 0,
+    "peak_outstanding": 4,
+    "scenario": "breaker",
+    "succeeded": 1801,
+    "time_utc": "2026-10-24T07:47:11.100325Z",
+    "topic": "evidence-20261024074454-breaker-disabled"
+  }
+]

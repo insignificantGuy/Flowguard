@@ -14,6 +14,8 @@ import (
 
 // Config holds every tunable in the service.
 type Config struct {
+	DisableBackpressure   bool
+	DisableCircuitBreaker bool
 	// Env is the deployment environment (development | staging | production).
 	Env string
 
@@ -73,16 +75,18 @@ type Config struct {
 // Load reads configuration from the environment with sane defaults.
 func Load() (Config, error) {
 	c := Config{
-		Env:             getEnv("ENV", "development"),
-		Host:            getEnv("HOST", "0.0.0.0"),
-		Port:            getEnvInt("PORT", 3000),
-		LogLevel:        getEnv("LOG_LEVEL", "info"),
-		RateLimitMax:    getEnvInt("RATE_LIMIT_MAX", 100),
-		RateLimitWindow: time.Duration(getEnvInt("RATE_LIMIT_TTL_MS", 60000)) * time.Millisecond,
-		RedisURL:        osEnv("REDIS_URL"),
-		KafkaBrokers:    splitCSV(osEnv("KAFKA_BROKERS")),
-		KafkaTopic:      getEnv("KAFKA_TOPIC", "RECONCILIATION"),
-		KafkaTimeout:    time.Duration(getEnvInt("KAFKA_TIMEOUT_MS", 5000)) * time.Millisecond,
+		DisableBackpressure:          os.Getenv("DISABLE_BACKPRESSURE") == "true",
+		DisableCircuitBreaker:        os.Getenv("DISABLE_CIRCUIT_BREAKER") == "true",
+		Env:                          getEnv("ENV", "development"),
+		Host:                         getEnv("HOST", "0.0.0.0"),
+		Port:                         getEnvInt("PORT", 3000),
+		LogLevel:                     getEnv("LOG_LEVEL", "info"),
+		RateLimitMax:                 getEnvInt("RATE_LIMIT_MAX", 100),
+		RateLimitWindow:              time.Duration(getEnvInt("RATE_LIMIT_TTL_MS", 60000)) * time.Millisecond,
+		RedisURL:                     osEnv("REDIS_URL"),
+		KafkaBrokers:                 splitCSV(osEnv("KAFKA_BROKERS")),
+		KafkaTopic:                   getEnv("KAFKA_TOPIC", "RECONCILIATION"),
+		KafkaTimeout:                 time.Duration(getEnvInt("KAFKA_TIMEOUT_MS", 5000)) * time.Millisecond,
 		BackpressureMaxQueueDepth:    getEnvInt("BACKPRESSURE_MAX_QUEUE_DEPTH", 0),
 		BackpressurePauseAfterDepth:  getEnvInt("BACKPRESSURE_PAUSE_AFTER_DEPTH", 0),
 		BackpressureResumeAfterDepth: getEnvInt("BACKPRESSURE_RESUME_AFTER_DEPTH", 0),

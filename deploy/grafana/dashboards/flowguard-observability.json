@@ -39,12 +39,12 @@
       },
       "targets": [
         {
-          "expr": "(sum(flowguard_messages_published_total) - sum(flowguard_messages_published_total offset 1m)) / 60",
+          "expr": "sum(rate(flowguard_messages_published_total{topic=~\"$topic\"}[$__rate_interval]))",
           "legendFormat": "Published",
           "refId": "A"
         },
         {
-          "expr": "(sum(flowguard_messages_consumed_total) - sum(flowguard_messages_consumed_total offset 1m)) / 60",
+          "expr": "sum(rate(flowguard_messages_consumed_total{topic=~\"$topic\"}[$__rate_interval]))",
           "legendFormat": "Consumed",
           "refId": "B"
         }
@@ -68,7 +68,7 @@
       "options": {"orientation": "auto", "reduceOptions": {"values": false, "calcs": ["lastNotNull"], "fields": ""}, "showThresholdLabels": false, "showThresholdMarkers": true},
       "targets": [
         {
-          "expr": "rate(flowguard_processing_errors_total[5m]) * 100",
+          "expr": "100 * sum(rate(flowguard_processing_errors_total{topic=~\"$topic\"}[$__rate_interval])) / clamp_min(sum(rate(flowguard_messages_consumed_total{topic=~\"$topic\"}[$__rate_interval])), 0.001)",
           "legendFormat": "Error Rate %",
           "refId": "A"
         }
@@ -116,7 +116,7 @@
       "options": {"orientation": "auto", "reduceOptions": {"values": false, "calcs": ["lastNotNull"], "fields": ""}, "showThresholdLabels": false, "showThresholdMarkers": true},
       "targets": [
         {
-          "expr": "flowguard_backpressure_depth",
+          "expr": "flowguard_backpressure_depth{topic=~\"$topic\"}",
           "legendFormat": "{{topic}}",
           "refId": "A"
         }
@@ -140,7 +140,7 @@
       "options": {"orientation": "auto", "reduceOptions": {"values": false, "calcs": ["lastNotNull"], "fields": ""}, "showThresholdLabels": false, "showThresholdMarkers": true},
       "targets": [
         {
-          "expr": "flowguard_backpressure_paused",
+          "expr": "flowguard_backpressure_paused{topic=~\"$topic\"}",
           "legendFormat": "{{topic}}",
           "refId": "A"
         }
@@ -164,7 +164,7 @@
       "options": {"orientation": "auto", "reduceOptions": {"values": false, "calcs": ["lastNotNull"], "fields": ""}, "showThresholdLabels": false, "showThresholdMarkers": true},
       "targets": [
         {
-          "expr": "flowguard_dead_letter_queue_depth",
+          "expr": "flowguard_dead_letter_queue_depth{topic=~\"$topic\"}",
           "legendFormat": "{{topic}}",
           "refId": "A"
         }
@@ -192,17 +192,17 @@
       },
       "targets": [
         {
-          "expr": "histogram_quantile(0.50, rate(flowguard_processing_latency_seconds_bucket[5m]))",
+          "expr": "histogram_quantile(0.50, rate(flowguard_processing_latency_seconds_bucket{topic=~\"$topic\"}[5m]))",
           "legendFormat": "p50",
           "refId": "A"
         },
         {
-          "expr": "histogram_quantile(0.95, rate(flowguard_processing_latency_seconds_bucket[5m]))",
+          "expr": "histogram_quantile(0.95, rate(flowguard_processing_latency_seconds_bucket{topic=~\"$topic\"}[5m]))",
           "legendFormat": "p95",
           "refId": "B"
         },
         {
-          "expr": "histogram_quantile(0.99, rate(flowguard_processing_latency_seconds_bucket[5m]))",
+          "expr": "histogram_quantile(0.99, rate(flowguard_processing_latency_seconds_bucket{topic=~\"$topic\"}[5m]))",
           "legendFormat": "p99",
           "refId": "C"
         }
@@ -230,7 +230,7 @@
       },
       "targets": [
         {
-          "expr": "rate(flowguard_processing_errors_total[5m])",
+          "expr": "rate(flowguard_processing_errors_total{topic=~\"$topic\"}[5m])",
           "legendFormat": "{{reason}}",
           "refId": "A"
         }
@@ -242,57 +242,57 @@
       "datasource": "Prometheus",
       "fieldConfig": {
         "defaults": {
-          "color": {"mode": "thresholds"},
+          "color": {
+            "mode": "thresholds"
+          },
           "mappings": [],
-          "thresholds": {"mode": "absolute", "steps": [{"color": "green", "value": null}]},
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              }
+            ]
+          },
           "unit": "short"
         },
         "overrides": []
       },
-      "gridPos": {"h": 4, "w": 24, "x": 0, "y": 24},
+      "gridPos": {
+        "h": 4,
+        "w": 24,
+        "x": 0,
+        "y": 24
+      },
       "id": 9,
-      "options": {"showHeader": true},
+      "options": {
+        "legend": {
+          "displayMode": "table",
+          "placement": "bottom"
+        }
+      },
       "targets": [
         {
-          "expr": "(sum(flowguard_messages_published_total) - sum(flowguard_messages_published_total offset 1m)) / 60",
-          "legendFormat": "Published",
+          "expr": "flowguard_backpressure_depth{topic=~\"$topic\"}",
+          "legendFormat": "Queued + executing",
           "refId": "A"
         },
         {
-          "expr": "(sum(flowguard_messages_consumed_total) - sum(flowguard_messages_consumed_total offset 1m)) / 60",
-          "legendFormat": "Consumed",
+          "expr": "flowguard_backpressure_paused{topic=~\"$topic\"}",
+          "legendFormat": "Intake paused",
           "refId": "B"
-        },
-        {
-          "expr": "sum(rate(flowguard_processing_errors_total[5m])) by (topic, reason)",
-          "legendFormat": "Errors {{topic}}/{{reason}}",
-          "refId": "C"
-        },
-        {
-          "expr": "flowguard_circuit_breaker_state",
-          "legendFormat": "CB State: {{name}}",
-          "refId": "D"
-        },
-        {
-          "expr": "flowguard_backpressure_depth",
-          "legendFormat": "BP Depth: {{topic}}",
-          "refId": "E"
-        },
-        {
-          "expr": "flowguard_dead_letter_queue_depth",
-          "legendFormat": "DLQ Depth: {{topic}}",
-          "refId": "F"
         }
       ],
-      "title": "All Metrics Summary Table",
-      "type": "table"
+      "title": "Outstanding Messages and Intake Pauses",
+      "type": "timeseries"
     }
   ],
   "refresh": "10s",
   "schemaVersion": 38,
   "style": "dark",
   "tags": ["flowguard", "resilience", "kafka"],
-  "templating": {"list": []},
+  "templating": {"list": [{"name": "topic", "label": "Topic / evidence run", "type": "query", "datasource": "Prometheus", "query": "label_values(flowguard_messages_published_total, topic)", "refresh": 1, "includeAll": true, "allValue": ".*", "multi": false, "current": {"text": "All", "value": "$__all"}}]},
   "time": {"from": "now-1h", "to": "now"},
   "timepicker": {},
   "timezone": "",

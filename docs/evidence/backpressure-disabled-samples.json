@@ -1,0 +1,4942 @@
+[
+  {
+    "breaker_state": 0,
+    "dead_lettered": 0,
+    "downstream_calls": 0,
+    "downstream_failures": 0,
+    "metrics": {
+      "consumed": 0,
+      "published": 0
+    },
+    "mode": "disabled",
+    "outstanding": 0,
+    "paused": false,
+    "paused_samples_5ms": 0,
+    "peak_outstanding": 0,
+    "scenario": "backpressure",
+    "succeeded": 0,
+    "time_utc": "2026-10-24T07:45:45.439801Z",
+    "topic": "evidence-20261024074454-backpressure-disabled"
+  },
+  {
+    "breaker_state": 0,
+    "dead_lettered": 0,
+    "downstream_calls": 0,
+    "downstream_failures": 0,
+    "metrics": {
+      "consumed": 0,
+      "published": 0
+    },
+    "mode": "disabled",
+    "outstanding": 0,
+    "paused": false,
+    "paused_samples_5ms": 0,
+    "peak_outstanding": 0,
+    "scenario": "backpressure",
+    "succeeded": 0,
+    "time_utc": "2026-10-24T07:45:45.541115Z",
+    "topic": "evidence-20261024074454-backpressure-disabled"
+  },
+  {
+    "breaker_state": 0,
+    "dead_lettered": 0,
+    "downstream_calls": 8,
+    "downstream_failures": 0,
+    "metrics": {
+      "consumed": 8,
+      "published": 16
+    },
+    "mode": "disabled",
+    "outstanding": 12,
+    "paused": false,
+    "paused_samples_5ms": 0,
+    "peak_outstanding": 13,
+    "scenario": "backpressure",
+    "succeeded": 4,
+    "time_utc": "2026-10-24T07:45:45.644183Z",
+    "topic": "evidence-20261024074454-backpressure-disabled"
+  },
+  {
+    "breaker_state": 0,
+    "dead_lettered": 0,
+    "downstream_calls": 16,
+    "downstream_failures": 0,
+    "metrics": {
+      "consumed": 16,
+      "published": 37
+    },
+    "mode": "disabled",
+    "outstanding": 25,
+    "paused": false,
+    "paused_samples_5ms": 0,
+    "peak_outstanding": 25,
+    "scenario": "backpressure",
+    "succeeded": 12,
+    "time_utc": "2026-10-24T07:45:45.74914Z",
+    "topic": "evidence-20261024074454-backpressure-disabled"
+  },
+  {
+    "breaker_state": 0,
+    "dead_lettered": 0,
+    "downstream_calls": 24,
+    "downstream_failures": 0,
+    "metrics": {
+      "consumed": 24,
+      "published": 58
+    },
+    "mode": "disabled",
+    "outstanding": 38,
+    "paused": false,
+    "paused_samples_5ms": 0,
+    "peak_outstanding": 37,
+    "scenario": "backpressure",
+    "succeeded": 20,
+    "time_utc": "2026-10-24T07:45:45.85024Z",
+    "topic": "evidence-20261024074454-backpressure-disabled"
+  },
+  {
+    "breaker_state": 0,
+    "dead_lettered": 0,
+    "downstream_calls": 32,
+    "downstream_failures": 0,
+    "metrics": {
+      "consumed": 32,
+      "published": 79
+    },
+    "mode": "disabled",
+    "outstanding": 51,
+    "paused": false,
+    "paused_samples_5ms": 0,
+    "peak_outstanding": 51,
+    "scenario": "backpressure",
+    "succeeded": 28,
+    "time_utc": "2026-10-24T07:45:45.956195Z",
+    "topic": "evidence-20261024074454-backpressure-disabled"
+  },
+  {
+    "breaker_state": 0,
+    "dead_lettered": 0,
+    "downstream_calls": 40,
+    "downstream_failures": 0,
+    "metrics": {
+      "consumed": 40,
+      "published": 99
+    },
+    "mode": "disabled",
+    "outstanding": 63,
+    "paused": false,
+    "paused_samples_5ms": 0,
+    "peak_outstanding": 63,
+    "scenario": "backpressure",
+    "succeeded": 36,
+    "time_utc": "2026-10-24T07:45:46.059421Z",
+    "topic": "evidence-20261024074454-backpressure-disabled"
+  },
+  {
+    "breaker_state": 0,
+    "dead_lettered": 0,
+    "downstream_calls": 48,
+    "downstream_failures": 0,
+    "metrics": {
+      "consumed": 48,
+      "published": 118
+    },
+    "mode": "disabled",
+    "outstanding": 74,
+    "paused": false,
+    "paused_samples_5ms": 0,
+    "peak_outstanding": 74,
+    "scenario": "backpressure",
+    "succeeded": 44,
+    "time_utc": "2026-10-24T07:45:46.163415Z",
+    "topic": "evidence-20261024074454-backpressure-disabled"
+  },
+  {
+    "breaker_state": 0,
+    "dead_lettered": 0,
+    "downstream_calls": 56,
+    "downstream_failures": 0,
+    "metrics": {
+      "consumed": 56,
+      "published": 141
+    },
+    "mode": "disabled",
+    "outstanding": 89,
+    "paused": false,
+    "paused_samples_5ms": 0,
+    "peak_outstanding": 89,
+    "scenario": "backpressure",
+    "succeeded": 52,
+    "time_utc": "2026-10-24T07:45:46.26594Z",
+    "topic": "evidence-20261024074454-backpressure-disabled"
+  },
+  {
+    "breaker_state": 0,
+    "dead_lettered": 0,
+    "downstream_calls": 64,
+    "downstream_failures": 0,
+    "metrics": {
+      "consumed": 64,
+      "published": 162
+    },
+    "mode": "disabled",
+    "outstanding": 102,
+    "paused": false,
+    "paused_samples_5ms": 0,
+    "peak_outstanding": 101,
+    "scenario": "backpressure",
+    "succeeded": 60,
+    "time_utc": "2026-10-24T07:45:46.370217Z",
+    "topic": "evidence-20261024074454-backpressure-disabled"
+  },
+  {
+    "breaker_state": 0,
+    "dead_lettered": 0,
+    "downstream_calls": 72,
+    "downstream_failures": 0,
+    "metrics": {
+      "consumed": 72,
+      "published": 182
+    },
+    "mode": "disabled",
+    "outstanding": 114,
+    "paused": false,
+    "paused_samples_5ms": 0,
+    "peak_outstanding": 114,
+    "scenario": "backpressure",
+    "succeeded": 68,
+    "time_utc": "2026-10-24T07:45:46.471178Z",
+    "topic": "evidence-20261024074454-backpressure-disabled"
+  },
+  {
+    "breaker_state": 0,
+    "dead_lettered": 0,
+    "downstream_calls": 80,
+    "downstream_failures": 0,
+    "metrics": {
+      "consumed": 80,
+      "published": 202
+    },
+    "mode": "disabled",
+    "outstanding": 126,
+    "paused": false,
+    "paused_samples_5ms": 0,
+    "peak_outstanding": 126,
+    "scenario": "backpressure",
+    "succeeded": 76,
+    "time_utc": "2026-10-24T07:45:46.572176Z",
+    "topic": "evidence-20261024074454-backpressure-disabled"
+  },
+  {
+    "breaker_state": 0,
+    "dead_lettered": 0,
+    "downstream_calls": 88,
+    "downstream_failures": 0,
+    "metrics": {
+      "consumed": 88,
+      "published": 222
+    },
+    "mode": "disabled",
+    "outstanding": 138,
+    "paused": false,
+    "paused_samples_5ms": 0,
+    "peak_outstanding": 138,
+    "scenario": "backpressure",
+    "succeeded": 84,
+    "time_utc": "2026-10-24T07:45:46.674113Z",
+    "topic": "evidence-20261024074454-backpressure-disabled"
+  },
+  {
+    "breaker_state": 0,
+    "dead_lettered": 0,
+    "downstream_calls": 97,
+    "downstream_failures": 0,
+    "metrics": {
+      "consumed": 97,
+      "published": 243
+    },
+    "mode": "disabled",
+    "outstanding": 150,
+    "paused": false,
+    "paused_samples_5ms": 0,
+    "peak_outstanding": 151,
+    "scenario": "backpressure",
+    "succeeded": 93,
+    "time_utc": "2026-10-24T07:45:46.779057Z",
+    "topic": "evidence-20261024074454-backpressure-disabled"
+  },
+  {
+    "breaker_state": 0,
+    "dead_lettered": 0,
+    "downstream_calls": 108,
+    "downstream_failures": 0,
+    "metrics": {
+      "consumed": 108,
+      "published": 265
+    },
+    "mode": "disabled",
+    "outstanding": 160,
+    "paused": false,
+    "paused_samples_5ms": 0,
+    "peak_outstanding": 163,
+    "scenario": "backpressure",
+    "succeeded": 104,
+    "time_utc": "2026-10-24T07:45:46.884284Z",
+    "topic": "evidence-20261024074454-backpressure-disabled"
+  },
+  {
+    "breaker_state": 0,
+    "dead_lettered": 0,
+    "downstream_calls": 116,
+    "downstream_failures": 0,
+    "metrics": {
+      "consumed": 116,
+      "published": 285
+    },
+    "mode": "disabled",
+    "outstanding": 173,
+    "paused": false,
+    "paused_samples_5ms": 0,
+    "peak_outstanding": 175,
+    "scenario": "backpressure",
+    "succeeded": 112,
+    "time_utc": "2026-10-24T07:45:46.986764Z",
+    "topic": "evidence-20261024074454-backpressure-disabled"
+  },
+  {
+    "breaker_state": 0,
+    "dead_lettered": 0,
+    "downstream_calls": 124,
+    "downstream_failures": 0,
+    "metrics": {
+      "consumed": 124,
+      "published": 305
+    },
+    "mode": "disabled",
+    "outstanding": 185,
+    "paused": false,
+    "paused_samples_5ms": 0,
+    "peak_outstanding": 187,
+    "scenario": "backpressure",
+    "succeeded": 120,
+    "time_utc": "2026-10-24T07:45:47.089309Z",
+    "topic": "evidence-20261024074454-backpressure-disabled"
+  },
+  {
+    "breaker_state": 0,
+    "dead_lettered": 0,
+    "downstream_calls": 132,
+    "downstream_failures": 0,
+    "metrics": {
+      "consumed": 132,
+      "published": 326
+    },
+    "mode": "disabled",
+    "outstanding": 198,
+    "paused": false,
+    "paused_samples_5ms": 0,
+    "peak_outstanding": 199,
+    "scenario": "backpressure",
+    "succeeded": 128,
+    "time_utc": "2026-10-24T07:45:47.192489Z",
+    "topic": "evidence-20261024074454-backpressure-disabled"
+  },
+  {
+    "breaker_state": 0,
+    "dead_lettered": 0,
+    "downstream_calls": 140,
+    "downstream_failures": 0,
+    "metrics": {
+      "consumed": 140,
+      "published": 347
+    },
+    "mode": "disabled",
+    "outstanding": 211,
+    "paused": false,
+    "paused_samples_5ms": 0,
+    "peak_outstanding": 211,
+    "scenario": "backpressure",
+    "succeeded": 136,
+    "time_utc": "2026-10-24T07:45:47.298572Z",
+    "topic": "evidence-20261024074454-backpressure-disabled"
+  },
+  {
+    "breaker_state": 0,
+    "dead_lettered": 0,
+    "downstream_calls": 148,
+    "downstream_failures": 0,
+    "metrics": {
+      "consumed": 148,
+      "published": 368
+    },
+    "mode": "disabled",
+    "outstanding": 224,
+    "paused": false,
+    "paused_samples_5ms": 0,
+    "peak_outstanding": 224,
+    "scenario": "backpressure",
+    "succeeded": 144,
+    "time_utc": "2026-10-24T07:45:47.403973Z",
+    "topic": "evidence-20261024074454-backpressure-disabled"
+  },
+  {
+    "breaker_state": 0,
+    "dead_lettered": 0,
+    "downstream_calls": 156,
+    "downstream_failures": 0,
+    "metrics": {
+      "consumed": 156,
+      "published": 390
+    },
+    "mode": "disabled",
+    "outstanding": 238,
+    "paused": false,
+    "paused_samples_5ms": 0,
+    "peak_outstanding": 237,
+    "scenario": "backpressure",
+    "succeeded": 152,
+    "time_utc": "2026-10-24T07:45:47.509935Z",
+    "topic": "evidence-20261024074454-backpressure-disabled"
+  },
+  {
+    "breaker_state": 0,
+    "dead_lettered": 0,
+    "downstream_calls": 164,
+    "downstream_failures": 0,
+    "metrics": {
+      "consumed": 164,
+      "published": 411
+    },
+    "mode": "disabled",
+    "outstanding": 251,
+    "paused": false,
+    "paused_samples_5ms": 0,
+    "peak_outstanding": 251,
+    "scenario": "backpressure",
+    "succeeded": 160,
+    "time_utc": "2026-10-24T07:45:47.616494Z",
+    "topic": "evidence-20261024074454-backpressure-disabled"
+  },
+  {
+    "breaker_state": 0,
+    "dead_lettered": 0,
+    "downstream_calls": 172,
+    "downstream_failures": 0,
+    "metrics": {
+      "consumed": 172,
+      "published": 432
+    },
+    "mode": "disabled",
+    "outstanding": 264,
+    "paused": false,
+    "paused_samples_5ms": 0,
+    "peak_outstanding": 264,
+    "scenario": "backpressure",
+    "succeeded": 168,
+    "time_utc": "2026-10-24T07:45:47.722852Z",
+    "topic": "evidence-20261024074454-backpressure-disabled"
+  },
+  {
+    "breaker_state": 0,
+    "dead_lettered": 0,
+    "downstream_calls": 180,
+    "downstream_failures": 0,
+    "metrics": {
+      "consumed": 180,
+      "published": 453
+    },
+    "mode": "disabled",
+    "outstanding": 277,
+    "paused": false,
+    "paused_samples_5ms": 0,
+    "peak_outstanding": 276,
+    "scenario": "backpressure",
+    "succeeded": 176,
+    "time_utc": "2026-10-24T07:45:47.824857Z",
+    "topic": "evidence-20261024074454-backpressure-disabled"
+  },
+  {
+    "breaker_state": 0,
+    "dead_lettered": 0,
+    "downstream_calls": 189,
+    "downstream_failures": 0,
+    "metrics": {
+      "consumed": 189,
+      "published": 474
+    },
+    "mode": "disabled",
+    "outstanding": 289,
+    "paused": false,
+    "paused_samples_5ms": 0,
+    "peak_outstanding": 289,
+    "scenario": "backpressure",
+    "succeeded": 185,
+    "time_utc": "2026-10-24T07:45:47.930706Z",
+    "topic": "evidence-20261024074454-backpressure-disabled"
+  },
+  {
+    "breaker_state": 0,
+    "dead_lettered": 0,
+    "downstream_calls": 199,
+    "downstream_failures": 0,
+    "metrics": {
+      "consumed": 199,
+      "published": 493
+    },
+    "mode": "disabled",
+    "outstanding": 298,
+    "paused": false,
+    "paused_samples_5ms": 0,
+    "peak_outstanding": 301,
+    "scenario": "backpressure",
+    "succeeded": 195,
+    "time_utc": "2026-10-24T07:45:48.033109Z",
+    "topic": "evidence-20261024074454-backpressure-disabled"
+  },
+  {
+    "breaker_state": 0,
+    "dead_lettered": 0,
+    "downstream_calls": 208,
+    "downstream_failures": 0,
+    "metrics": {
+      "consumed": 208,
+      "published": 516
+    },
+    "mode": "disabled",
+    "outstanding": 312,
+    "paused": false,
+    "paused_samples_5ms": 0,
+    "peak_outstanding": 313,
+    "scenario": "backpressure",
+    "succeeded": 204,
+    "time_utc": "2026-10-24T07:45:48.139369Z",
+    "topic": "evidence-20261024074454-backpressure-disabled"
+  },
+  {
+    "breaker_state": 0,
+    "dead_lettered": 0,
+    "downstream_calls": 216,
+    "downstream_failures": 0,
+    "metrics": {
+      "consumed": 216,
+      "published": 536
+    },
+    "mode": "disabled",
+    "outstanding": 324,
+    "paused": false,
+    "paused_samples_5ms": 0,
+    "peak_outstanding": 325,
+    "scenario": "backpressure",
+    "succeeded": 212,
+    "time_utc": "2026-10-24T07:45:48.244249Z",
+    "topic": "evidence-20261024074454-backpressure-disabled"
+  },
+  {
+    "breaker_state": 0,
+    "dead_lettered": 0,
+    "downstream_calls": 224,
+    "downstream_failures": 0,
+    "metrics": {
+      "consumed": 224,
+      "published": 557
+    },
+    "mode": "disabled",
+    "outstanding": 337,
+    "paused": false,
+    "paused_samples_5ms": 0,
+    "peak_outstanding": 337,
+    "scenario": "backpressure",
+    "succeeded": 220,
+    "time_utc": "2026-10-24T07:45:48.345461Z",
+    "topic": "evidence-20261024074454-backpressure-disabled"
+  },
+  {
+    "breaker_state": 0,
+    "dead_lettered": 0,
+    "downstream_calls": 232,
+    "downstream_failures": 0,
+    "metrics": {
+      "consumed": 232,
+      "published": 578
+    },
+    "mode": "disabled",
+    "outstanding": 350,
+    "paused": false,
+    "paused_samples_5ms": 0,
+    "peak_outstanding": 349,
+    "scenario": "backpressure",
+    "succeeded": 228,
+    "time_utc": "2026-10-24T07:45:48.450509Z",
+    "topic": "evidence-20261024074454-backpressure-disabled"
+  },
+  {
+    "breaker_state": 0,
+    "dead_lettered": 0,
+    "downstream_calls": 240,
+    "downstream_failures": 0,
+    "metrics": {
+      "consumed": 240,
+      "published": 599
+    },
+    "mode": "disabled",
+    "outstanding": 363,
+    "paused": false,
+    "paused_samples_5ms": 0,
+    "peak_outstanding": 362,
+    "scenario": "backpressure",
+    "succeeded": 236,
+    "time_utc": "2026-10-24T07:45:48.554659Z",
+    "topic": "evidence-20261024074454-backpressure-disabled"
+  },
+  {
+    "breaker_state": 0,
+    "dead_lettered": 0,
+    "downstream_calls": 248,
+    "downstream_failures": 0,
+    "metrics": {
+      "consumed": 248,
+      "published": 619
+    },
+    "mode": "disabled",
+    "outstanding": 375,
+    "paused": false,
+    "paused_samples_5ms": 0,
+    "peak_outstanding": 375,
+    "scenario": "backpressure",
+    "succeeded": 244,
+    "time_utc": "2026-10-24T07:45:48.656845Z",
+    "topic": "evidence-20261024074454-backpressure-disabled"
+  },
+  {
+    "breaker_state": 0,
+    "dead_lettered": 0,
+    "downstream_calls": 256,
+    "downstream_failures": 0,
+    "metrics": {
+      "consumed": 256,
+      "published": 640
+    },
+    "mode": "disabled",
+    "outstanding": 388,
+    "paused": false,
+    "paused_samples_5ms": 0,
+    "peak_outstanding": 388,
+    "scenario": "backpressure",
+    "succeeded": 252,
+    "time_utc": "2026-10-24T07:45:48.761126Z",
+    "topic": "evidence-20261024074454-backpressure-disabled"
+  },
+  {
+    "breaker_state": 0,
+    "dead_lettered": 0,
+    "downstream_calls": 264,
+    "downstream_failures": 0,
+    "metrics": {
+      "consumed": 264,
+      "published": 661
+    },
+    "mode": "disabled",
+    "outstanding": 400,
+    "paused": false,
+    "paused_samples_5ms": 0,
+    "peak_outstanding": 400,
+    "scenario": "backpressure",
+    "succeeded": 260,
+    "time_utc": "2026-10-24T07:45:48.864428Z",
+    "topic": "evidence-20261024074454-backpressure-disabled"
+  },
+  {
+    "breaker_state": 0,
+    "dead_lettered": 0,
+    "downstream_calls": 272,
+    "downstream_failures": 0,
+    "metrics": {
+      "consumed": 272,
+      "published": 681
+    },
+    "mode": "disabled",
+    "outstanding": 413,
+    "paused": false,
+    "paused_samples_5ms": 0,
+    "peak_outstanding": 413,
+    "scenario": "backpressure",
+    "succeeded": 268,
+    "time_utc": "2026-10-24T07:45:48.966616Z",
+    "topic": "evidence-20261024074454-backpressure-disabled"
+  },
+  {
+    "breaker_state": 0,
+    "dead_lettered": 0,
+    "downstream_calls": 280,
+    "downstream_failures": 0,
+    "metrics": {
+      "consumed": 280,
+      "published": 702
+    },
+    "mode": "disabled",
+    "outstanding": 426,
+    "paused": false,
+    "paused_samples_5ms": 0,
+    "peak_outstanding": 425,
+    "scenario": "backpressure",
+    "succeeded": 276,
+    "time_utc": "2026-10-24T07:45:49.070404Z",
+    "topic": "evidence-20261024074454-backpressure-disabled"
+  },
+  {
+    "breaker_state": 0,
+    "dead_lettered": 0,
+    "downstream_calls": 288,
+    "downstream_failures": 0,
+    "metrics": {
+      "consumed": 288,
+      "published": 722
+    },
+    "mode": "disabled",
+    "outstanding": 438,
+    "paused": false,
+    "paused_samples_5ms": 0,
+    "peak_outstanding": 438,
+    "scenario": "backpressure",
+    "succeeded": 284,
+    "time_utc": "2026-10-24T07:45:49.172224Z",
+    "topic": "evidence-20261024074454-backpressure-disabled"
+  },
+  {
+    "breaker_state": 0,
+    "dead_lettered": 0,
+    "downstream_calls": 296,
+    "downstream_failures": 0,
+    "metrics": {
+      "consumed": 296,
+      "published": 743
+    },
+    "mode": "disabled",
+    "outstanding": 451,
+    "paused": false,
+    "paused_samples_5ms": 0,
+    "peak_outstanding": 450,
+    "scenario": "backpressure",
+    "succeeded": 292,
+    "time_utc": "2026-10-24T07:45:49.275177Z",
+    "topic": "evidence-20261024074454-backpressure-disabled"
+  },
+  {
+    "breaker_state": 0,
+    "dead_lettered": 0,
+    "downstream_calls": 304,
+    "downstream_failures": 0,
+    "metrics": {
+      "consumed": 304,
+      "published": 763
+    },
+    "mode": "disabled",
+    "outstanding": 463,
+    "paused": false,
+    "paused_samples_5ms": 0,
+    "peak_outstanding": 463,
+    "scenario": "backpressure",
+    "succeeded": 300,
+    "time_utc": "2026-10-24T07:45:49.379746Z",
+    "topic": "evidence-20261024074454-backpressure-disabled"
+  },
+  {
+    "breaker_state": 0,
+    "dead_lettered": 0,
+    "downstream_calls": 315,
+    "downstream_failures": 0,
+    "metrics": {
+      "consumed": 315,
+      "published": 785
+    },
+    "mode": "disabled",
+    "outstanding": 474,
+    "paused": false,
+    "paused_samples_5ms": 0,
+    "peak_outstanding": 475,
+    "scenario": "backpressure",
+    "succeeded": 311,
+    "time_utc": "2026-10-24T07:45:49.4847Z",
+    "topic": "evidence-20261024074454-backpressure-disabled"
+  },
+  {
+    "breaker_state": 0,
+    "dead_lettered": 0,
+    "downstream_calls": 324,
+    "downstream_failures": 0,
+    "metrics": {
+      "consumed": 324,
+      "published": 806
+    },
+    "mode": "disabled",
+    "outstanding": 486,
+    "paused": false,
+    "paused_samples_5ms": 0,
+    "peak_outstanding": 488,
+    "scenario": "backpressure",
+    "succeeded": 320,
+    "time_utc": "2026-10-24T07:45:49.590692Z",
+    "topic": "evidence-20261024074454-backpressure-disabled"
+  },
+  {
+    "breaker_state": 0,
+    "dead_lettered": 0,
+    "downstream_calls": 332,
+    "downstream_failures": 0,
+    "metrics": {
+      "consumed": 332,
+      "published": 826
+    },
+    "mode": "disabled",
+    "outstanding": 498,
+    "paused": false,
+    "paused_samples_5ms": 0,
+    "peak_outstanding": 500,
+    "scenario": "backpressure",
+    "succeeded": 328,
+    "time_utc": "2026-10-24T07:45:49.69489Z",
+    "topic": "evidence-20261024074454-backpressure-disabled"
+  },
+  {
+    "breaker_state": 0,
+    "dead_lettered": 0,
+    "downstream_calls": 340,
+    "downstream_failures": 0,
+    "metrics": {
+      "consumed": 340,
+      "published": 848
+    },
+    "mode": "disabled",
+    "outstanding": 512,
+    "paused": false,
+    "paused_samples_5ms": 0,
+    "peak_outstanding": 512,
+    "scenario": "backpressure",
+    "succeeded": 336,
+    "time_utc": "2026-10-24T07:45:49.79986Z",
+    "topic": "evidence-20261024074454-backpressure-disabled"
+  },
+  {
+    "breaker_state": 0,
+    "dead_lettered": 0,
+    "downstream_calls": 348,
+    "downstream_failures": 0,
+    "metrics": {
+      "consumed": 348,
+      "published": 868
+    },
+    "mode": "disabled",
+    "outstanding": 517,
+    "paused": false,
+    "paused_samples_5ms": 0,
+    "peak_outstanding": 517,
+    "scenario": "backpressure",
+    "succeeded": 344,
+    "time_utc": "2026-10-24T07:45:49.904493Z",
+    "topic": "evidence-20261024074454-backpressure-disabled"
+  },
+  {
+    "breaker_state": 0,
+    "dead_lettered": 0,
+    "downstream_calls": 356,
+    "downstream_failures": 0,
+    "metrics": {
+      "consumed": 356,
+      "published": 889
+    },
+    "mode": "disabled",
+    "outstanding": 517,
+    "paused": false,
+    "paused_samples_5ms": 0,
+    "peak_outstanding": 517,
+    "scenario": "backpressure",
+    "succeeded": 352,
+    "time_utc": "2026-10-24T07:45:50.006516Z",
+    "topic": "evidence-20261024074454-backpressure-disabled"
+  },
+  {
+    "breaker_state": 0,
+    "dead_lettered": 0,
+    "downstream_calls": 364,
+    "downstream_failures": 0,
+    "metrics": {
+      "consumed": 364,
+      "published": 909
+    },
+    "mode": "disabled",
+    "outstanding": 517,
+    "paused": false,
+    "paused_samples_5ms": 0,
+    "peak_outstanding": 517,
+    "scenario": "backpressure",
+    "succeeded": 360,
+    "time_utc": "2026-10-24T07:45:50.109594Z",
+    "topic": "evidence-20261024074454-backpressure-disabled"
+  },
+  {
+    "breaker_state": 0,
+    "dead_lettered": 0,
+    "downstream_calls": 372,
+    "downstream_failures": 0,
+    "metrics": {
+      "consumed": 372,
+      "published": 930
+    },
+    "mode": "disabled",
+    "outstanding": 517,
+    "paused": false,
+    "paused_samples_5ms": 0,
+    "peak_outstanding": 517,
+    "scenario": "backpressure",
+    "succeeded": 368,
+    "time_utc": "2026-10-24T07:45:50.21407Z",
+    "topic": "evidence-20261024074454-backpressure-disabled"
+  },
+  {
+    "breaker_state": 0,
+    "dead_lettered": 0,
+    "downstream_calls": 380,
+    "downstream_failures": 0,
+    "metrics": {
+      "consumed": 380,
+      "published": 951
+    },
+    "mode": "disabled",
+    "outstanding": 517,
+    "paused": false,
+    "paused_samples_5ms": 0,
+    "peak_outstanding": 517,
+    "scenario": "backpressure",
+    "succeeded": 376,
+    "time_utc": "2026-10-24T07:45:50.316764Z",
+    "topic": "evidence-20261024074454-backpressure-disabled"
+  },
+  {
+    "breaker_state": 0,
+    "dead_lettered": 0,
+    "downstream_calls": 388,
+    "downstream_failures": 0,
+    "metrics": {
+      "consumed": 388,
+      "published": 972
+    },
+    "mode": "disabled",
+    "outstanding": 517,
+    "paused": false,
+    "paused_samples_5ms": 0,
+    "peak_outstanding": 517,
+    "scenario": "backpressure",
+    "succeeded": 384,
+    "time_utc": "2026-10-24T07:45:50.423136Z",
+    "topic": "evidence-20261024074454-backpressure-disabled"
+  },
+  {
+    "breaker_state": 0,
+    "dead_lettered": 0,
+    "downstream_calls": 396,
+    "downstream_failures": 0,
+    "metrics": {
+      "consumed": 396,
+      "published": 993
+    },
+    "mode": "disabled",
+    "outstanding": 517,
+    "paused": false,
+    "paused_samples_5ms": 0,
+    "peak_outstanding": 517,
+    "scenario": "backpressure",
+    "succeeded": 392,
+    "time_utc": "2026-10-24T07:45:50.525148Z",
+    "topic": "evidence-20261024074454-backpressure-disabled"
+  },
+  {
+    "breaker_state": 0,
+    "dead_lettered": 0,
+    "downstream_calls": 404,
+    "downstream_failures": 0,
+    "metrics": {
+      "consumed": 404,
+      "published": 1014
+    },
+    "mode": "disabled",
+    "outstanding": 517,
+    "paused": false,
+    "paused_samples_5ms": 0,
+    "peak_outstanding": 517,
+    "scenario": "backpressure",
+    "succeeded": 400,
+    "time_utc": "2026-10-24T07:45:50.629324Z",
+    "topic": "evidence-20261024074454-backpressure-disabled"
+  },
+  {
+    "breaker_state": 0,
+    "dead_lettered": 0,
+    "downstream_calls": 412,
+    "downstream_failures": 0,
+    "metrics": {
+      "consumed": 412,
+      "published": 1034
+    },
+    "mode": "disabled",
+    "outstanding": 517,
+    "paused": false,
+    "paused_samples_5ms": 0,
+    "peak_outstanding": 517,
+    "scenario": "backpressure",
+    "succeeded": 408,
+    "time_utc": "2026-10-24T07:45:50.730274Z",
+    "topic": "evidence-20261024074454-backpressure-disabled"
+  },
+  {
+    "breaker_state": 0,
+    "dead_lettered": 0,
+    "downstream_calls": 420,
+    "downstream_failures": 0,
+    "metrics": {
+      "consumed": 420,
+      "published": 1054
+    },
+    "mode": "disabled",
+    "outstanding": 517,
+    "paused": false,
+    "paused_samples_5ms": 0,
+    "peak_outstanding": 517,
+    "scenario": "backpressure",
+    "succeeded": 416,
+    "time_utc": "2026-10-24T07:45:50.831761Z",
+    "topic": "evidence-20261024074454-backpressure-disabled"
+  },
+  {
+    "breaker_state": 0,
+    "dead_lettered": 0,
+    "downstream_calls": 428,
+    "downstream_failures": 0,
+    "metrics": {
+      "consumed": 428,
+      "published": 1074
+    },
+    "mode": "disabled",
+    "outstanding": 517,
+    "paused": false,
+    "paused_samples_5ms": 0,
+    "peak_outstanding": 517,
+    "scenario": "backpressure",
+    "succeeded": 424,
+    "time_utc": "2026-10-24T07:45:50.933448Z",
+    "topic": "evidence-20261024074454-backpressure-disabled"
+  },
+  {
+    "breaker_state": 0,
+    "dead_lettered": 0,
+    "downstream_calls": 439,
+    "downstream_failures": 0,
+    "metrics": {
+      "consumed": 439,
+      "published": 1095
+    },
+    "mode": "disabled",
+    "outstanding": 517,
+    "paused": false,
+    "paused_samples_5ms": 0,
+    "peak_outstanding": 517,
+    "scenario": "backpressure",
+    "succeeded": 435,
+    "time_utc": "2026-10-24T07:45:51.037168Z",
+    "topic": "evidence-20261024074454-backpressure-disabled"
+  },
+  {
+    "breaker_state": 0,
+    "dead_lettered": 0,
+    "downstream_calls": 448,
+    "downstream_failures": 0,
+    "metrics": {
+      "consumed": 448,
+      "published": 1115
+    },
+    "mode": "disabled",
+    "outstanding": 517,
+    "paused": false,
+    "paused_samples_5ms": 0,
+    "peak_outstanding": 517,
+    "scenario": "backpressure",
+    "succeeded": 444,
+    "time_utc": "2026-10-24T07:45:51.139579Z",
+    "topic": "evidence-20261024074454-backpressure-disabled"
+  },
+  {
+    "breaker_state": 0,
+    "dead_lettered": 0,
+    "downstream_calls": 456,
+    "downstream_failures": 0,
+    "metrics": {
+      "consumed": 456,
+      "published": 1136
+    },
+    "mode": "disabled",
+    "outstanding": 517,
+    "paused": false,
+    "paused_samples_5ms": 0,
+    "peak_outstanding": 517,
+    "scenario": "backpressure",
+    "succeeded": 452,
+    "time_utc": "2026-10-24T07:45:51.244484Z",
+    "topic": "evidence-20261024074454-backpressure-disabled"
+  },
+  {
+    "breaker_state": 0,
+    "dead_lettered": 0,
+    "downstream_calls": 464,
+    "downstream_failures": 0,
+    "metrics": {
+      "consumed": 464,
+      "published": 1157
+    },
+    "mode": "disabled",
+    "outstanding": 517,
+    "paused": false,
+    "paused_samples_5ms": 0,
+    "peak_outstanding": 517,
+    "scenario": "backpressure",
+    "succeeded": 460,
+    "time_utc": "2026-10-24T07:45:51.346588Z",
+    "topic": "evidence-20261024074454-backpressure-disabled"
+  },
+  {
+    "breaker_state": 0,
+    "dead_lettered": 0,
+    "downstream_calls": 472,
+    "downstream_failures": 0,
+    "metrics": {
+      "consumed": 472,
+      "published": 1177
+    },
+    "mode": "disabled",
+    "outstanding": 517,
+    "paused": false,
+    "paused_samples_5ms": 0,
+    "peak_outstanding": 517,
+    "scenario": "backpressure",
+    "succeeded": 468,
+    "time_utc": "2026-10-24T07:45:51.448836Z",
+    "topic": "evidence-20261024074454-backpressure-disabled"
+  },
+  {
+    "breaker_state": 0,
+    "dead_lettered": 0,
+    "downstream_calls": 480,
+    "downstream_failures": 0,
+    "metrics": {
+      "consumed": 480,
+      "published": 1198
+    },
+    "mode": "disabled",
+    "outstanding": 517,
+    "paused": false,
+    "paused_samples_5ms": 0,
+    "peak_outstanding": 517,
+    "scenario": "backpressure",
+    "succeeded": 476,
+    "time_utc": "2026-10-24T07:45:51.551759Z",
+    "topic": "evidence-20261024074454-backpressure-disabled"
+  },
+  {
+    "breaker_state": 0,
+    "dead_lettered": 0,
+    "downstream_calls": 488,
+    "downstream_failures": 0,
+    "metrics": {
+      "consumed": 488,
+      "published": 1219
+    },
+    "mode": "disabled",
+    "outstanding": 517,
+    "paused": false,
+    "paused_samples_5ms": 0,
+    "peak_outstanding": 517,
+    "scenario": "backpressure",
+    "succeeded": 484,
+    "time_utc": "2026-10-24T07:45:51.657564Z",
+    "topic": "evidence-20261024074454-backpressure-disabled"
+  },
+  {
+    "breaker_state": 0,
+    "dead_lettered": 0,
+    "downstream_calls": 496,
+    "downstream_failures": 0,
+    "metrics": {
+      "consumed": 496,
+      "published": 1240
+    },
+    "mode": "disabled",
+    "outstanding": 517,
+    "paused": false,
+    "paused_samples_5ms": 0,
+    "peak_outstanding": 517,
+    "scenario": "backpressure",
+    "succeeded": 492,
+    "time_utc": "2026-10-24T07:45:51.760828Z",
+    "topic": "evidence-20261024074454-backpressure-disabled"
+  },
+  {
+    "breaker_state": 0,
+    "dead_lettered": 0,
+    "downstream_calls": 504,
+    "downstream_failures": 0,
+    "metrics": {
+      "consumed": 504,
+      "published": 1260
+    },
+    "mode": "disabled",
+    "outstanding": 517,
+    "paused": false,
+    "paused_samples_5ms": 0,
+    "peak_outstanding": 517,
+    "scenario": "backpressure",
+    "succeeded": 500,
+    "time_utc": "2026-10-24T07:45:51.864488Z",
+    "topic": "evidence-20261024074454-backpressure-disabled"
+  },
+  {
+    "breaker_state": 0,
+    "dead_lettered": 0,
+    "downstream_calls": 512,
+    "downstream_failures": 0,
+    "metrics": {
+      "consumed": 512,
+      "published": 1281
+    },
+    "mode": "disabled",
+    "outstanding": 517,
+    "paused": false,
+    "paused_samples_5ms": 0,
+    "peak_outstanding": 517,
+    "scenario": "backpressure",
+    "succeeded": 508,
+    "time_utc": "2026-10-24T07:45:51.968665Z",
+    "topic": "evidence-20261024074454-backpressure-disabled"
+  },
+  {
+    "breaker_state": 0,
+    "dead_lettered": 0,
+    "downstream_calls": 520,
+    "downstream_failures": 0,
+    "metrics": {
+      "consumed": 520,
+      "published": 1303
+    },
+    "mode": "disabled",
+    "outstanding": 517,
+    "paused": false,
+    "paused_samples_5ms": 0,
+    "peak_outstanding": 517,
+    "scenario": "backpressure",
+    "succeeded": 516,
+    "time_utc": "2026-10-24T07:45:52.074689Z",
+    "topic": "evidence-20261024074454-backpressure-disabled"
+  },
+  {
+    "breaker_state": 0,
+    "dead_lettered": 0,
+    "downstream_calls": 528,
+    "downstream_failures": 0,
+    "metrics": {
+      "consumed": 528,
+      "published": 1323
+    },
+    "mode": "disabled",
+    "outstanding": 517,
+    "paused": false,
+    "paused_samples_5ms": 0,
+    "peak_outstanding": 517,
+    "scenario": "backpressure",
+    "succeeded": 524,
+    "time_utc": "2026-10-24T07:45:52.176399Z",
+    "topic": "evidence-20261024074454-backpressure-disabled"
+  },
+  {
+    "breaker_state": 0,
+    "dead_lettered": 0,
+    "downstream_calls": 536,
+    "downstream_failures": 0,
+    "metrics": {
+      "consumed": 536,
+      "published": 1343
+    },
+    "mode": "disabled",
+    "outstanding": 517,
+    "paused": false,
+    "paused_samples_5ms": 0,
+    "peak_outstanding": 517,
+    "scenario": "backpressure",
+    "succeeded": 532,
+    "time_utc": "2026-10-24T07:45:52.278821Z",
+    "topic": "evidence-20261024074454-backpressure-disabled"
+  },
+  {
+    "breaker_state": 0,
+    "dead_lettered": 0,
+    "downstream_calls": 544,
+    "downstream_failures": 0,
+    "metrics": {
+      "consumed": 544,
+      "published": 1364
+    },
+    "mode": "disabled",
+    "outstanding": 517,
+    "paused": false,
+    "paused_samples_5ms": 0,
+    "peak_outstanding": 517,
+    "scenario": "backpressure",
+    "succeeded": 540,
+    "time_utc": "2026-10-24T07:45:52.384685Z",
+    "topic": "evidence-20261024074454-backpressure-disabled"
+  },
+  {
+    "breaker_state": 0,
+    "dead_lettered": 0,
+    "downstream_calls": 555,
+    "downstream_failures": 0,
+    "metrics": {
+      "consumed": 555,
+      "published": 1386
+    },
+    "mode": "disabled",
+    "outstanding": 517,
+    "paused": false,
+    "paused_samples_5ms": 0,
+    "peak_outstanding": 517,
+    "scenario": "backpressure",
+    "succeeded": 551,
+    "time_utc": "2026-10-24T07:45:52.48999Z",
+    "topic": "evidence-20261024074454-backpressure-disabled"
+  },
+  {
+    "breaker_state": 0,
+    "dead_lettered": 0,
+    "downstream_calls": 564,
+    "downstream_failures": 0,
+    "metrics": {
+      "consumed": 564,
+      "published": 1407
+    },
+    "mode": "disabled",
+    "outstanding": 517,
+    "paused": false,
+    "paused_samples_5ms": 0,
+    "peak_outstanding": 517,
+    "scenario": "backpressure",
+    "succeeded": 560,
+    "time_utc": "2026-10-24T07:45:52.596052Z",
+    "topic": "evidence-20261024074454-backpressure-disabled"
+  },
+  {
+    "breaker_state": 0,
+    "dead_lettered": 0,
+    "downstream_calls": 572,
+    "downstream_failures": 0,
+    "metrics": {
+      "consumed": 572,
+      "published": 1427
+    },
+    "mode": "disabled",
+    "outstanding": 517,
+    "paused": false,
+    "paused_samples_5ms": 0,
+    "peak_outstanding": 517,
+    "scenario": "backpressure",
+    "succeeded": 568,
+    "time_utc": "2026-10-24T07:45:52.698401Z",
+    "topic": "evidence-20261024074454-backpressure-disabled"
+  },
+  {
+    "breaker_state": 0,
+    "dead_lettered": 0,
+    "downstream_calls": 580,
+    "downstream_failures": 0,
+    "metrics": {
+      "consumed": 580,
+      "published": 1448
+    },
+    "mode": "disabled",
+    "outstanding": 517,
+    "paused": false,
+    "paused_samples_5ms": 0,
+    "peak_outstanding": 517,
+    "scenario": "backpressure",
+    "succeeded": 576,
+    "time_utc": "2026-10-24T07:45:52.801636Z",
+    "topic": "evidence-20261024074454-backpressure-disabled"
+  },
+  {
+    "breaker_state": 0,
+    "dead_lettered": 0,
+    "downstream_calls": 588,
+    "downstream_failures": 0,
+    "metrics": {
+      "consumed": 588,
+      "published": 1468
+    },
+    "mode": "disabled",
+    "outstanding": 517,
+    "paused": false,
+    "paused_samples_5ms": 0,
+    "peak_outstanding": 517,
+    "scenario": "backpressure",
+    "succeeded": 584,
+    "time_utc": "2026-10-24T07:45:52.903883Z",
+    "topic": "evidence-20261024074454-backpressure-disabled"
+  },
+  {
+    "breaker_state": 0,
+    "dead_lettered": 0,
+    "downstream_calls": 596,
+    "downstream_failures": 0,
+    "metrics": {
+      "consumed": 596,
+      "published": 1489
+    },
+    "mode": "disabled",
+    "outstanding": 517,
+    "paused": false,
+    "paused_samples_5ms": 0,
+    "peak_outstanding": 517,
+    "scenario": "backpressure",
+    "succeeded": 592,
+    "time_utc": "2026-10-24T07:45:53.00626Z",
+    "topic": "evidence-20261024074454-backpressure-disabled"
+  },
+  {
+    "breaker_state": 0,
+    "dead_lettered": 0,
+    "downstream_calls": 604,
+    "downstream_failures": 0,
+    "metrics": {
+      "consumed": 604,
+      "published": 1509
+    },
+    "mode": "disabled",
+    "outstanding": 517,
+    "paused": false,
+    "paused_samples_5ms": 0,
+    "peak_outstanding": 517,
+    "scenario": "backpressure",
+    "succeeded": 600,
+    "time_utc": "2026-10-24T07:45:53.108618Z",
+    "topic": "evidence-20261024074454-backpressure-disabled"
+  },
+  {
+    "breaker_state": 0,
+    "dead_lettered": 0,
+    "downstream_calls": 612,
+    "downstream_failures": 0,
+    "metrics": {
+      "consumed": 612,
+      "published": 1530
+    },
+    "mode": "disabled",
+    "outstanding": 517,
+    "paused": false,
+    "paused_samples_5ms": 0,
+    "peak_outstanding": 517,
+    "scenario": "backpressure",
+    "succeeded": 608,
+    "time_utc": "2026-10-24T07:45:53.210596Z",
+    "topic": "evidence-20261024074454-backpressure-disabled"
+  },
+  {
+    "breaker_state": 0,
+    "dead_lettered": 0,
+    "downstream_calls": 620,
+    "downstream_failures": 0,
+    "metrics": {
+      "consumed": 620,
+      "published": 1551
+    },
+    "mode": "disabled",
+    "outstanding": 517,
+    "paused": false,
+    "paused_samples_5ms": 0,
+    "peak_outstanding": 517,
+    "scenario": "backpressure",
+    "succeeded": 616,
+    "time_utc": "2026-10-24T07:45:53.31547Z",
+    "topic": "evidence-20261024074454-backpressure-disabled"
+  },
+  {
+    "breaker_state": 0,
+    "dead_lettered": 0,
+    "downstream_calls": 628,
+    "downstream_failures": 0,
+    "metrics": {
+      "consumed": 628,
+      "published": 1571
+    },
+    "mode": "disabled",
+    "outstanding": 517,
+    "paused": false,
+    "paused_samples_5ms": 0,
+    "peak_outstanding": 517,
+    "scenario": "backpressure",
+    "succeeded": 624,
+    "time_utc": "2026-10-24T07:45:53.419145Z",
+    "topic": "evidence-20261024074454-backpressure-disabled"
+  },
+  {
+    "breaker_state": 0,
+    "dead_lettered": 0,
+    "downstream_calls": 636,
+    "downstream_failures": 0,
+    "metrics": {
+      "consumed": 636,
+      "published": 1592
+    },
+    "mode": "disabled",
+    "outstanding": 517,
+    "paused": false,
+    "paused_samples_5ms": 0,
+    "peak_outstanding": 517,
+    "scenario": "backpressure",
+    "succeeded": 632,
+    "time_utc": "2026-10-24T07:45:53.524722Z",
+    "topic": "evidence-20261024074454-backpressure-disabled"
+  },
+  {
+    "breaker_state": 0,
+    "dead_lettered": 0,
+    "downstream_calls": 644,
+    "downstream_failures": 0,
+    "metrics": {
+      "consumed": 644,
+      "published": 1614
+    },
+    "mode": "disabled",
+    "outstanding": 517,
+    "paused": false,
+    "paused_samples_5ms": 0,
+    "peak_outstanding": 517,
+    "scenario": "backpressure",
+    "succeeded": 640,
+    "time_utc": "2026-10-24T07:45:53.630736Z",
+    "topic": "evidence-20261024074454-backpressure-disabled"
+  },
+  {
+    "breaker_state": 0,
+    "dead_lettered": 0,
+    "downstream_calls": 652,
+    "downstream_failures": 0,
+    "metrics": {
+      "consumed": 652,
+      "published": 1635
+    },
+    "mode": "disabled",
+    "outstanding": 517,
+    "paused": false,
+    "paused_samples_5ms": 0,
+    "peak_outstanding": 517,
+    "scenario": "backpressure",
+    "succeeded": 648,
+    "time_utc": "2026-10-24T07:45:53.737391Z",
+    "topic": "evidence-20261024074454-backpressure-disabled"
+  },
+  {
+    "breaker_state": 0,
+    "dead_lettered": 0,
+    "downstream_calls": 663,
+    "downstream_failures": 0,
+    "metrics": {
+      "consumed": 663,
+      "published": 1656
+    },
+    "mode": "disabled",
+    "outstanding": 517,
+    "paused": false,
+    "paused_samples_5ms": 0,
+    "peak_outstanding": 517,
+    "scenario": "backpressure",
+    "succeeded": 659,
+    "time_utc": "2026-10-24T07:45:53.840676Z",
+    "topic": "evidence-20261024074454-backpressure-disabled"
+  },
+  {
+    "breaker_state": 0,
+    "dead_lettered": 0,
+    "downstream_calls": 672,
+    "downstream_failures": 0,
+    "metrics": {
+      "consumed": 672,
+      "published": 1677
+    },
+    "mode": "disabled",
+    "outstanding": 517,
+    "paused": false,
+    "paused_samples_5ms": 0,
+    "peak_outstanding": 517,
+    "scenario": "backpressure",
+    "succeeded": 668,
+    "time_utc": "2026-10-24T07:45:53.945149Z",
+    "topic": "evidence-20261024074454-backpressure-disabled"
+  },
+  {
+    "breaker_state": 0,
+    "dead_lettered": 0,
+    "downstream_calls": 680,
+    "downstream_failures": 0,
+    "metrics": {
+      "consumed": 680,
+      "published": 1698
+    },
+    "mode": "disabled",
+    "outstanding": 517,
+    "paused": false,
+    "paused_samples_5ms": 0,
+    "peak_outstanding": 517,
+    "scenario": "backpressure",
+    "succeeded": 676,
+    "time_utc": "2026-10-24T07:45:54.050619Z",
+    "topic": "evidence-20261024074454-backpressure-disabled"
+  },
+  {
+    "breaker_state": 0,
+    "dead_lettered": 0,
+    "downstream_calls": 688,
+    "downstream_failures": 0,
+    "metrics": {
+      "consumed": 688,
+      "published": 1718
+    },
+    "mode": "disabled",
+    "outstanding": 517,
+    "paused": false,
+    "paused_samples_5ms": 0,
+    "peak_outstanding": 517,
+    "scenario": "backpressure",
+    "succeeded": 684,
+    "time_utc": "2026-10-24T07:45:54.153039Z",
+    "topic": "evidence-20261024074454-backpressure-disabled"
+  },
+  {
+    "breaker_state": 0,
+    "dead_lettered": 0,
+    "downstream_calls": 696,
+    "downstream_failures": 0,
+    "metrics": {
+      "consumed": 696,
+      "published": 1739
+    },
+    "mode": "disabled",
+    "outstanding": 517,
+    "paused": false,
+    "paused_samples_5ms": 0,
+    "peak_outstanding": 517,
+    "scenario": "backpressure",
+    "succeeded": 692,
+    "time_utc": "2026-10-24T07:45:54.25574Z",
+    "topic": "evidence-20261024074454-backpressure-disabled"
+  },
+  {
+    "breaker_state": 0,
+    "dead_lettered": 0,
+    "downstream_calls": 704,
+    "downstream_failures": 0,
+    "metrics": {
+      "consumed": 704,
+      "published": 1759
+    },
+    "mode": "disabled",
+    "outstanding": 517,
+    "paused": false,
+    "paused_samples_5ms": 0,
+    "peak_outstanding": 517,
+    "scenario": "backpressure",
+    "succeeded": 700,
+    "time_utc": "2026-10-24T07:45:54.357808Z",
+    "topic": "evidence-20261024074454-backpressure-disabled"
+  },
+  {
+    "breaker_state": 0,
+    "dead_lettered": 0,
+    "downstream_calls": 712,
+    "downstream_failures": 0,
+    "metrics": {
+      "consumed": 712,
+      "published": 1780
+    },
+    "mode": "disabled",
+    "outstanding": 517,
+    "paused": false,
+    "paused_samples_5ms": 0,
+    "peak_outstanding": 517,
+    "scenario": "backpressure",
+    "succeeded": 708,
+    "time_utc": "2026-10-24T07:45:54.46388Z",
+    "topic": "evidence-20261024074454-backpressure-disabled"
+  },
+  {
+    "breaker_state": 0,
+    "dead_lettered": 0,
+    "downstream_calls": 720,
+    "downstream_failures": 0,
+    "metrics": {
+      "consumed": 720,
+      "published": 1801
+    },
+    "mode": "disabled",
+    "outstanding": 517,
+    "paused": false,
+    "paused_samples_5ms": 0,
+    "peak_outstanding": 517,
+    "scenario": "backpressure",
+    "succeeded": 716,
+    "time_utc": "2026-10-24T07:45:54.565627Z",
+    "topic": "evidence-20261024074454-backpressure-disabled"
+  },
+  {
+    "breaker_state": 0,
+    "dead_lettered": 0,
+    "downstream_calls": 728,
+    "downstream_failures": 0,
+    "metrics": {
+      "consumed": 728,
+      "published": 1818
+    },
+    "mode": "disabled",
+    "outstanding": 517,
+    "paused": false,
+    "paused_samples_5ms": 0,
+    "peak_outstanding": 517,
+    "scenario": "backpressure",
+    "succeeded": 724,
+    "time_utc": "2026-10-24T07:45:54.670617Z",
+    "topic": "evidence-20261024074454-backpressure-disabled"
+  },
+  {
+    "breaker_state": 0,
+    "dead_lettered": 0,
+    "downstream_calls": 736,
+    "downstream_failures": 0,
+    "metrics": {
+      "consumed": 736,
+      "published": 1841
+    },
+    "mode": "disabled",
+    "outstanding": 517,
+    "paused": false,
+    "paused_samples_5ms": 0,
+    "peak_outstanding": 517,
+    "scenario": "backpressure",
+    "succeeded": 732,
+    "time_utc": "2026-10-24T07:45:54.773398Z",
+    "topic": "evidence-20261024074454-backpressure-disabled"
+  },
+  {
+    "breaker_state": 0,
+    "dead_lettered": 0,
+    "downstream_calls": 744,
+    "downstream_failures": 0,
+    "metrics": {
+      "consumed": 744,
+      "published": 1863
+    },
+    "mode": "disabled",
+    "outstanding": 517,
+    "paused": false,
+    "paused_samples_5ms": 0,
+    "peak_outstanding": 517,
+    "scenario": "backpressure",
+    "succeeded": 740,
+    "time_utc": "2026-10-24T07:45:54.875447Z",
+    "topic": "evidence-20261024074454-backpressure-disabled"
+  },
+  {
+    "breaker_state": 0,
+    "dead_lettered": 0,
+    "downstream_calls": 752,
+    "downstream_failures": 0,
+    "metrics": {
+      "consumed": 752,
+      "published": 1883
+    },
+    "mode": "disabled",
+    "outstanding": 517,
+    "paused": false,
+    "paused_samples_5ms": 0,
+    "peak_outstanding": 517,
+    "scenario": "backpressure",
+    "succeeded": 748,
+    "time_utc": "2026-10-24T07:45:54.979194Z",
+    "topic": "evidence-20261024074454-backpressure-disabled"
+  },
+  {
+    "breaker_state": 0,
+    "dead_lettered": 0,
+    "downstream_calls": 760,
+    "downstream_failures": 0,
+    "metrics": {
+      "consumed": 760,
+      "published": 1904
+    },
+    "mode": "disabled",
+    "outstanding": 517,
+    "paused": false,
+    "paused_samples_5ms": 0,
+    "peak_outstanding": 517,
+    "scenario": "backpressure",
+    "succeeded": 756,
+    "time_utc": "2026-10-24T07:45:55.084339Z",
+    "topic": "evidence-20261024074454-backpressure-disabled"
+  },
+  {
+    "breaker_state": 0,
+    "dead_lettered": 0,
+    "downstream_calls": 768,
+    "downstream_failures": 0,
+    "metrics": {
+      "consumed": 768,
+      "published": 1925
+    },
+    "mode": "disabled",
+    "outstanding": 517,
+    "paused": false,
+    "paused_samples_5ms": 0,
+    "peak_outstanding": 517,
+    "scenario": "backpressure",
+    "succeeded": 764,
+    "time_utc": "2026-10-24T07:45:55.18604Z",
+    "topic": "evidence-20261024074454-backpressure-disabled"
+  },
+  {
+    "breaker_state": 0,
+    "dead_lettered": 0,
+    "downstream_calls": 776,
+    "downstream_failures": 0,
+    "metrics": {
+      "consumed": 776,
+      "published": 1946
+    },
+    "mode": "disabled",
+    "outstanding": 517,
+    "paused": false,
+    "paused_samples_5ms": 0,
+    "peak_outstanding": 517,
+    "scenario": "backpressure",
+    "succeeded": 773,
+    "time_utc": "2026-10-24T07:45:55.291666Z",
+    "topic": "evidence-20261024074454-backpressure-disabled"
+  },
+  {
+    "breaker_state": 0,
+    "dead_lettered": 0,
+    "downstream_calls": 787,
+    "downstream_failures": 0,
+    "metrics": {
+      "consumed": 787,
+      "published": 1967
+    },
+    "mode": "disabled",
+    "outstanding": 517,
+    "paused": false,
+    "paused_samples_5ms": 0,
+    "peak_outstanding": 517,
+    "scenario": "backpressure",
+    "succeeded": 783,
+    "time_utc": "2026-10-24T07:45:55.39462Z",
+    "topic": "evidence-20261024074454-backpressure-disabled"
+  },
+  {
+    "breaker_state": 0,
+    "dead_lettered": 0,
+    "downstream_calls": 796,
+    "downstream_failures": 0,
+    "metrics": {
+      "consumed": 796,
+      "published": 1988
+    },
+    "mode": "disabled",
+    "outstanding": 517,
+    "paused": false,
+    "paused_samples_5ms": 0,
+    "peak_outstanding": 517,
+    "scenario": "backpressure",
+    "succeeded": 792,
+    "time_utc": "2026-10-24T07:45:55.499598Z",
+    "topic": "evidence-20261024074454-backpressure-disabled"
+  },
+  {
+    "breaker_state": 0,
+    "dead_lettered": 0,
+    "downstream_calls": 804,
+    "downstream_failures": 0,
+    "metrics": {
+      "consumed": 804,
+      "published": 2009
+    },
+    "mode": "disabled",
+    "outstanding": 517,
+    "paused": false,
+    "paused_samples_5ms": 0,
+    "peak_outstanding": 517,
+    "scenario": "backpressure",
+    "succeeded": 800,
+    "time_utc": "2026-10-24T07:45:55.605317Z",
+    "topic": "evidence-20261024074454-backpressure-disabled"
+  },
+  {
+    "breaker_state": 0,
+    "dead_lettered": 0,
+    "downstream_calls": 812,
+    "downstream_failures": 0,
+    "metrics": {
+      "consumed": 812,
+      "published": 2030
+    },
+    "mode": "disabled",
+    "outstanding": 517,
+    "paused": false,
+    "paused_samples_5ms": 0,
+    "peak_outstanding": 517,
+    "scenario": "backpressure",
+    "succeeded": 808,
+    "time_utc": "2026-10-24T07:45:55.711454Z",
+    "topic": "evidence-20261024074454-backpressure-disabled"
+  },
+  {
+    "breaker_state": 0,
+    "dead_lettered": 0,
+    "downstream_calls": 820,
+    "downstream_failures": 0,
+    "metrics": {
+      "consumed": 820,
+      "published": 2051
+    },
+    "mode": "disabled",
+    "outstanding": 517,
+    "paused": false,
+    "paused_samples_5ms": 0,
+    "peak_outstanding": 517,
+    "scenario": "backpressure",
+    "succeeded": 816,
+    "time_utc": "2026-10-24T07:45:55.816791Z",
+    "topic": "evidence-20261024074454-backpressure-disabled"
+  },
+  {
+    "breaker_state": 0,
+    "dead_lettered": 0,
+    "downstream_calls": 828,
+    "downstream_failures": 0,
+    "metrics": {
+      "consumed": 828,
+      "published": 2071
+    },
+    "mode": "disabled",
+    "outstanding": 517,
+    "paused": false,
+    "paused_samples_5ms": 0,
+    "peak_outstanding": 517,
+    "scenario": "backpressure",
+    "succeeded": 824,
+    "time_utc": "2026-10-24T07:45:55.918782Z",
+    "topic": "evidence-20261024074454-backpressure-disabled"
+  },
+  {
+    "breaker_state": 0,
+    "dead_lettered": 0,
+    "downstream_calls": 836,
+    "downstream_failures": 0,
+    "metrics": {
+      "consumed": 836,
+      "published": 2092
+    },
+    "mode": "disabled",
+    "outstanding": 517,
+    "paused": false,
+    "paused_samples_5ms": 0,
+    "peak_outstanding": 517,
+    "scenario": "backpressure",
+    "succeeded": 832,
+    "time_utc": "2026-10-24T07:45:56.020424Z",
+    "topic": "evidence-20261024074454-backpressure-disabled"
+  },
+  {
+    "breaker_state": 0,
+    "dead_lettered": 0,
+    "downstream_calls": 844,
+    "downstream_failures": 0,
+    "metrics": {
+      "consumed": 844,
+      "published": 2112
+    },
+    "mode": "disabled",
+    "outstanding": 517,
+    "paused": false,
+    "paused_samples_5ms": 0,
+    "peak_outstanding": 517,
+    "scenario": "backpressure",
+    "succeeded": 840,
+    "time_utc": "2026-10-24T07:45:56.121828Z",
+    "topic": "evidence-20261024074454-backpressure-disabled"
+  },
+  {
+    "breaker_state": 0,
+    "dead_lettered": 0,
+    "downstream_calls": 852,
+    "downstream_failures": 0,
+    "metrics": {
+      "consumed": 852,
+      "published": 2133
+    },
+    "mode": "disabled",
+    "outstanding": 517,
+    "paused": false,
+    "paused_samples_5ms": 0,
+    "peak_outstanding": 517,
+    "scenario": "backpressure",
+    "succeeded": 848,
+    "time_utc": "2026-10-24T07:45:56.228019Z",
+    "topic": "evidence-20261024074454-backpressure-disabled"
+  },
+  {
+    "breaker_state": 0,
+    "dead_lettered": 0,
+    "downstream_calls": 860,
+    "downstream_failures": 0,
+    "metrics": {
+      "consumed": 860,
+      "published": 2154
+    },
+    "mode": "disabled",
+    "outstanding": 517,
+    "paused": false,
+    "paused_samples_5ms": 0,
+    "peak_outstanding": 517,
+    "scenario": "backpressure",
+    "succeeded": 856,
+    "time_utc": "2026-10-24T07:45:56.329629Z",
+    "topic": "evidence-20261024074454-backpressure-disabled"
+  },
+  {
+    "breaker_state": 0,
+    "dead_lettered": 0,
+    "downstream_calls": 868,
+    "downstream_failures": 0,
+    "metrics": {
+      "consumed": 868,
+      "published": 2175
+    },
+    "mode": "disabled",
+    "outstanding": 517,
+    "paused": false,
+    "paused_samples_5ms": 0,
+    "peak_outstanding": 517,
+    "scenario": "backpressure",
+    "succeeded": 864,
+    "time_utc": "2026-10-24T07:45:56.435751Z",
+    "topic": "evidence-20261024074454-backpressure-disabled"
+  },
+  {
+    "breaker_state": 0,
+    "dead_lettered": 0,
+    "downstream_calls": 876,
+    "downstream_failures": 0,
+    "metrics": {
+      "consumed": 876,
+      "published": 2195
+    },
+    "mode": "disabled",
+    "outstanding": 517,
+    "paused": false,
+    "paused_samples_5ms": 0,
+    "peak_outstanding": 517,
+    "scenario": "backpressure",
+    "succeeded": 872,
+    "time_utc": "2026-10-24T07:45:56.537913Z",
+    "topic": "evidence-20261024074454-backpressure-disabled"
+  },
+  {
+    "breaker_state": 0,
+    "dead_lettered": 0,
+    "downstream_calls": 887,
+    "downstream_failures": 0,
+    "metrics": {
+      "consumed": 887,
+      "published": 2216
+    },
+    "mode": "disabled",
+    "outstanding": 517,
+    "paused": false,
+    "paused_samples_5ms": 0,
+    "peak_outstanding": 517,
+    "scenario": "backpressure",
+    "succeeded": 883,
+    "time_utc": "2026-10-24T07:45:56.644486Z",
+    "topic": "evidence-20261024074454-backpressure-disabled"
+  },
+  {
+    "breaker_state": 0,
+    "dead_lettered": 0,
+    "downstream_calls": 895,
+    "downstream_failures": 0,
+    "metrics": {
+      "consumed": 895,
+      "published": 2237
+    },
+    "mode": "disabled",
+    "outstanding": 517,
+    "paused": false,
+    "paused_samples_5ms": 0,
+    "peak_outstanding": 517,
+    "scenario": "backpressure",
+    "succeeded": 891,
+    "time_utc": "2026-10-24T07:45:56.747004Z",
+    "topic": "evidence-20261024074454-backpressure-disabled"
+  },
+  {
+    "breaker_state": 0,
+    "dead_lettered": 0,
+    "downstream_calls": 904,
+    "downstream_failures": 0,
+    "metrics": {
+      "consumed": 904,
+      "published": 2258
+    },
+    "mode": "disabled",
+    "outstanding": 517,
+    "paused": false,
+    "paused_samples_5ms": 0,
+    "peak_outstanding": 517,
+    "scenario": "backpressure",
+    "succeeded": 900,
+    "time_utc": "2026-10-24T07:45:56.849443Z",
+    "topic": "evidence-20261024074454-backpressure-disabled"
+  },
+  {
+    "breaker_state": 0,
+    "dead_lettered": 0,
+    "downstream_calls": 912,
+    "downstream_failures": 0,
+    "metrics": {
+      "consumed": 912,
+      "published": 2279
+    },
+    "mode": "disabled",
+    "outstanding": 517,
+    "paused": false,
+    "paused_samples_5ms": 0,
+    "peak_outstanding": 517,
+    "scenario": "backpressure",
+    "succeeded": 908,
+    "time_utc": "2026-10-24T07:45:56.954674Z",
+    "topic": "evidence-20261024074454-backpressure-disabled"
+  },
+  {
+    "breaker_state": 0,
+    "dead_lettered": 0,
+    "downstream_calls": 920,
+    "downstream_failures": 0,
+    "metrics": {
+      "consumed": 920,
+      "published": 2299
+    },
+    "mode": "disabled",
+    "outstanding": 517,
+    "paused": false,
+    "paused_samples_5ms": 0,
+    "peak_outstanding": 517,
+    "scenario": "backpressure",
+    "succeeded": 916,
+    "time_utc": "2026-10-24T07:45:57.056233Z",
+    "topic": "evidence-20261024074454-backpressure-disabled"
+  },
+  {
+    "breaker_state": 0,
+    "dead_lettered": 0,
+    "downstream_calls": 928,
+    "downstream_failures": 0,
+    "metrics": {
+      "consumed": 928,
+      "published": 2320
+    },
+    "mode": "disabled",
+    "outstanding": 517,
+    "paused": false,
+    "paused_samples_5ms": 0,
+    "peak_outstanding": 517,
+    "scenario": "backpressure",
+    "succeeded": 924,
+    "time_utc": "2026-10-24T07:45:57.162187Z",
+    "topic": "evidence-20261024074454-backpressure-disabled"
+  },
+  {
+    "breaker_state": 0,
+    "dead_lettered": 0,
+    "downstream_calls": 936,
+    "downstream_failures": 0,
+    "metrics": {
+      "consumed": 936,
+      "published": 2341
+    },
+    "mode": "disabled",
+    "outstanding": 517,
+    "paused": false,
+    "paused_samples_5ms": 0,
+    "peak_outstanding": 517,
+    "scenario": "backpressure",
+    "succeeded": 932,
+    "time_utc": "2026-10-24T07:45:57.264724Z",
+    "topic": "evidence-20261024074454-backpressure-disabled"
+  },
+  {
+    "breaker_state": 0,
+    "dead_lettered": 0,
+    "downstream_calls": 944,
+    "downstream_failures": 0,
+    "metrics": {
+      "consumed": 944,
+      "published": 2362
+    },
+    "mode": "disabled",
+    "outstanding": 517,
+    "paused": false,
+    "paused_samples_5ms": 0,
+    "peak_outstanding": 517,
+    "scenario": "backpressure",
+    "succeeded": 940,
+    "time_utc": "2026-10-24T07:45:57.37186Z",
+    "topic": "evidence-20261024074454-backpressure-disabled"
+  },
+  {
+    "breaker_state": 0,
+    "dead_lettered": 0,
+    "downstream_calls": 952,
+    "downstream_failures": 0,
+    "metrics": {
+      "consumed": 952,
+      "published": 2383
+    },
+    "mode": "disabled",
+    "outstanding": 517,
+    "paused": false,
+    "paused_samples_5ms": 0,
+    "peak_outstanding": 517,
+    "scenario": "backpressure",
+    "succeeded": 948,
+    "time_utc": "2026-10-24T07:45:57.477603Z",
+    "topic": "evidence-20261024074454-backpressure-disabled"
+  },
+  {
+    "breaker_state": 0,
+    "dead_lettered": 0,
+    "downstream_calls": 960,
+    "downstream_failures": 0,
+    "metrics": {
+      "consumed": 960,
+      "published": 2404
+    },
+    "mode": "disabled",
+    "outstanding": 517,
+    "paused": false,
+    "paused_samples_5ms": 0,
+    "peak_outstanding": 517,
+    "scenario": "backpressure",
+    "succeeded": 956,
+    "time_utc": "2026-10-24T07:45:57.581573Z",
+    "topic": "evidence-20261024074454-backpressure-disabled"
+  },
+  {
+    "breaker_state": 0,
+    "dead_lettered": 0,
+    "downstream_calls": 968,
+    "downstream_failures": 0,
+    "metrics": {
+      "consumed": 968,
+      "published": 2425
+    },
+    "mode": "disabled",
+    "outstanding": 517,
+    "paused": false,
+    "paused_samples_5ms": 0,
+    "peak_outstanding": 517,
+    "scenario": "backpressure",
+    "succeeded": 964,
+    "time_utc": "2026-10-24T07:45:57.685714Z",
+    "topic": "evidence-20261024074454-backpressure-disabled"
+  },
+  {
+    "breaker_state": 0,
+    "dead_lettered": 0,
+    "downstream_calls": 976,
+    "downstream_failures": 0,
+    "metrics": {
+      "consumed": 976,
+      "published": 2446
+    },
+    "mode": "disabled",
+    "outstanding": 517,
+    "paused": false,
+    "paused_samples_5ms": 0,
+    "peak_outstanding": 517,
+    "scenario": "backpressure",
+    "succeeded": 972,
+    "time_utc": "2026-10-24T07:45:57.792019Z",
+    "topic": "evidence-20261024074454-backpressure-disabled"
+  },
+  {
+    "breaker_state": 0,
+    "dead_lettered": 0,
+    "downstream_calls": 984,
+    "downstream_failures": 0,
+    "metrics": {
+      "consumed": 984,
+      "published": 2466
+    },
+    "mode": "disabled",
+    "outstanding": 517,
+    "paused": false,
+    "paused_samples_5ms": 0,
+    "peak_outstanding": 517,
+    "scenario": "backpressure",
+    "succeeded": 980,
+    "time_utc": "2026-10-24T07:45:57.893695Z",
+    "topic": "evidence-20261024074454-backpressure-disabled"
+  },
+  {
+    "breaker_state": 0,
+    "dead_lettered": 0,
+    "downstream_calls": 995,
+    "downstream_failures": 0,
+    "metrics": {
+      "consumed": 995,
+      "published": 2487
+    },
+    "mode": "disabled",
+    "outstanding": 517,
+    "paused": false,
+    "paused_samples_5ms": 0,
+    "peak_outstanding": 517,
+    "scenario": "backpressure",
+    "succeeded": 991,
+    "time_utc": "2026-10-24T07:45:57.996825Z",
+    "topic": "evidence-20261024074454-backpressure-disabled"
+  },
+  {
+    "breaker_state": 0,
+    "dead_lettered": 0,
+    "downstream_calls": 1003,
+    "downstream_failures": 0,
+    "metrics": {
+      "consumed": 1003,
+      "published": 2508
+    },
+    "mode": "disabled",
+    "outstanding": 517,
+    "paused": false,
+    "paused_samples_5ms": 0,
+    "peak_outstanding": 517,
+    "scenario": "backpressure",
+    "succeeded": 999,
+    "time_utc": "2026-10-24T07:45:58.10186Z",
+    "topic": "evidence-20261024074454-backpressure-disabled"
+  },
+  {
+    "breaker_state": 0,
+    "dead_lettered": 0,
+    "downstream_calls": 1012,
+    "downstream_failures": 0,
+    "metrics": {
+      "consumed": 1012,
+      "published": 2529
+    },
+    "mode": "disabled",
+    "outstanding": 517,
+    "paused": false,
+    "paused_samples_5ms": 0,
+    "peak_outstanding": 517,
+    "scenario": "backpressure",
+    "succeeded": 1008,
+    "time_utc": "2026-10-24T07:45:58.204487Z",
+    "topic": "evidence-20261024074454-backpressure-disabled"
+  },
+  {
+    "breaker_state": 0,
+    "dead_lettered": 0,
+    "downstream_calls": 1020,
+    "downstream_failures": 0,
+    "metrics": {
+      "consumed": 1020,
+      "published": 2549
+    },
+    "mode": "disabled",
+    "outstanding": 517,
+    "paused": false,
+    "paused_samples_5ms": 0,
+    "peak_outstanding": 517,
+    "scenario": "backpressure",
+    "succeeded": 1016,
+    "time_utc": "2026-10-24T07:45:58.307173Z",
+    "topic": "evidence-20261024074454-backpressure-disabled"
+  },
+  {
+    "breaker_state": 0,
+    "dead_lettered": 0,
+    "downstream_calls": 1028,
+    "downstream_failures": 0,
+    "metrics": {
+      "consumed": 1028,
+      "published": 2570
+    },
+    "mode": "disabled",
+    "outstanding": 517,
+    "paused": false,
+    "paused_samples_5ms": 0,
+    "peak_outstanding": 517,
+    "scenario": "backpressure",
+    "succeeded": 1024,
+    "time_utc": "2026-10-24T07:45:58.409708Z",
+    "topic": "evidence-20261024074454-backpressure-disabled"
+  },
+  {
+    "breaker_state": 0,
+    "dead_lettered": 0,
+    "downstream_calls": 1036,
+    "downstream_failures": 0,
+    "metrics": {
+      "consumed": 1036,
+      "published": 2591
+    },
+    "mode": "disabled",
+    "outstanding": 517,
+    "paused": false,
+    "paused_samples_5ms": 0,
+    "peak_outstanding": 517,
+    "scenario": "backpressure",
+    "succeeded": 1032,
+    "time_utc": "2026-10-24T07:45:58.515437Z",
+    "topic": "evidence-20261024074454-backpressure-disabled"
+  },
+  {
+    "breaker_state": 0,
+    "dead_lettered": 0,
+    "downstream_calls": 1044,
+    "downstream_failures": 0,
+    "metrics": {
+      "consumed": 1044,
+      "published": 2611
+    },
+    "mode": "disabled",
+    "outstanding": 517,
+    "paused": false,
+    "paused_samples_5ms": 0,
+    "peak_outstanding": 517,
+    "scenario": "backpressure",
+    "succeeded": 1040,
+    "time_utc": "2026-10-24T07:45:58.619358Z",
+    "topic": "evidence-20261024074454-backpressure-disabled"
+  },
+  {
+    "breaker_state": 0,
+    "dead_lettered": 0,
+    "downstream_calls": 1052,
+    "downstream_failures": 0,
+    "metrics": {
+      "consumed": 1052,
+      "published": 2632
+    },
+    "mode": "disabled",
+    "outstanding": 517,
+    "paused": false,
+    "paused_samples_5ms": 0,
+    "peak_outstanding": 517,
+    "scenario": "backpressure",
+    "succeeded": 1048,
+    "time_utc": "2026-10-24T07:45:58.722108Z",
+    "topic": "evidence-20261024074454-backpressure-disabled"
+  },
+  {
+    "breaker_state": 0,
+    "dead_lettered": 0,
+    "downstream_calls": 1060,
+    "downstream_failures": 0,
+    "metrics": {
+      "consumed": 1060,
+      "published": 2653
+    },
+    "mode": "disabled",
+    "outstanding": 517,
+    "paused": false,
+    "paused_samples_5ms": 0,
+    "peak_outstanding": 517,
+    "scenario": "backpressure",
+    "succeeded": 1056,
+    "time_utc": "2026-10-24T07:45:58.826976Z",
+    "topic": "evidence-20261024074454-backpressure-disabled"
+  },
+  {
+    "breaker_state": 0,
+    "dead_lettered": 0,
+    "downstream_calls": 1068,
+    "downstream_failures": 0,
+    "metrics": {
+      "consumed": 1068,
+      "published": 2673
+    },
+    "mode": "disabled",
+    "outstanding": 517,
+    "paused": false,
+    "paused_samples_5ms": 0,
+    "peak_outstanding": 517,
+    "scenario": "backpressure",
+    "succeeded": 1064,
+    "time_utc": "2026-10-24T07:45:58.929423Z",
+    "topic": "evidence-20261024074454-backpressure-disabled"
+  },
+  {
+    "breaker_state": 0,
+    "dead_lettered": 0,
+    "downstream_calls": 1076,
+    "downstream_failures": 0,
+    "metrics": {
+      "consumed": 1076,
+      "published": 2695
+    },
+    "mode": "disabled",
+    "outstanding": 517,
+    "paused": false,
+    "paused_samples_5ms": 0,
+    "peak_outstanding": 517,
+    "scenario": "backpressure",
+    "succeeded": 1072,
+    "time_utc": "2026-10-24T07:45:59.03485Z",
+    "topic": "evidence-20261024074454-backpressure-disabled"
+  },
+  {
+    "breaker_state": 0,
+    "dead_lettered": 0,
+    "downstream_calls": 1084,
+    "downstream_failures": 0,
+    "metrics": {
+      "consumed": 1084,
+      "published": 2715
+    },
+    "mode": "disabled",
+    "outstanding": 517,
+    "paused": false,
+    "paused_samples_5ms": 0,
+    "peak_outstanding": 517,
+    "scenario": "backpressure",
+    "succeeded": 1080,
+    "time_utc": "2026-10-24T07:45:59.139644Z",
+    "topic": "evidence-20261024074454-backpressure-disabled"
+  },
+  {
+    "breaker_state": 0,
+    "dead_lettered": 0,
+    "downstream_calls": 1092,
+    "downstream_failures": 0,
+    "metrics": {
+      "consumed": 1092,
+      "published": 2736
+    },
+    "mode": "disabled",
+    "outstanding": 517,
+    "paused": false,
+    "paused_samples_5ms": 0,
+    "peak_outstanding": 517,
+    "scenario": "backpressure",
+    "succeeded": 1088,
+    "time_utc": "2026-10-24T07:45:59.244727Z",
+    "topic": "evidence-20261024074454-backpressure-disabled"
+  },
+  {
+    "breaker_state": 0,
+    "dead_lettered": 0,
+    "downstream_calls": 1103,
+    "downstream_failures": 0,
+    "metrics": {
+      "consumed": 1103,
+      "published": 2757
+    },
+    "mode": "disabled",
+    "outstanding": 517,
+    "paused": false,
+    "paused_samples_5ms": 0,
+    "peak_outstanding": 517,
+    "scenario": "backpressure",
+    "succeeded": 1099,
+    "time_utc": "2026-10-24T07:45:59.349095Z",
+    "topic": "evidence-20261024074454-backpressure-disabled"
+  },
+  {
+    "breaker_state": 0,
+    "dead_lettered": 0,
+    "downstream_calls": 1111,
+    "downstream_failures": 0,
+    "metrics": {
+      "consumed": 1111,
+      "published": 2778
+    },
+    "mode": "disabled",
+    "outstanding": 517,
+    "paused": false,
+    "paused_samples_5ms": 0,
+    "peak_outstanding": 517,
+    "scenario": "backpressure",
+    "succeeded": 1107,
+    "time_utc": "2026-10-24T07:45:59.455028Z",
+    "topic": "evidence-20261024074454-backpressure-disabled"
+  },
+  {
+    "breaker_state": 0,
+    "dead_lettered": 0,
+    "downstream_calls": 1119,
+    "downstream_failures": 0,
+    "metrics": {
+      "consumed": 1119,
+      "published": 2800
+    },
+    "mode": "disabled",
+    "outstanding": 517,
+    "paused": false,
+    "paused_samples_5ms": 0,
+    "peak_outstanding": 517,
+    "scenario": "backpressure",
+    "succeeded": 1115,
+    "time_utc": "2026-10-24T07:45:59.559773Z",
+    "topic": "evidence-20261024074454-backpressure-disabled"
+  },
+  {
+    "breaker_state": 0,
+    "dead_lettered": 0,
+    "downstream_calls": 1127,
+    "downstream_failures": 0,
+    "metrics": {
+      "consumed": 1127,
+      "published": 2820
+    },
+    "mode": "disabled",
+    "outstanding": 517,
+    "paused": false,
+    "paused_samples_5ms": 0,
+    "peak_outstanding": 517,
+    "scenario": "backpressure",
+    "succeeded": 1123,
+    "time_utc": "2026-10-24T07:45:59.661479Z",
+    "topic": "evidence-20261024074454-backpressure-disabled"
+  },
+  {
+    "breaker_state": 0,
+    "dead_lettered": 0,
+    "downstream_calls": 1135,
+    "downstream_failures": 0,
+    "metrics": {
+      "consumed": 1135,
+      "published": 2841
+    },
+    "mode": "disabled",
+    "outstanding": 517,
+    "paused": false,
+    "paused_samples_5ms": 0,
+    "peak_outstanding": 517,
+    "scenario": "backpressure",
+    "succeeded": 1131,
+    "time_utc": "2026-10-24T07:45:59.765963Z",
+    "topic": "evidence-20261024074454-backpressure-disabled"
+  },
+  {
+    "breaker_state": 0,
+    "dead_lettered": 0,
+    "downstream_calls": 1143,
+    "downstream_failures": 0,
+    "metrics": {
+      "consumed": 1143,
+      "published": 2861
+    },
+    "mode": "disabled",
+    "outstanding": 517,
+    "paused": false,
+    "paused_samples_5ms": 0,
+    "peak_outstanding": 517,
+    "scenario": "backpressure",
+    "succeeded": 1139,
+    "time_utc": "2026-10-24T07:45:59.869646Z",
+    "topic": "evidence-20261024074454-backpressure-disabled"
+  },
+  {
+    "breaker_state": 0,
+    "dead_lettered": 0,
+    "downstream_calls": 1151,
+    "downstream_failures": 0,
+    "metrics": {
+      "consumed": 1151,
+      "published": 2882
+    },
+    "mode": "disabled",
+    "outstanding": 517,
+    "paused": false,
+    "paused_samples_5ms": 0,
+    "peak_outstanding": 517,
+    "scenario": "backpressure",
+    "succeeded": 1147,
+    "time_utc": "2026-10-24T07:45:59.974949Z",
+    "topic": "evidence-20261024074454-backpressure-disabled"
+  },
+  {
+    "breaker_state": 0,
+    "dead_lettered": 0,
+    "downstream_calls": 1159,
+    "downstream_failures": 0,
+    "metrics": {
+      "consumed": 1159,
+      "published": 2903
+    },
+    "mode": "disabled",
+    "outstanding": 517,
+    "paused": false,
+    "paused_samples_5ms": 0,
+    "peak_outstanding": 517,
+    "scenario": "backpressure",
+    "succeeded": 1155,
+    "time_utc": "2026-10-24T07:46:00.076909Z",
+    "topic": "evidence-20261024074454-backpressure-disabled"
+  },
+  {
+    "breaker_state": 0,
+    "dead_lettered": 0,
+    "downstream_calls": 1167,
+    "downstream_failures": 0,
+    "metrics": {
+      "consumed": 1167,
+      "published": 2923
+    },
+    "mode": "disabled",
+    "outstanding": 517,
+    "paused": false,
+    "paused_samples_5ms": 0,
+    "peak_outstanding": 517,
+    "scenario": "backpressure",
+    "succeeded": 1163,
+    "time_utc": "2026-10-24T07:46:00.18022Z",
+    "topic": "evidence-20261024074454-backpressure-disabled"
+  },
+  {
+    "breaker_state": 0,
+    "dead_lettered": 0,
+    "downstream_calls": 1176,
+    "downstream_failures": 0,
+    "metrics": {
+      "consumed": 1176,
+      "published": 2944
+    },
+    "mode": "disabled",
+    "outstanding": 517,
+    "paused": false,
+    "paused_samples_5ms": 0,
+    "peak_outstanding": 517,
+    "scenario": "backpressure",
+    "succeeded": 1172,
+    "time_utc": "2026-10-24T07:46:00.282849Z",
+    "topic": "evidence-20261024074454-backpressure-disabled"
+  },
+  {
+    "breaker_state": 0,
+    "dead_lettered": 0,
+    "downstream_calls": 1184,
+    "downstream_failures": 0,
+    "metrics": {
+      "consumed": 1184,
+      "published": 2965
+    },
+    "mode": "disabled",
+    "outstanding": 517,
+    "paused": false,
+    "paused_samples_5ms": 0,
+    "peak_outstanding": 517,
+    "scenario": "backpressure",
+    "succeeded": 1180,
+    "time_utc": "2026-10-24T07:46:00.387246Z",
+    "topic": "evidence-20261024074454-backpressure-disabled"
+  },
+  {
+    "breaker_state": 0,
+    "dead_lettered": 0,
+    "downstream_calls": 1192,
+    "downstream_failures": 0,
+    "metrics": {
+      "consumed": 1192,
+      "published": 2985
+    },
+    "mode": "disabled",
+    "outstanding": 517,
+    "paused": false,
+    "paused_samples_5ms": 0,
+    "peak_outstanding": 517,
+    "scenario": "backpressure",
+    "succeeded": 1188,
+    "time_utc": "2026-10-24T07:46:00.489049Z",
+    "topic": "evidence-20261024074454-backpressure-disabled"
+  },
+  {
+    "breaker_state": 0,
+    "dead_lettered": 0,
+    "downstream_calls": 1200,
+    "downstream_failures": 0,
+    "metrics": {
+      "consumed": 1200,
+      "published": 3000
+    },
+    "mode": "disabled",
+    "outstanding": 517,
+    "paused": false,
+    "paused_samples_5ms": 0,
+    "peak_outstanding": 517,
+    "scenario": "backpressure",
+    "succeeded": 1196,
+    "time_utc": "2026-10-24T07:46:00.594479Z",
+    "topic": "evidence-20261024074454-backpressure-disabled"
+  },
+  {
+    "breaker_state": 0,
+    "dead_lettered": 0,
+    "downstream_calls": 1208,
+    "downstream_failures": 0,
+    "metrics": {
+      "consumed": 1208,
+      "published": 3000
+    },
+    "mode": "disabled",
+    "outstanding": 517,
+    "paused": false,
+    "paused_samples_5ms": 0,
+    "peak_outstanding": 517,
+    "scenario": "backpressure",
+    "succeeded": 1204,
+    "time_utc": "2026-10-24T07:46:00.698099Z",
+    "topic": "evidence-20261024074454-backpressure-disabled"
+  },
+  {
+    "breaker_state": 0,
+    "dead_lettered": 0,
+    "downstream_calls": 1219,
+    "downstream_failures": 0,
+    "metrics": {
+      "consumed": 1219,
+      "published": 3000
+    },
+    "mode": "disabled",
+    "outstanding": 517,
+    "paused": false,
+    "paused_samples_5ms": 0,
+    "peak_outstanding": 517,
+    "scenario": "backpressure",
+    "succeeded": 1215,
+    "time_utc": "2026-10-24T07:46:00.802968Z",
+    "topic": "evidence-20261024074454-backpressure-disabled"
+  },
+  {
+    "breaker_state": 0,
+    "dead_lettered": 0,
+    "downstream_calls": 1227,
+    "downstream_failures": 0,
+    "metrics": {
+      "consumed": 1227,
+      "published": 3000
+    },
+    "mode": "disabled",
+    "outstanding": 517,
+    "paused": false,
+    "paused_samples_5ms": 0,
+    "peak_outstanding": 517,
+    "scenario": "backpressure",
+    "succeeded": 1223,
+    "time_utc": "2026-10-24T07:46:00.905435Z",
+    "topic": "evidence-20261024074454-backpressure-disabled"
+  },
+  {
+    "breaker_state": 0,
+    "dead_lettered": 0,
+    "downstream_calls": 1235,
+    "downstream_failures": 0,
+    "metrics": {
+      "consumed": 1235,
+      "published": 3000
+    },
+    "mode": "disabled",
+    "outstanding": 517,
+    "paused": false,
+    "paused_samples_5ms": 0,
+    "peak_outstanding": 517,
+    "scenario": "backpressure",
+    "succeeded": 1231,
+    "time_utc": "2026-10-24T07:46:01.007702Z",
+    "topic": "evidence-20261024074454-backpressure-disabled"
+  },
+  {
+    "breaker_state": 0,
+    "dead_lettered": 0,
+    "downstream_calls": 1243,
+    "downstream_failures": 0,
+    "metrics": {
+      "consumed": 1243,
+      "published": 3000
+    },
+    "mode": "disabled",
+    "outstanding": 517,
+    "paused": false,
+    "paused_samples_5ms": 0,
+    "peak_outstanding": 517,
+    "scenario": "backpressure",
+    "succeeded": 1239,
+    "time_utc": "2026-10-24T07:46:01.110295Z",
+    "topic": "evidence-20261024074454-backpressure-disabled"
+  },
+  {
+    "breaker_state": 0,
+    "dead_lettered": 0,
+    "downstream_calls": 1259,
+    "downstream_failures": 0,
+    "metrics": {
+      "consumed": 1259,
+      "published": 3000
+    },
+    "mode": "disabled",
+    "outstanding": 517,
+    "paused": false,
+    "paused_samples_5ms": 0,
+    "peak_outstanding": 517,
+    "scenario": "backpressure",
+    "succeeded": 1255,
+    "time_utc": "2026-10-24T07:46:01.312613Z",
+    "topic": "evidence-20261024074454-backpressure-disabled"
+  },
+  {
+    "breaker_state": 0,
+    "dead_lettered": 0,
+    "downstream_calls": 1275,
+    "downstream_failures": 0,
+    "metrics": {
+      "consumed": 1275,
+      "published": 3000
+    },
+    "mode": "disabled",
+    "outstanding": 517,
+    "paused": false,
+    "paused_samples_5ms": 0,
+    "peak_outstanding": 517,
+    "scenario": "backpressure",
+    "succeeded": 1271,
+    "time_utc": "2026-10-24T07:46:01.516672Z",
+    "topic": "evidence-20261024074454-backpressure-disabled"
+  },
+  {
+    "breaker_state": 0,
+    "dead_lettered": 0,
+    "downstream_calls": 1291,
+    "downstream_failures": 0,
+    "metrics": {
+      "consumed": 1291,
+      "published": 3000
+    },
+    "mode": "disabled",
+    "outstanding": 517,
+    "paused": false,
+    "paused_samples_5ms": 0,
+    "peak_outstanding": 517,
+    "scenario": "backpressure",
+    "succeeded": 1287,
+    "time_utc": "2026-10-24T07:46:01.718601Z",
+    "topic": "evidence-20261024074454-backpressure-disabled"
+  },
+  {
+    "breaker_state": 0,
+    "dead_lettered": 0,
+    "downstream_calls": 1307,
+    "downstream_failures": 0,
+    "metrics": {
+      "consumed": 1307,
+      "published": 3000
+    },
+    "mode": "disabled",
+    "outstanding": 517,
+    "paused": false,
+    "paused_samples_5ms": 0,
+    "peak_outstanding": 517,
+    "scenario": "backpressure",
+    "succeeded": 1303,
+    "time_utc": "2026-10-24T07:46:01.920878Z",
+    "topic": "evidence-20261024074454-backpressure-disabled"
+  },
+  {
+    "breaker_state": 0,
+    "dead_lettered": 0,
+    "downstream_calls": 1323,
+    "downstream_failures": 0,
+    "metrics": {
+      "consumed": 1323,
+      "published": 3000
+    },
+    "mode": "disabled",
+    "outstanding": 517,
+    "paused": false,
+    "paused_samples_5ms": 0,
+    "peak_outstanding": 517,
+    "scenario": "backpressure",
+    "succeeded": 1319,
+    "time_utc": "2026-10-24T07:46:02.127207Z",
+    "topic": "evidence-20261024074454-backpressure-disabled"
+  },
+  {
+    "breaker_state": 0,
+    "dead_lettered": 0,
+    "downstream_calls": 1339,
+    "downstream_failures": 0,
+    "metrics": {
+      "consumed": 1339,
+      "published": 3000
+    },
+    "mode": "disabled",
+    "outstanding": 517,
+    "paused": false,
+    "paused_samples_5ms": 0,
+    "peak_outstanding": 517,
+    "scenario": "backpressure",
+    "succeeded": 1335,
+    "time_utc": "2026-10-24T07:46:02.333349Z",
+    "topic": "evidence-20261024074454-backpressure-disabled"
+  },
+  {
+    "breaker_state": 0,
+    "dead_lettered": 0,
+    "downstream_calls": 1356,
+    "downstream_failures": 0,
+    "metrics": {
+      "consumed": 1356,
+      "published": 3000
+    },
+    "mode": "disabled",
+    "outstanding": 517,
+    "paused": false,
+    "paused_samples_5ms": 0,
+    "peak_outstanding": 517,
+    "scenario": "backpressure",
+    "succeeded": 1352,
+    "time_utc": "2026-10-24T07:46:02.539073Z",
+    "topic": "evidence-20261024074454-backpressure-disabled"
+  },
+  {
+    "breaker_state": 0,
+    "dead_lettered": 0,
+    "downstream_calls": 1372,
+    "downstream_failures": 0,
+    "metrics": {
+      "consumed": 1372,
+      "published": 3000
+    },
+    "mode": "disabled",
+    "outstanding": 517,
+    "paused": false,
+    "paused_samples_5ms": 0,
+    "peak_outstanding": 517,
+    "scenario": "backpressure",
+    "succeeded": 1368,
+    "time_utc": "2026-10-24T07:46:02.742738Z",
+    "topic": "evidence-20261024074454-backpressure-disabled"
+  },
+  {
+    "breaker_state": 0,
+    "dead_lettered": 0,
+    "downstream_calls": 1388,
+    "downstream_failures": 0,
+    "metrics": {
+      "consumed": 1388,
+      "published": 3000
+    },
+    "mode": "disabled",
+    "outstanding": 517,
+    "paused": false,
+    "paused_samples_5ms": 0,
+    "peak_outstanding": 517,
+    "scenario": "backpressure",
+    "succeeded": 1384,
+    "time_utc": "2026-10-24T07:46:02.946977Z",
+    "topic": "evidence-20261024074454-backpressure-disabled"
+  },
+  {
+    "breaker_state": 0,
+    "dead_lettered": 0,
+    "downstream_calls": 1404,
+    "downstream_failures": 0,
+    "metrics": {
+      "consumed": 1404,
+      "published": 3000
+    },
+    "mode": "disabled",
+    "outstanding": 517,
+    "paused": false,
+    "paused_samples_5ms": 0,
+    "peak_outstanding": 517,
+    "scenario": "backpressure",
+    "succeeded": 1400,
+    "time_utc": "2026-10-24T07:46:03.149531Z",
+    "topic": "evidence-20261024074454-backpressure-disabled"
+  },
+  {
+    "breaker_state": 0,
+    "dead_lettered": 0,
+    "downstream_calls": 1423,
+    "downstream_failures": 0,
+    "metrics": {
+      "consumed": 1423,
+      "published": 3000
+    },
+    "mode": "disabled",
+    "outstanding": 517,
+    "paused": false,
+    "paused_samples_5ms": 0,
+    "peak_outstanding": 517,
+    "scenario": "backpressure",
+    "succeeded": 1419,
+    "time_utc": "2026-10-24T07:46:03.355547Z",
+    "topic": "evidence-20261024074454-backpressure-disabled"
+  },
+  {
+    "breaker_state": 0,
+    "dead_lettered": 0,
+    "downstream_calls": 1439,
+    "downstream_failures": 0,
+    "metrics": {
+      "consumed": 1439,
+      "published": 3000
+    },
+    "mode": "disabled",
+    "outstanding": 517,
+    "paused": false,
+    "paused_samples_5ms": 0,
+    "peak_outstanding": 517,
+    "scenario": "backpressure",
+    "succeeded": 1435,
+    "time_utc": "2026-10-24T07:46:03.559022Z",
+    "topic": "evidence-20261024074454-backpressure-disabled"
+  },
+  {
+    "breaker_state": 0,
+    "dead_lettered": 0,
+    "downstream_calls": 1455,
+    "downstream_failures": 0,
+    "metrics": {
+      "consumed": 1455,
+      "published": 3000
+    },
+    "mode": "disabled",
+    "outstanding": 517,
+    "paused": false,
+    "paused_samples_5ms": 0,
+    "peak_outstanding": 517,
+    "scenario": "backpressure",
+    "succeeded": 1451,
+    "time_utc": "2026-10-24T07:46:03.765634Z",
+    "topic": "evidence-20261024074454-backpressure-disabled"
+  },
+  {
+    "breaker_state": 0,
+    "dead_lettered": 0,
+    "downstream_calls": 1471,
+    "downstream_failures": 0,
+    "metrics": {
+      "consumed": 1471,
+      "published": 3000
+    },
+    "mode": "disabled",
+    "outstanding": 517,
+    "paused": false,
+    "paused_samples_5ms": 0,
+    "peak_outstanding": 517,
+    "scenario": "backpressure",
+    "succeeded": 1467,
+    "time_utc": "2026-10-24T07:46:03.971259Z",
+    "topic": "evidence-20261024074454-backpressure-disabled"
+  },
+  {
+    "breaker_state": 0,
+    "dead_lettered": 0,
+    "downstream_calls": 1487,
+    "downstream_failures": 0,
+    "metrics": {
+      "consumed": 1487,
+      "published": 3000
+    },
+    "mode": "disabled",
+    "outstanding": 517,
+    "paused": false,
+    "paused_samples_5ms": 0,
+    "peak_outstanding": 517,
+    "scenario": "backpressure",
+    "succeeded": 1483,
+    "time_utc": "2026-10-24T07:46:04.175966Z",
+    "topic": "evidence-20261024074454-backpressure-disabled"
+  },
+  {
+    "breaker_state": 0,
+    "dead_lettered": 0,
+    "downstream_calls": 1503,
+    "downstream_failures": 0,
+    "metrics": {
+      "consumed": 1503,
+      "published": 3000
+    },
+    "mode": "disabled",
+    "outstanding": 517,
+    "paused": false,
+    "paused_samples_5ms": 0,
+    "peak_outstanding": 517,
+    "scenario": "backpressure",
+    "succeeded": 1499,
+    "time_utc": "2026-10-24T07:46:04.378044Z",
+    "topic": "evidence-20261024074454-backpressure-disabled"
+  },
+  {
+    "breaker_state": 0,
+    "dead_lettered": 0,
+    "downstream_calls": 1519,
+    "downstream_failures": 0,
+    "metrics": {
+      "consumed": 1519,
+      "published": 3000
+    },
+    "mode": "disabled",
+    "outstanding": 517,
+    "paused": false,
+    "paused_samples_5ms": 0,
+    "peak_outstanding": 517,
+    "scenario": "backpressure",
+    "succeeded": 1515,
+    "time_utc": "2026-10-24T07:46:04.581118Z",
+    "topic": "evidence-20261024074454-backpressure-disabled"
+  },
+  {
+    "breaker_state": 0,
+    "dead_lettered": 0,
+    "downstream_calls": 1535,
+    "downstream_failures": 0,
+    "metrics": {
+      "consumed": 1535,
+      "published": 3000
+    },
+    "mode": "disabled",
+    "outstanding": 517,
+    "paused": false,
+    "paused_samples_5ms": 0,
+    "peak_outstanding": 517,
+    "scenario": "backpressure",
+    "succeeded": 1531,
+    "time_utc": "2026-10-24T07:46:04.78375Z",
+    "topic": "evidence-20261024074454-backpressure-disabled"
+  },
+  {
+    "breaker_state": 0,
+    "dead_lettered": 0,
+    "downstream_calls": 1551,
+    "downstream_failures": 0,
+    "metrics": {
+      "consumed": 1551,
+      "published": 3000
+    },
+    "mode": "disabled",
+    "outstanding": 517,
+    "paused": false,
+    "paused_samples_5ms": 0,
+    "peak_outstanding": 517,
+    "scenario": "backpressure",
+    "succeeded": 1547,
+    "time_utc": "2026-10-24T07:46:04.987905Z",
+    "topic": "evidence-20261024074454-backpressure-disabled"
+  },
+  {
+    "breaker_state": 0,
+    "dead_lettered": 0,
+    "downstream_calls": 1568,
+    "downstream_failures": 0,
+    "metrics": {
+      "consumed": 1568,
+      "published": 3000
+    },
+    "mode": "disabled",
+    "outstanding": 517,
+    "paused": false,
+    "paused_samples_5ms": 0,
+    "peak_outstanding": 517,
+    "scenario": "backpressure",
+    "succeeded": 1564,
+    "time_utc": "2026-10-24T07:46:05.193987Z",
+    "topic": "evidence-20261024074454-backpressure-disabled"
+  },
+  {
+    "breaker_state": 0,
+    "dead_lettered": 0,
+    "downstream_calls": 1584,
+    "downstream_failures": 0,
+    "metrics": {
+      "consumed": 1584,
+      "published": 3000
+    },
+    "mode": "disabled",
+    "outstanding": 517,
+    "paused": false,
+    "paused_samples_5ms": 0,
+    "peak_outstanding": 517,
+    "scenario": "backpressure",
+    "succeeded": 1580,
+    "time_utc": "2026-10-24T07:46:05.400853Z",
+    "topic": "evidence-20261024074454-backpressure-disabled"
+  },
+  {
+    "breaker_state": 0,
+    "dead_lettered": 0,
+    "downstream_calls": 1600,
+    "downstream_failures": 0,
+    "metrics": {
+      "consumed": 1600,
+      "published": 3000
+    },
+    "mode": "disabled",
+    "outstanding": 517,
+    "paused": false,
+    "paused_samples_5ms": 0,
+    "peak_outstanding": 517,
+    "scenario": "backpressure",
+    "succeeded": 1596,
+    "time_utc": "2026-10-24T07:46:05.602625Z",
+    "topic": "evidence-20261024074454-backpressure-disabled"
+  },
+  {
+    "breaker_state": 0,
+    "dead_lettered": 0,
+    "downstream_calls": 1616,
+    "downstream_failures": 0,
+    "metrics": {
+      "consumed": 1616,
+      "published": 3000
+    },
+    "mode": "disabled",
+    "outstanding": 517,
+    "paused": false,
+    "paused_samples_5ms": 0,
+    "peak_outstanding": 517,
+    "scenario": "backpressure",
+    "succeeded": 1612,
+    "time_utc": "2026-10-24T07:46:05.807868Z",
+    "topic": "evidence-20261024074454-backpressure-disabled"
+  },
+  {
+    "breaker_state": 0,
+    "dead_lettered": 0,
+    "downstream_calls": 1635,
+    "downstream_failures": 0,
+    "metrics": {
+      "consumed": 1635,
+      "published": 3000
+    },
+    "mode": "disabled",
+    "outstanding": 517,
+    "paused": false,
+    "paused_samples_5ms": 0,
+    "peak_outstanding": 517,
+    "scenario": "backpressure",
+    "succeeded": 1631,
+    "time_utc": "2026-10-24T07:46:06.01195Z",
+    "topic": "evidence-20261024074454-backpressure-disabled"
+  },
+  {
+    "breaker_state": 0,
+    "dead_lettered": 0,
+    "downstream_calls": 1651,
+    "downstream_failures": 0,
+    "metrics": {
+      "consumed": 1651,
+      "published": 3000
+    },
+    "mode": "disabled",
+    "outstanding": 517,
+    "paused": false,
+    "paused_samples_5ms": 0,
+    "peak_outstanding": 517,
+    "scenario": "backpressure",
+    "succeeded": 1647,
+    "time_utc": "2026-10-24T07:46:06.217084Z",
+    "topic": "evidence-20261024074454-backpressure-disabled"
+  },
+  {
+    "breaker_state": 0,
+    "dead_lettered": 0,
+    "downstream_calls": 1667,
+    "downstream_failures": 0,
+    "metrics": {
+      "consumed": 1667,
+      "published": 3000
+    },
+    "mode": "disabled",
+    "outstanding": 517,
+    "paused": false,
+    "paused_samples_5ms": 0,
+    "peak_outstanding": 517,
+    "scenario": "backpressure",
+    "succeeded": 1663,
+    "time_utc": "2026-10-24T07:46:06.423769Z",
+    "topic": "evidence-20261024074454-backpressure-disabled"
+  },
+  {
+    "breaker_state": 0,
+    "dead_lettered": 0,
+    "downstream_calls": 1683,
+    "downstream_failures": 0,
+    "metrics": {
+      "consumed": 1683,
+      "published": 3000
+    },
+    "mode": "disabled",
+    "outstanding": 517,
+    "paused": false,
+    "paused_samples_5ms": 0,
+    "peak_outstanding": 517,
+    "scenario": "backpressure",
+    "succeeded": 1679,
+    "time_utc": "2026-10-24T07:46:06.628126Z",
+    "topic": "evidence-20261024074454-backpressure-disabled"
+  },
+  {
+    "breaker_state": 0,
+    "dead_lettered": 0,
+    "downstream_calls": 1699,
+    "downstream_failures": 0,
+    "metrics": {
+      "consumed": 1699,
+      "published": 3000
+    },
+    "mode": "disabled",
+    "outstanding": 517,
+    "paused": false,
+    "paused_samples_5ms": 0,
+    "peak_outstanding": 517,
+    "scenario": "backpressure",
+    "succeeded": 1695,
+    "time_utc": "2026-10-24T07:46:06.829675Z",
+    "topic": "evidence-20261024074454-backpressure-disabled"
+  },
+  {
+    "breaker_state": 0,
+    "dead_lettered": 0,
+    "downstream_calls": 1715,
+    "downstream_failures": 0,
+    "metrics": {
+      "consumed": 1715,
+      "published": 3000
+    },
+    "mode": "disabled",
+    "outstanding": 517,
+    "paused": false,
+    "paused_samples_5ms": 0,
+    "peak_outstanding": 517,
+    "scenario": "backpressure",
+    "succeeded": 1711,
+    "time_utc": "2026-10-24T07:46:07.031971Z",
+    "topic": "evidence-20261024074454-backpressure-disabled"
+  },
+  {
+    "breaker_state": 0,
+    "dead_lettered": 0,
+    "downstream_calls": 1731,
+    "downstream_failures": 0,
+    "metrics": {
+      "consumed": 1731,
+      "published": 3000
+    },
+    "mode": "disabled",
+    "outstanding": 517,
+    "paused": false,
+    "paused_samples_5ms": 0,
+    "peak_outstanding": 517,
+    "scenario": "backpressure",
+    "succeeded": 1727,
+    "time_utc": "2026-10-24T07:46:07.234398Z",
+    "topic": "evidence-20261024074454-backpressure-disabled"
+  },
+  {
+    "breaker_state": 0,
+    "dead_lettered": 0,
+    "downstream_calls": 1747,
+    "downstream_failures": 0,
+    "metrics": {
+      "consumed": 1747,
+      "published": 3000
+    },
+    "mode": "disabled",
+    "outstanding": 517,
+    "paused": false,
+    "paused_samples_5ms": 0,
+    "peak_outstanding": 517,
+    "scenario": "backpressure",
+    "succeeded": 1743,
+    "time_utc": "2026-10-24T07:46:07.439055Z",
+    "topic": "evidence-20261024074454-backpressure-disabled"
+  },
+  {
+    "breaker_state": 0,
+    "dead_lettered": 0,
+    "downstream_calls": 1763,
+    "downstream_failures": 0,
+    "metrics": {
+      "consumed": 1763,
+      "published": 3000
+    },
+    "mode": "disabled",
+    "outstanding": 517,
+    "paused": false,
+    "paused_samples_5ms": 0,
+    "peak_outstanding": 517,
+    "scenario": "backpressure",
+    "succeeded": 1759,
+    "time_utc": "2026-10-24T07:46:07.642169Z",
+    "topic": "evidence-20261024074454-backpressure-disabled"
+  },
+  {
+    "breaker_state": 0,
+    "dead_lettered": 0,
+    "downstream_calls": 1780,
+    "downstream_failures": 0,
+    "metrics": {
+      "consumed": 1780,
+      "published": 3000
+    },
+    "mode": "disabled",
+    "outstanding": 517,
+    "paused": false,
+    "paused_samples_5ms": 0,
+    "peak_outstanding": 517,
+    "scenario": "backpressure",
+    "succeeded": 1776,
+    "time_utc": "2026-10-24T07:46:07.848769Z",
+    "topic": "evidence-20261024074454-backpressure-disabled"
+  },
+  {
+    "breaker_state": 0,
+    "dead_lettered": 0,
+    "downstream_calls": 1796,
+    "downstream_failures": 0,
+    "metrics": {
+      "consumed": 1796,
+      "published": 3000
+    },
+    "mode": "disabled",
+    "outstanding": 517,
+    "paused": false,
+    "paused_samples_5ms": 0,
+    "peak_outstanding": 517,
+    "scenario": "backpressure",
+    "succeeded": 1792,
+    "time_utc": "2026-10-24T07:46:08.05459Z",
+    "topic": "evidence-20261024074454-backpressure-disabled"
+  },
+  {
+    "breaker_state": 0,
+    "dead_lettered": 0,
+    "downstream_calls": 1812,
+    "downstream_failures": 0,
+    "metrics": {
+      "consumed": 1812,
+      "published": 3000
+    },
+    "mode": "disabled",
+    "outstanding": 517,
+    "paused": false,
+    "paused_samples_5ms": 0,
+    "peak_outstanding": 517,
+    "scenario": "backpressure",
+    "succeeded": 1808,
+    "time_utc": "2026-10-24T07:46:08.256763Z",
+    "topic": "evidence-20261024074454-backpressure-disabled"
+  },
+  {
+    "breaker_state": 0,
+    "dead_lettered": 0,
+    "downstream_calls": 1828,
+    "downstream_failures": 0,
+    "metrics": {
+      "consumed": 1828,
+      "published": 3000
+    },
+    "mode": "disabled",
+    "outstanding": 517,
+    "paused": false,
+    "paused_samples_5ms": 0,
+    "peak_outstanding": 517,
+    "scenario": "backpressure",
+    "succeeded": 1824,
+    "time_utc": "2026-10-24T07:46:08.462989Z",
+    "topic": "evidence-20261024074454-backpressure-disabled"
+  },
+  {
+    "breaker_state": 0,
+    "dead_lettered": 0,
+    "downstream_calls": 1847,
+    "downstream_failures": 0,
+    "metrics": {
+      "consumed": 1847,
+      "published": 3000
+    },
+    "mode": "disabled",
+    "outstanding": 517,
+    "paused": false,
+    "paused_samples_5ms": 0,
+    "peak_outstanding": 517,
+    "scenario": "backpressure",
+    "succeeded": 1843,
+    "time_utc": "2026-10-24T07:46:08.665245Z",
+    "topic": "evidence-20261024074454-backpressure-disabled"
+  },
+  {
+    "breaker_state": 0,
+    "dead_lettered": 0,
+    "downstream_calls": 1863,
+    "downstream_failures": 0,
+    "metrics": {
+      "consumed": 1863,
+      "published": 3000
+    },
+    "mode": "disabled",
+    "outstanding": 517,
+    "paused": false,
+    "paused_samples_5ms": 0,
+    "peak_outstanding": 517,
+    "scenario": "backpressure",
+    "succeeded": 1859,
+    "time_utc": "2026-10-24T07:46:08.870809Z",
+    "topic": "evidence-20261024074454-backpressure-disabled"
+  },
+  {
+    "breaker_state": 0,
+    "dead_lettered": 0,
+    "downstream_calls": 1879,
+    "downstream_failures": 0,
+    "metrics": {
+      "consumed": 1879,
+      "published": 3000
+    },
+    "mode": "disabled",
+    "outstanding": 517,
+    "paused": false,
+    "paused_samples_5ms": 0,
+    "peak_outstanding": 517,
+    "scenario": "backpressure",
+    "succeeded": 1875,
+    "time_utc": "2026-10-24T07:46:09.073161Z",
+    "topic": "evidence-20261024074454-backpressure-disabled"
+  },
+  {
+    "breaker_state": 0,
+    "dead_lettered": 0,
+    "downstream_calls": 1895,
+    "downstream_failures": 0,
+    "metrics": {
+      "consumed": 1895,
+      "published": 3000
+    },
+    "mode": "disabled",
+    "outstanding": 517,
+    "paused": false,
+    "paused_samples_5ms": 0,
+    "peak_outstanding": 517,
+    "scenario": "backpressure",
+    "succeeded": 1891,
+    "time_utc": "2026-10-24T07:46:09.275061Z",
+    "topic": "evidence-20261024074454-backpressure-disabled"
+  },
+  {
+    "breaker_state": 0,
+    "dead_lettered": 0,
+    "downstream_calls": 1911,
+    "downstream_failures": 0,
+    "metrics": {
+      "consumed": 1911,
+      "published": 3000
+    },
+    "mode": "disabled",
+    "outstanding": 517,
+    "paused": false,
+    "paused_samples_5ms": 0,
+    "peak_outstanding": 517,
+    "scenario": "backpressure",
+    "succeeded": 1907,
+    "time_utc": "2026-10-24T07:46:09.4779Z",
+    "topic": "evidence-20261024074454-backpressure-disabled"
+  },
+  {
+    "breaker_state": 0,
+    "dead_lettered": 0,
+    "downstream_calls": 1927,
+    "downstream_failures": 0,
+    "metrics": {
+      "consumed": 1927,
+      "published": 3000
+    },
+    "mode": "disabled",
+    "outstanding": 517,
+    "paused": false,
+    "paused_samples_5ms": 0,
+    "peak_outstanding": 517,
+    "scenario": "backpressure",
+    "succeeded": 1923,
+    "time_utc": "2026-10-24T07:46:09.681595Z",
+    "topic": "evidence-20261024074454-backpressure-disabled"
+  },
+  {
+    "breaker_state": 0,
+    "dead_lettered": 0,
+    "downstream_calls": 1943,
+    "downstream_failures": 0,
+    "metrics": {
+      "consumed": 1943,
+      "published": 3000
+    },
+    "mode": "disabled",
+    "outstanding": 517,
+    "paused": false,
+    "paused_samples_5ms": 0,
+    "peak_outstanding": 517,
+    "scenario": "backpressure",
+    "succeeded": 1939,
+    "time_utc": "2026-10-24T07:46:09.886725Z",
+    "topic": "evidence-20261024074454-backpressure-disabled"
+  },
+  {
+    "breaker_state": 0,
+    "dead_lettered": 0,
+    "downstream_calls": 1959,
+    "downstream_failures": 0,
+    "metrics": {
+      "consumed": 1959,
+      "published": 3000
+    },
+    "mode": "disabled",
+    "outstanding": 517,
+    "paused": false,
+    "paused_samples_5ms": 0,
+    "peak_outstanding": 517,
+    "scenario": "backpressure",
+    "succeeded": 1955,
+    "time_utc": "2026-10-24T07:46:10.089065Z",
+    "topic": "evidence-20261024074454-backpressure-disabled"
+  },
+  {
+    "breaker_state": 0,
+    "dead_lettered": 0,
+    "downstream_calls": 1975,
+    "downstream_failures": 0,
+    "metrics": {
+      "consumed": 1975,
+      "published": 3000
+    },
+    "mode": "disabled",
+    "outstanding": 517,
+    "paused": false,
+    "paused_samples_5ms": 0,
+    "peak_outstanding": 517,
+    "scenario": "backpressure",
+    "succeeded": 1971,
+    "time_utc": "2026-10-24T07:46:10.29418Z",
+    "topic": "evidence-20261024074454-backpressure-disabled"
+  },
+  {
+    "breaker_state": 0,
+    "dead_lettered": 0,
+    "downstream_calls": 1992,
+    "downstream_failures": 0,
+    "metrics": {
+      "consumed": 1992,
+      "published": 3000
+    },
+    "mode": "disabled",
+    "outstanding": 517,
+    "paused": false,
+    "paused_samples_5ms": 0,
+    "peak_outstanding": 517,
+    "scenario": "backpressure",
+    "succeeded": 1988,
+    "time_utc": "2026-10-24T07:46:10.500888Z",
+    "topic": "evidence-20261024074454-backpressure-disabled"
+  },
+  {
+    "breaker_state": 0,
+    "dead_lettered": 0,
+    "downstream_calls": 2008,
+    "downstream_failures": 0,
+    "metrics": {
+      "consumed": 2008,
+      "published": 3000
+    },
+    "mode": "disabled",
+    "outstanding": 517,
+    "paused": false,
+    "paused_samples_5ms": 0,
+    "peak_outstanding": 517,
+    "scenario": "backpressure",
+    "succeeded": 2004,
+    "time_utc": "2026-10-24T07:46:10.702783Z",
+    "topic": "evidence-20261024074454-backpressure-disabled"
+  },
+  {
+    "breaker_state": 0,
+    "dead_lettered": 0,
+    "downstream_calls": 2024,
+    "downstream_failures": 0,
+    "metrics": {
+      "consumed": 2024,
+      "published": 3000
+    },
+    "mode": "disabled",
+    "outstanding": 517,
+    "paused": false,
+    "paused_samples_5ms": 0,
+    "peak_outstanding": 517,
+    "scenario": "backpressure",
+    "succeeded": 2020,
+    "time_utc": "2026-10-24T07:46:10.909146Z",
+    "topic": "evidence-20261024074454-backpressure-disabled"
+  },
+  {
+    "breaker_state": 0,
+    "dead_lettered": 0,
+    "downstream_calls": 2040,
+    "downstream_failures": 0,
+    "metrics": {
+      "consumed": 2040,
+      "published": 3000
+    },
+    "mode": "disabled",
+    "outstanding": 517,
+    "paused": false,
+    "paused_samples_5ms": 0,
+    "peak_outstanding": 517,
+    "scenario": "backpressure",
+    "succeeded": 2036,
+    "time_utc": "2026-10-24T07:46:11.113909Z",
+    "topic": "evidence-20261024074454-backpressure-disabled"
+  },
+  {
+    "breaker_state": 0,
+    "dead_lettered": 0,
+    "downstream_calls": 2056,
+    "downstream_failures": 0,
+    "metrics": {
+      "consumed": 2056,
+      "published": 3000
+    },
+    "mode": "disabled",
+    "outstanding": 517,
+    "paused": false,
+    "paused_samples_5ms": 0,
+    "peak_outstanding": 517,
+    "scenario": "backpressure",
+    "succeeded": 2052,
+    "time_utc": "2026-10-24T07:46:11.317278Z",
+    "topic": "evidence-20261024074454-backpressure-disabled"
+  },
+  {
+    "breaker_state": 0,
+    "dead_lettered": 0,
+    "downstream_calls": 2075,
+    "downstream_failures": 0,
+    "metrics": {
+      "consumed": 2075,
+      "published": 3000
+    },
+    "mode": "disabled",
+    "outstanding": 517,
+    "paused": false,
+    "paused_samples_5ms": 0,
+    "peak_outstanding": 517,
+    "scenario": "backpressure",
+    "succeeded": 2071,
+    "time_utc": "2026-10-24T07:46:11.521762Z",
+    "topic": "evidence-20261024074454-backpressure-disabled"
+  },
+  {
+    "breaker_state": 0,
+    "dead_lettered": 0,
+    "downstream_calls": 2091,
+    "downstream_failures": 0,
+    "metrics": {
+      "consumed": 2091,
+      "published": 3000
+    },
+    "mode": "disabled",
+    "outstanding": 517,
+    "paused": false,
+    "paused_samples_5ms": 0,
+    "peak_outstanding": 517,
+    "scenario": "backpressure",
+    "succeeded": 2087,
+    "time_utc": "2026-10-24T07:46:11.728419Z",
+    "topic": "evidence-20261024074454-backpressure-disabled"
+  },
+  {
+    "breaker_state": 0,
+    "dead_lettered": 0,
+    "downstream_calls": 2107,
+    "downstream_failures": 0,
+    "metrics": {
+      "consumed": 2107,
+      "published": 3000
+    },
+    "mode": "disabled",
+    "outstanding": 517,
+    "paused": false,
+    "paused_samples_5ms": 0,
+    "peak_outstanding": 517,
+    "scenario": "backpressure",
+    "succeeded": 2103,
+    "time_utc": "2026-10-24T07:46:11.930574Z",
+    "topic": "evidence-20261024074454-backpressure-disabled"
+  },
+  {
+    "breaker_state": 0,
+    "dead_lettered": 0,
+    "downstream_calls": 2123,
+    "downstream_failures": 0,
+    "metrics": {
+      "consumed": 2123,
+      "published": 3000
+    },
+    "mode": "disabled",
+    "outstanding": 517,
+    "paused": false,
+    "paused_samples_5ms": 0,
+    "peak_outstanding": 517,
+    "scenario": "backpressure",
+    "succeeded": 2119,
+    "time_utc": "2026-10-24T07:46:12.133087Z",
+    "topic": "evidence-20261024074454-backpressure-disabled"
+  },
+  {
+    "breaker_state": 0,
+    "dead_lettered": 0,
+    "downstream_calls": 2139,
+    "downstream_failures": 0,
+    "metrics": {
+      "consumed": 2139,
+      "published": 3000
+    },
+    "mode": "disabled",
+    "outstanding": 517,
+    "paused": false,
+    "paused_samples_5ms": 0,
+    "peak_outstanding": 517,
+    "scenario": "backpressure",
+    "succeeded": 2135,
+    "time_utc": "2026-10-24T07:46:12.339626Z",
+    "topic": "evidence-20261024074454-backpressure-disabled"
+  },
+  {
+    "breaker_state": 0,
+    "dead_lettered": 0,
+    "downstream_calls": 2155,
+    "downstream_failures": 0,
+    "metrics": {
+      "consumed": 2155,
+      "published": 3000
+    },
+    "mode": "disabled",
+    "outstanding": 517,
+    "paused": false,
+    "paused_samples_5ms": 0,
+    "peak_outstanding": 517,
+    "scenario": "backpressure",
+    "succeeded": 2151,
+    "time_utc": "2026-10-24T07:46:12.541949Z",
+    "topic": "evidence-20261024074454-backpressure-disabled"
+  },
+  {
+    "breaker_state": 0,
+    "dead_lettered": 0,
+    "downstream_calls": 2171,
+    "downstream_failures": 0,
+    "metrics": {
+      "consumed": 2171,
+      "published": 3000
+    },
+    "mode": "disabled",
+    "outstanding": 517,
+    "paused": false,
+    "paused_samples_5ms": 0,
+    "peak_outstanding": 517,
+    "scenario": "backpressure",
+    "succeeded": 2167,
+    "time_utc": "2026-10-24T07:46:12.744582Z",
+    "topic": "evidence-20261024074454-backpressure-disabled"
+  },
+  {
+    "breaker_state": 0,
+    "dead_lettered": 0,
+    "downstream_calls": 2187,
+    "downstream_failures": 0,
+    "metrics": {
+      "consumed": 2187,
+      "published": 3000
+    },
+    "mode": "disabled",
+    "outstanding": 517,
+    "paused": false,
+    "paused_samples_5ms": 0,
+    "peak_outstanding": 517,
+    "scenario": "backpressure",
+    "succeeded": 2183,
+    "time_utc": "2026-10-24T07:46:12.950119Z",
+    "topic": "evidence-20261024074454-backpressure-disabled"
+  },
+  {
+    "breaker_state": 0,
+    "dead_lettered": 0,
+    "downstream_calls": 2203,
+    "downstream_failures": 0,
+    "metrics": {
+      "consumed": 2203,
+      "published": 3000
+    },
+    "mode": "disabled",
+    "outstanding": 517,
+    "paused": false,
+    "paused_samples_5ms": 0,
+    "peak_outstanding": 517,
+    "scenario": "backpressure",
+    "succeeded": 2199,
+    "time_utc": "2026-10-24T07:46:13.153003Z",
+    "topic": "evidence-20261024074454-backpressure-disabled"
+  },
+  {
+    "breaker_state": 0,
+    "dead_lettered": 0,
+    "downstream_calls": 2220,
+    "downstream_failures": 0,
+    "metrics": {
+      "consumed": 2220,
+      "published": 3000
+    },
+    "mode": "disabled",
+    "outstanding": 517,
+    "paused": false,
+    "paused_samples_5ms": 0,
+    "peak_outstanding": 517,
+    "scenario": "backpressure",
+    "succeeded": 2216,
+    "time_utc": "2026-10-24T07:46:13.355645Z",
+    "topic": "evidence-20261024074454-backpressure-disabled"
+  },
+  {
+    "breaker_state": 0,
+    "dead_lettered": 0,
+    "downstream_calls": 2236,
+    "downstream_failures": 0,
+    "metrics": {
+      "consumed": 2236,
+      "published": 3000
+    },
+    "mode": "disabled",
+    "outstanding": 517,
+    "paused": false,
+    "paused_samples_5ms": 0,
+    "peak_outstanding": 517,
+    "scenario": "backpressure",
+    "succeeded": 2232,
+    "time_utc": "2026-10-24T07:46:13.557681Z",
+    "topic": "evidence-20261024074454-backpressure-disabled"
+  },
+  {
+    "breaker_state": 0,
+    "dead_lettered": 0,
+    "downstream_calls": 2252,
+    "downstream_failures": 0,
+    "metrics": {
+      "consumed": 2252,
+      "published": 3000
+    },
+    "mode": "disabled",
+    "outstanding": 517,
+    "paused": false,
+    "paused_samples_5ms": 0,
+    "peak_outstanding": 517,
+    "scenario": "backpressure",
+    "succeeded": 2248,
+    "time_utc": "2026-10-24T07:46:13.762271Z",
+    "topic": "evidence-20261024074454-backpressure-disabled"
+  },
+  {
+    "breaker_state": 0,
+    "dead_lettered": 0,
+    "downstream_calls": 2268,
+    "downstream_failures": 0,
+    "metrics": {
+      "consumed": 2268,
+      "published": 3000
+    },
+    "mode": "disabled",
+    "outstanding": 517,
+    "paused": false,
+    "paused_samples_5ms": 0,
+    "peak_outstanding": 517,
+    "scenario": "backpressure",
+    "succeeded": 2264,
+    "time_utc": "2026-10-24T07:46:13.969404Z",
+    "topic": "evidence-20261024074454-backpressure-disabled"
+  },
+  {
+    "breaker_state": 0,
+    "dead_lettered": 0,
+    "downstream_calls": 2284,
+    "downstream_failures": 0,
+    "metrics": {
+      "consumed": 2284,
+      "published": 3000
+    },
+    "mode": "disabled",
+    "outstanding": 517,
+    "paused": false,
+    "paused_samples_5ms": 0,
+    "peak_outstanding": 517,
+    "scenario": "backpressure",
+    "succeeded": 2280,
+    "time_utc": "2026-10-24T07:46:14.173876Z",
+    "topic": "evidence-20261024074454-backpressure-disabled"
+  },
+  {
+    "breaker_state": 0,
+    "dead_lettered": 0,
+    "downstream_calls": 2303,
+    "downstream_failures": 0,
+    "metrics": {
+      "consumed": 2303,
+      "published": 3000
+    },
+    "mode": "disabled",
+    "outstanding": 517,
+    "paused": false,
+    "paused_samples_5ms": 0,
+    "peak_outstanding": 517,
+    "scenario": "backpressure",
+    "succeeded": 2299,
+    "time_utc": "2026-10-24T07:46:14.375667Z",
+    "topic": "evidence-20261024074454-backpressure-disabled"
+  },
+  {
+    "breaker_state": 0,
+    "dead_lettered": 0,
+    "downstream_calls": 2319,
+    "downstream_failures": 0,
+    "metrics": {
+      "consumed": 2319,
+      "published": 3000
+    },
+    "mode": "disabled",
+    "outstanding": 517,
+    "paused": false,
+    "paused_samples_5ms": 0,
+    "peak_outstanding": 517,
+    "scenario": "backpressure",
+    "succeeded": 2315,
+    "time_utc": "2026-10-24T07:46:14.582539Z",
+    "topic": "evidence-20261024074454-backpressure-disabled"
+  },
+  {
+    "breaker_state": 0,
+    "dead_lettered": 0,
+    "downstream_calls": 2335,
+    "downstream_failures": 0,
+    "metrics": {
+      "consumed": 2335,
+      "published": 3000
+    },
+    "mode": "disabled",
+    "outstanding": 517,
+    "paused": false,
+    "paused_samples_5ms": 0,
+    "peak_outstanding": 517,
+    "scenario": "backpressure",
+    "succeeded": 2331,
+    "time_utc": "2026-10-24T07:46:14.78935Z",
+    "topic": "evidence-20261024074454-backpressure-disabled"
+  },
+  {
+    "breaker_state": 0,
+    "dead_lettered": 0,
+    "downstream_calls": 2351,
+    "downstream_failures": 0,
+    "metrics": {
+      "consumed": 2351,
+      "published": 3000
+    },
+    "mode": "disabled",
+    "outstanding": 517,
+    "paused": false,
+    "paused_samples_5ms": 0,
+    "peak_outstanding": 517,
+    "scenario": "backpressure",
+    "succeeded": 2347,
+    "time_utc": "2026-10-24T07:46:14.995467Z",
+    "topic": "evidence-20261024074454-backpressure-disabled"
+  },
+  {
+    "breaker_state": 0,
+    "dead_lettered": 0,
+    "downstream_calls": 2367,
+    "downstream_failures": 0,
+    "metrics": {
+      "consumed": 2367,
+      "published": 3000
+    },
+    "mode": "disabled",
+    "outstanding": 517,
+    "paused": false,
+    "paused_samples_5ms": 0,
+    "peak_outstanding": 517,
+    "scenario": "backpressure",
+    "succeeded": 2363,
+    "time_utc": "2026-10-24T07:46:15.202064Z",
+    "topic": "evidence-20261024074454-backpressure-disabled"
+  },
+  {
+    "breaker_state": 0,
+    "dead_lettered": 0,
+    "downstream_calls": 2383,
+    "downstream_failures": 0,
+    "metrics": {
+      "consumed": 2383,
+      "published": 3000
+    },
+    "mode": "disabled",
+    "outstanding": 517,
+    "paused": false,
+    "paused_samples_5ms": 0,
+    "peak_outstanding": 517,
+    "scenario": "backpressure",
+    "succeeded": 2379,
+    "time_utc": "2026-10-24T07:46:15.406942Z",
+    "topic": "evidence-20261024074454-backpressure-disabled"
+  },
+  {
+    "breaker_state": 0,
+    "dead_lettered": 0,
+    "downstream_calls": 2400,
+    "downstream_failures": 0,
+    "metrics": {
+      "consumed": 2400,
+      "published": 3000
+    },
+    "mode": "disabled",
+    "outstanding": 517,
+    "paused": false,
+    "paused_samples_5ms": 0,
+    "peak_outstanding": 517,
+    "scenario": "backpressure",
+    "succeeded": 2396,
+    "time_utc": "2026-10-24T07:46:15.612033Z",
+    "topic": "evidence-20261024074454-backpressure-disabled"
+  },
+  {
+    "breaker_state": 0,
+    "dead_lettered": 0,
+    "downstream_calls": 2416,
+    "downstream_failures": 0,
+    "metrics": {
+      "consumed": 2416,
+      "published": 3000
+    },
+    "mode": "disabled",
+    "outstanding": 517,
+    "paused": false,
+    "paused_samples_5ms": 0,
+    "peak_outstanding": 517,
+    "scenario": "backpressure",
+    "succeeded": 2412,
+    "time_utc": "2026-10-24T07:46:15.818819Z",
+    "topic": "evidence-20261024074454-backpressure-disabled"
+  },
+  {
+    "breaker_state": 0,
+    "dead_lettered": 0,
+    "downstream_calls": 2432,
+    "downstream_failures": 0,
+    "metrics": {
+      "consumed": 2432,
+      "published": 3000
+    },
+    "mode": "disabled",
+    "outstanding": 517,
+    "paused": false,
+    "paused_samples_5ms": 0,
+    "peak_outstanding": 517,
+    "scenario": "backpressure",
+    "succeeded": 2428,
+    "time_utc": "2026-10-24T07:46:16.025027Z",
+    "topic": "evidence-20261024074454-backpressure-disabled"
+  },
+  {
+    "breaker_state": 0,
+    "dead_lettered": 0,
+    "downstream_calls": 2451,
+    "downstream_failures": 0,
+    "metrics": {
+      "consumed": 2451,
+      "published": 3000
+    },
+    "mode": "disabled",
+    "outstanding": 517,
+    "paused": false,
+    "paused_samples_5ms": 0,
+    "peak_outstanding": 517,
+    "scenario": "backpressure",
+    "succeeded": 2447,
+    "time_utc": "2026-10-24T07:46:16.228951Z",
+    "topic": "evidence-20261024074454-backpressure-disabled"
+  },
+  {
+    "breaker_state": 0,
+    "dead_lettered": 0,
+    "downstream_calls": 2467,
+    "downstream_failures": 0,
+    "metrics": {
+      "consumed": 2467,
+      "published": 3000
+    },
+    "mode": "disabled",
+    "outstanding": 517,
+    "paused": false,
+    "paused_samples_5ms": 0,
+    "peak_outstanding": 517,
+    "scenario": "backpressure",
+    "succeeded": 2463,
+    "time_utc": "2026-10-24T07:46:16.435608Z",
+    "topic": "evidence-20261024074454-backpressure-disabled"
+  },
+  {
+    "breaker_state": 0,
+    "dead_lettered": 0,
+    "downstream_calls": 2483,
+    "downstream_failures": 0,
+    "metrics": {
+      "consumed": 2483,
+      "published": 3000
+    },
+    "mode": "disabled",
+    "outstanding": 517,
+    "paused": false,
+    "paused_samples_5ms": 0,
+    "peak_outstanding": 517,
+    "scenario": "backpressure",
+    "succeeded": 2479,
+    "time_utc": "2026-10-24T07:46:16.636954Z",
+    "topic": "evidence-20261024074454-backpressure-disabled"
+  },
+  {
+    "breaker_state": 0,
+    "dead_lettered": 0,
+    "downstream_calls": 2499,
+    "downstream_failures": 0,
+    "metrics": {
+      "consumed": 2499,
+      "published": 3000
+    },
+    "mode": "disabled",
+    "outstanding": 505,
+    "paused": false,
+    "paused_samples_5ms": 0,
+    "peak_outstanding": 517,
+    "scenario": "backpressure",
+    "succeeded": 2495,
+    "time_utc": "2026-10-24T07:46:16.841056Z",
+    "topic": "evidence-20261024074454-backpressure-disabled"
+  },
+  {
+    "breaker_state": 0,
+    "dead_lettered": 0,
+    "downstream_calls": 2515,
+    "downstream_failures": 0,
+    "metrics": {
+      "consumed": 2515,
+      "published": 3000
+    },
+    "mode": "disabled",
+    "outstanding": 489,
+    "paused": false,
+    "paused_samples_5ms": 0,
+    "peak_outstanding": 517,
+    "scenario": "backpressure",
+    "succeeded": 2511,
+    "time_utc": "2026-10-24T07:46:17.045713Z",
+    "topic": "evidence-20261024074454-backpressure-disabled"
+  },
+  {
+    "breaker_state": 0,
+    "dead_lettered": 0,
+    "downstream_calls": 2531,
+    "downstream_failures": 0,
+    "metrics": {
+      "consumed": 2531,
+      "published": 3000
+    },
+    "mode": "disabled",
+    "outstanding": 473,
+    "paused": false,
+    "paused_samples_5ms": 0,
+    "peak_outstanding": 517,
+    "scenario": "backpressure",
+    "succeeded": 2527,
+    "time_utc": "2026-10-24T07:46:17.248099Z",
+    "topic": "evidence-20261024074454-backpressure-disabled"
+  },
+  {
+    "breaker_state": 0,
+    "dead_lettered": 0,
+    "downstream_calls": 2547,
+    "downstream_failures": 0,
+    "metrics": {
+      "consumed": 2547,
+      "published": 3000
+    },
+    "mode": "disabled",
+    "outstanding": 457,
+    "paused": false,
+    "paused_samples_5ms": 0,
+    "peak_outstanding": 517,
+    "scenario": "backpressure",
+    "succeeded": 2543,
+    "time_utc": "2026-10-24T07:46:17.454702Z",
+    "topic": "evidence-20261024074454-backpressure-disabled"
+  },
+  {
+    "breaker_state": 0,
+    "dead_lettered": 0,
+    "downstream_calls": 2563,
+    "downstream_failures": 0,
+    "metrics": {
+      "consumed": 2563,
+      "published": 3000
+    },
+    "mode": "disabled",
+    "outstanding": 441,
+    "paused": false,
+    "paused_samples_5ms": 0,
+    "peak_outstanding": 517,
+    "scenario": "backpressure",
+    "succeeded": 2559,
+    "time_utc": "2026-10-24T07:46:17.660833Z",
+    "topic": "evidence-20261024074454-backpressure-disabled"
+  },
+  {
+    "breaker_state": 0,
+    "dead_lettered": 0,
+    "downstream_calls": 2579,
+    "downstream_failures": 0,
+    "metrics": {
+      "consumed": 2579,
+      "published": 3000
+    },
+    "mode": "disabled",
+    "outstanding": 425,
+    "paused": false,
+    "paused_samples_5ms": 0,
+    "peak_outstanding": 517,
+    "scenario": "backpressure",
+    "succeeded": 2575,
+    "time_utc": "2026-10-24T07:46:17.865621Z",
+    "topic": "evidence-20261024074454-backpressure-disabled"
+  },
+  {
+    "breaker_state": 0,
+    "dead_lettered": 0,
+    "downstream_calls": 2596,
+    "downstream_failures": 0,
+    "metrics": {
+      "consumed": 2596,
+      "published": 3000
+    },
+    "mode": "disabled",
+    "outstanding": 408,
+    "paused": false,
+    "paused_samples_5ms": 0,
+    "peak_outstanding": 517,
+    "scenario": "backpressure",
+    "succeeded": 2592,
+    "time_utc": "2026-10-24T07:46:18.069752Z",
+    "topic": "evidence-20261024074454-backpressure-disabled"
+  },
+  {
+    "breaker_state": 0,
+    "dead_lettered": 0,
+    "downstream_calls": 2612,
+    "downstream_failures": 0,
+    "metrics": {
+      "consumed": 2612,
+      "published": 3000
+    },
+    "mode": "disabled",
+    "outstanding": 392,
+    "paused": false,
+    "paused_samples_5ms": 0,
+    "peak_outstanding": 517,
+    "scenario": "backpressure",
+    "succeeded": 2608,
+    "time_utc": "2026-10-24T07:46:18.277553Z",
+    "topic": "evidence-20261024074454-backpressure-disabled"
+  },
+  {
+    "breaker_state": 0,
+    "dead_lettered": 0,
+    "downstream_calls": 2631,
+    "downstream_failures": 0,
+    "metrics": {
+      "consumed": 2631,
+      "published": 3000
+    },
+    "mode": "disabled",
+    "outstanding": 373,
+    "paused": false,
+    "paused_samples_5ms": 0,
+    "peak_outstanding": 517,
+    "scenario": "backpressure",
+    "succeeded": 2627,
+    "time_utc": "2026-10-24T07:46:18.484557Z",
+    "topic": "evidence-20261024074454-backpressure-disabled"
+  },
+  {
+    "breaker_state": 0,
+    "dead_lettered": 0,
+    "downstream_calls": 2647,
+    "downstream_failures": 0,
+    "metrics": {
+      "consumed": 2647,
+      "published": 3000
+    },
+    "mode": "disabled",
+    "outstanding": 357,
+    "paused": false,
+    "paused_samples_5ms": 0,
+    "peak_outstanding": 517,
+    "scenario": "backpressure",
+    "succeeded": 2643,
+    "time_utc": "2026-10-24T07:46:18.686183Z",
+    "topic": "evidence-20261024074454-backpressure-disabled"
+  },
+  {
+    "breaker_state": 0,
+    "dead_lettered": 0,
+    "downstream_calls": 2663,
+    "downstream_failures": 0,
+    "metrics": {
+      "consumed": 2663,
+      "published": 3000
+    },
+    "mode": "disabled",
+    "outstanding": 341,
+    "paused": false,
+    "paused_samples_5ms": 0,
+    "peak_outstanding": 517,
+    "scenario": "backpressure",
+    "succeeded": 2659,
+    "time_utc": "2026-10-24T07:46:18.891963Z",
+    "topic": "evidence-20261024074454-backpressure-disabled"
+  },
+  {
+    "breaker_state": 0,
+    "dead_lettered": 0,
+    "downstream_calls": 2679,
+    "downstream_failures": 0,
+    "metrics": {
+      "consumed": 2679,
+      "published": 3000
+    },
+    "mode": "disabled",
+    "outstanding": 325,
+    "paused": false,
+    "paused_samples_5ms": 0,
+    "peak_outstanding": 517,
+    "scenario": "backpressure",
+    "succeeded": 2675,
+    "time_utc": "2026-10-24T07:46:19.094625Z",
+    "topic": "evidence-20261024074454-backpressure-disabled"
+  },
+  {
+    "breaker_state": 0,
+    "dead_lettered": 0,
+    "downstream_calls": 2695,
+    "downstream_failures": 0,
+    "metrics": {
+      "consumed": 2695,
+      "published": 3000
+    },
+    "mode": "disabled",
+    "outstanding": 309,
+    "paused": false,
+    "paused_samples_5ms": 0,
+    "peak_outstanding": 517,
+    "scenario": "backpressure",
+    "succeeded": 2691,
+    "time_utc": "2026-10-24T07:46:19.299891Z",
+    "topic": "evidence-20261024074454-backpressure-disabled"
+  },
+  {
+    "breaker_state": 0,
+    "dead_lettered": 0,
+    "downstream_calls": 2711,
+    "downstream_failures": 0,
+    "metrics": {
+      "consumed": 2711,
+      "published": 3000
+    },
+    "mode": "disabled",
+    "outstanding": 293,
+    "paused": false,
+    "paused_samples_5ms": 0,
+    "peak_outstanding": 517,
+    "scenario": "backpressure",
+    "succeeded": 2707,
+    "time_utc": "2026-10-24T07:46:19.508355Z",
+    "topic": "evidence-20261024074454-backpressure-disabled"
+  },
+  {
+    "breaker_state": 0,
+    "dead_lettered": 0,
+    "downstream_calls": 2727,
+    "downstream_failures": 0,
+    "metrics": {
+      "consumed": 2727,
+      "published": 3000
+    },
+    "mode": "disabled",
+    "outstanding": 277,
+    "paused": false,
+    "paused_samples_5ms": 0,
+    "peak_outstanding": 517,
+    "scenario": "backpressure",
+    "succeeded": 2723,
+    "time_utc": "2026-10-24T07:46:19.713846Z",
+    "topic": "evidence-20261024074454-backpressure-disabled"
+  },
+  {
+    "breaker_state": 0,
+    "dead_lettered": 0,
+    "downstream_calls": 2743,
+    "downstream_failures": 0,
+    "metrics": {
+      "consumed": 2743,
+      "published": 3000
+    },
+    "mode": "disabled",
+    "outstanding": 261,
+    "paused": false,
+    "paused_samples_5ms": 0,
+    "peak_outstanding": 517,
+    "scenario": "backpressure",
+    "succeeded": 2739,
+    "time_utc": "2026-10-24T07:46:19.917151Z",
+    "topic": "evidence-20261024074454-backpressure-disabled"
+  },
+  {
+    "breaker_state": 0,
+    "dead_lettered": 0,
+    "downstream_calls": 2759,
+    "downstream_failures": 0,
+    "metrics": {
+      "consumed": 2759,
+      "published": 3000
+    },
+    "mode": "disabled",
+    "outstanding": 245,
+    "paused": false,
+    "paused_samples_5ms": 0,
+    "peak_outstanding": 517,
+    "scenario": "backpressure",
+    "succeeded": 2755,
+    "time_utc": "2026-10-24T07:46:20.119197Z",
+    "topic": "evidence-20261024074454-backpressure-disabled"
+  },
+  {
+    "breaker_state": 0,
+    "dead_lettered": 0,
+    "downstream_calls": 2776,
+    "downstream_failures": 0,
+    "metrics": {
+      "consumed": 2776,
+      "published": 3000
+    },
+    "mode": "disabled",
+    "outstanding": 228,
+    "paused": false,
+    "paused_samples_5ms": 0,
+    "peak_outstanding": 517,
+    "scenario": "backpressure",
+    "succeeded": 2772,
+    "time_utc": "2026-10-24T07:46:20.321802Z",
+    "topic": "evidence-20261024074454-backpressure-disabled"
+  },
+  {
+    "breaker_state": 0,
+    "dead_lettered": 0,
+    "downstream_calls": 2792,
+    "downstream_failures": 0,
+    "metrics": {
+      "consumed": 2792,
+      "published": 3000
+    },
+    "mode": "disabled",
+    "outstanding": 212,
+    "paused": false,
+    "paused_samples_5ms": 0,
+    "peak_outstanding": 517,
+    "scenario": "backpressure",
+    "succeeded": 2788,
+    "time_utc": "2026-10-24T07:46:20.52686Z",
+    "topic": "evidence-20261024074454-backpressure-disabled"
+  },
+  {
+    "breaker_state": 0,
+    "dead_lettered": 0,
+    "downstream_calls": 2808,
+    "downstream_failures": 0,
+    "metrics": {
+      "consumed": 2808,
+      "published": 3000
+    },
+    "mode": "disabled",
+    "outstanding": 196,
+    "paused": false,
+    "paused_samples_5ms": 0,
+    "peak_outstanding": 517,
+    "scenario": "backpressure",
+    "succeeded": 2804,
+    "time_utc": "2026-10-24T07:46:20.732773Z",
+    "topic": "evidence-20261024074454-backpressure-disabled"
+  },
+  {
+    "breaker_state": 0,
+    "dead_lettered": 0,
+    "downstream_calls": 2824,
+    "downstream_failures": 0,
+    "metrics": {
+      "consumed": 2824,
+      "published": 3000
+    },
+    "mode": "disabled",
+    "outstanding": 180,
+    "paused": false,
+    "paused_samples_5ms": 0,
+    "peak_outstanding": 517,
+    "scenario": "backpressure",
+    "succeeded": 2820,
+    "time_utc": "2026-10-24T07:46:20.935502Z",
+    "topic": "evidence-20261024074454-backpressure-disabled"
+  },
+  {
+    "breaker_state": 0,
+    "dead_lettered": 0,
+    "downstream_calls": 2843,
+    "downstream_failures": 0,
+    "metrics": {
+      "consumed": 2843,
+      "published": 3000
+    },
+    "mode": "disabled",
+    "outstanding": 161,
+    "paused": false,
+    "paused_samples_5ms": 0,
+    "peak_outstanding": 517,
+    "scenario": "backpressure",
+    "succeeded": 2839,
+    "time_utc": "2026-10-24T07:46:21.138947Z",
+    "topic": "evidence-20261024074454-backpressure-disabled"
+  },
+  {
+    "breaker_state": 0,
+    "dead_lettered": 0,
+    "downstream_calls": 2859,
+    "downstream_failures": 0,
+    "metrics": {
+      "consumed": 2859,
+      "published": 3000
+    },
+    "mode": "disabled",
+    "outstanding": 145,
+    "paused": false,
+    "paused_samples_5ms": 0,
+    "peak_outstanding": 517,
+    "scenario": "backpressure",
+    "succeeded": 2855,
+    "time_utc": "2026-10-24T07:46:21.34626Z",
+    "topic": "evidence-20261024074454-backpressure-disabled"
+  },
+  {
+    "breaker_state": 0,
+    "dead_lettered": 0,
+    "downstream_calls": 2875,
+    "downstream_failures": 0,
+    "metrics": {
+      "consumed": 2875,
+      "published": 3000
+    },
+    "mode": "disabled",
+    "outstanding": 129,
+    "paused": false,
+    "paused_samples_5ms": 0,
+    "peak_outstanding": 517,
+    "scenario": "backpressure",
+    "succeeded": 2871,
+    "time_utc": "2026-10-24T07:46:21.552095Z",
+    "topic": "evidence-20261024074454-backpressure-disabled"
+  },
+  {
+    "breaker_state": 0,
+    "dead_lettered": 0,
+    "downstream_calls": 2891,
+    "downstream_failures": 0,
+    "metrics": {
+      "consumed": 2891,
+      "published": 3000
+    },
+    "mode": "disabled",
+    "outstanding": 113,
+    "paused": false,
+    "paused_samples_5ms": 0,
+    "peak_outstanding": 517,
+    "scenario": "backpressure",
+    "succeeded": 2887,
+    "time_utc": "2026-10-24T07:46:21.761142Z",
+    "topic": "evidence-20261024074454-backpressure-disabled"
+  },
+  {
+    "breaker_state": 0,
+    "dead_lettered": 0,
+    "downstream_calls": 2907,
+    "downstream_failures": 0,
+    "metrics": {
+      "consumed": 2907,
+      "published": 3000
+    },
+    "mode": "disabled",
+    "outstanding": 97,
+    "paused": false,
+    "paused_samples_5ms": 0,
+    "peak_outstanding": 517,
+    "scenario": "backpressure",
+    "succeeded": 2903,
+    "time_utc": "2026-10-24T07:46:21.962793Z",
+    "topic": "evidence-20261024074454-backpressure-disabled"
+  },
+  {
+    "breaker_state": 0,
+    "dead_lettered": 0,
+    "downstream_calls": 2923,
+    "downstream_failures": 0,
+    "metrics": {
+      "consumed": 2923,
+      "published": 3000
+    },
+    "mode": "disabled",
+    "outstanding": 81,
+    "paused": false,
+    "paused_samples_5ms": 0,
+    "peak_outstanding": 517,
+    "scenario": "backpressure",
+    "succeeded": 2919,
+    "time_utc": "2026-10-24T07:46:22.166919Z",
+    "topic": "evidence-20261024074454-backpressure-disabled"
+  },
+  {
+    "breaker_state": 0,
+    "dead_lettered": 0,
+    "downstream_calls": 2939,
+    "downstream_failures": 0,
+    "metrics": {
+      "consumed": 2939,
+      "published": 3000
+    },
+    "mode": "disabled",
+    "outstanding": 65,
+    "paused": false,
+    "paused_samples_5ms": 0,
+    "peak_outstanding": 517,
+    "scenario": "backpressure",
+    "succeeded": 2935,
+    "time_utc": "2026-10-24T07:46:22.37343Z",
+    "topic": "evidence-20261024074454-backpressure-disabled"
+  },
+  {
+    "breaker_state": 0,
+    "dead_lettered": 0,
+    "downstream_calls": 2956,
+    "downstream_failures": 0,
+    "metrics": {
+      "consumed": 2956,
+      "published": 3000
+    },
+    "mode": "disabled",
+    "outstanding": 48,
+    "paused": false,
+    "paused_samples_5ms": 0,
+    "peak_outstanding": 517,
+    "scenario": "backpressure",
+    "succeeded": 2952,
+    "time_utc": "2026-10-24T07:46:22.578607Z",
+    "topic": "evidence-20261024074454-backpressure-disabled"
+  },
+  {
+    "breaker_state": 0,
+    "dead_lettered": 0,
+    "downstream_calls": 2972,
+    "downstream_failures": 0,
+    "metrics": {
+      "consumed": 2972,
+      "published": 3000
+    },
+    "mode": "disabled",
+    "outstanding": 32,
+    "paused": false,
+    "paused_samples_5ms": 0,
+    "peak_outstanding": 517,
+    "scenario": "backpressure",
+    "succeeded": 2968,
+    "time_utc": "2026-10-24T07:46:22.784947Z",
+    "topic": "evidence-20261024074454-backpressure-disabled"
+  },
+  {
+    "breaker_state": 0,
+    "dead_lettered": 0,
+    "downstream_calls": 2988,
+    "downstream_failures": 0,
+    "metrics": {
+      "consumed": 2988,
+      "published": 3000
+    },
+    "mode": "disabled",
+    "outstanding": 16,
+    "paused": false,
+    "paused_samples_5ms": 0,
+    "peak_outstanding": 517,
+    "scenario": "backpressure",
+    "succeeded": 2984,
+    "time_utc": "2026-10-24T07:46:22.990348Z",
+    "topic": "evidence-20261024074454-backpressure-disabled"
+  },
+  {
+    "breaker_state": 0,
+    "dead_lettered": 0,
+    "downstream_calls": 3000,
+    "downstream_failures": 0,
+    "metrics": {
+      "consumed": 3000,
+      "published": 3000
+    },
+    "mode": "disabled",
+    "outstanding": 0,
+    "paused": false,
+    "paused_samples_5ms": 0,
+    "peak_outstanding": 517,
+    "scenario": "backpressure",
+    "succeeded": 3000,
+    "time_utc": "2026-10-24T07:46:23.19538Z",
+    "topic": "evidence-20261024074454-backpressure-disabled"
+  }
+]

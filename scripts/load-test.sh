@@ -53,12 +53,14 @@ done
 # Check if k6 is available
 if ! command -v k6 &> /dev/null; then
     echo "k6 not found. Installing via docker..."
-    K6_CMD="docker run --rm -i grafana/k6:latest run -"
+    K6_CMD="docker run --rm -i --add-host=host.docker.internal:host-gateway grafana/k6:0.55.0 run -"
+    URL="${URL/localhost/host.docker.internal}"
+    URL="${URL/127.0.0.1/host.docker.internal}"
 else
     K6_CMD="k6 run -"
 fi
 
-cat <<'EOF' | $K6_CMD --quiet
+cat <<'EOF' | $K6_CMD --quiet -e URL="$URL" -e DURATION="$DURATION" -e VUS="$VUS" -e RATE="$RATE" --summary-export="${SUMMARY_PATH:-/tmp/flowthrough-k6-summary.json}"
 import http from 'k6/http';
 import { check, sleep } from 'k6';
 import { Rate, Trend, Counter } from 'k6/metrics';
@@ -72,13 +74,14 @@ export const options = {
   scenarios: {
     constant_rate: {
       executor: 'constant-arrival-rate',
-      rate: __ENV.RATE || 100,
+      rate: Number(__ENV.RATE || 100),
       timeUnit: '1s',
       duration: __ENV.DURATION || '30s',
-      preAllocatedVUs: __ENV.VUS || 10,
-      maxVUs: __ENV.VUS || 10,
+      preAllocatedVUs: Number(__ENV.VUS || 10),
+      maxVUs: Number(__ENV.VUS || 10),
     },
   },
+  summaryTrendStats: ['avg', 'min', 'max', 'p(90)', 'p(95)', 'p(99)'],
   thresholds: {
     'http_req_duration': ['p(95)<500'],
     'http_req_failed': ['rate<0.1'],

@@ -36,7 +36,7 @@ func NewSendMessageService(greeting, topic string, producer kafka.Producer) *Sen
 //
 // The Kafka key is the message itself (per the PRD); the value is the raw
 // message string. The publish waits for the broker ack, so a returned error
-// means the message was NOT durably written.
+// may have an ambiguous outcome (a broker can write before the caller sees an error).
 func (s *SendMessageService) Send(ctx context.Context, req model.SendMessageRequest) (model.SendMessageResponse, error) {
 	if err := s.producer.Publish(ctx, s.topic, req.Message, req.Message); err != nil {
 		return model.SendMessageResponse{}, err

@@ -1,0 +1,8 @@
+2026/10/24 13:16:31 evidence ready topic=evidence-20261024074454-breaker-enabled mode=enabled scenario=breaker
+2026/10/24 13:16:33 circuit_breaker from=closed to=open
+2026/10/24 13:16:35 circuit_breaker from=open to=half-open
+2026/10/24 13:16:35 circuit_breaker from=half-open to=open
+2026/10/24 13:16:37 circuit_breaker from=open to=half-open
+2026/10/24 13:16:37 circuit_breaker from=half-open to=open
+2026/10/24 13:16:39 circuit_breaker from=open to=half-open
+2026/10/24 13:16:39 circuit_breaker from=half-open to=closed

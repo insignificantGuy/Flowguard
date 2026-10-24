@@ -1,1 +1,5 @@
 .env
+/bin/
+/publish-prd
+/flowguard
+/coverage.out
