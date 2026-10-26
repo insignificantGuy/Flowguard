@@ -13,8 +13,7 @@ Go/Kafka event pipeline demonstrating backpressure, circuit breaking and observa
 - [x] 7. Repository-local PRD explicitly selects Kafka and supersedes the old RabbitMQ wording.
 - [x] 8. Backpressure, breaker and degradation tests pass locally with race detection and recorded coverage.
 
-Changes remain uncommitted, as requested. The checklist is verified by the raw
-artifacts linked below; it does not claim an upstream Notion edit or a CI run.
+The checklist is verified by the raw artifacts linked below; it does not claim an upstream Notion edit or a CI run.
 
 ## Endpoints
 
